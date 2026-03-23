@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Terracotta Tile Cleaning, Sealing & Restoration Sydney | Tile & Stone Cleaners</title>
+<meta name="description" content="Professional terracotta tile cleaning, stripping, sealing, and restoration in Sydney. Expert terracotta floor care with impregnating and topical sealers, efflorescence treatment, and grout cleaning. Free quotes.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #FAFAF7; --bg-warm: #F3F1EC; --bg-navy: #0C2340; --bg-navy-light: #122D4D;
+  --blue: #2B7DE9; --blue-hover: #1A6AD8; --blue-soft: rgba(43, 125, 233, 0.08); --blue-border: rgba(43, 125, 233, 0.2);
+  --text: #1A1A1A; --text-light: #F5F2ED; --text-muted: #6B7280; --text-muted-light: rgba(245, 242, 237, 0.55);
+  --border: rgba(0,0,0,0.08); --border-light: rgba(255,255,255,0.1);
+  --font-display: 'Syne', system-ui, sans-serif; --font-body: 'Inter', system-ui, sans-serif;
+  --ease: cubic-bezier(0.4, 0, 0.2, 1); --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --container: min(1200px, 100% - 2rem); --container-wide: min(1400px, 100% - 2rem);
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
+body { font-family: var(--font-body); font-size: 1rem; line-height: 1.7; color: var(--text); background: var(--bg); overflow-x: hidden; }
+a { text-decoration: none; color: inherit; } img { max-width: 100%; display: block; } ul { list-style: none; }
+.reveal { opacity: 0; transform: translateY(40px); transition: opacity 0.9s var(--ease-out), transform 0.9s var(--ease-out); }
+.reveal.visible { opacity: 1; transform: translateY(0); }
+.reveal-delay-1 { transition-delay: 0.1s; } .reveal-delay-2 { transition-delay: 0.2s; } .reveal-delay-3 { transition-delay: 0.3s; }
+.nav { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; background: rgba(250, 250, 247, 0.92); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border-bottom: 1px solid transparent; transition: border-color 0.3s var(--ease), box-shadow 0.3s var(--ease); }
+.nav.scrolled { border-bottom-color: var(--border); box-shadow: 0 1px 20px rgba(0,0,0,0.04); }
+.nav-inner { width: var(--container-wide); margin: 0 auto; display: flex; align-items: center; justify-content: space-between; height: 72px; }
+.nav-logo { display: flex; align-items: center; gap: 0.75rem; }
+.nav-logo img { width: 40px; height: 40px; border-radius: 8px; object-fit: cover; }
+.nav-logo-text { font-family: var(--font-display); font-size: 1.2rem; color: var(--bg-navy); letter-spacing: -0.01em; white-space: nowrap; }
+.nav-logo-text span { color: var(--blue); }
+.nav-links { display: flex; gap: 2.5rem; align-items: center; }
+.nav-links a { font-size: 0.875rem; font-weight: 500; color: var(--text-muted); letter-spacing: 0.02em; transition: color 0.25s var(--ease); position: relative; }
+.nav-links a::after { content: ''; position: absolute; bottom: -4px; left: 0; width: 0; height: 1.5px; background: var(--blue); transition: width 0.3s var(--ease-out); }
+.nav-links a:hover { color: var(--text); } .nav-links a:hover::after { width: 100%; }
+.nav-links a.active { color: var(--text); } .nav-links a.active::after { width: 100%; }
+.nav-right { display: flex; align-items: center; gap: 1.5rem; }
+.nav-phone { font-size: 0.875rem; font-weight: 600; color: var(--text); letter-spacing: 0.01em; }
+.btn-cta { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.65rem 1.5rem; background: var(--blue); color: #fff; font-family: var(--font-body); font-size: 0.85rem; font-weight: 600; letter-spacing: 0.03em; border: none; border-radius: 6px; cursor: pointer; transition: all 0.3s var(--ease); text-transform: uppercase; }
+.btn-cta:hover { background: var(--blue-hover); transform: translateY(-1px); box-shadow: 0 4px 20px rgba(43, 125, 233, 0.3); }
+.nav-toggle { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; }
+.nav-toggle span { display: block; width: 22px; height: 2px; background: var(--text); transition: all 0.3s var(--ease); }
+.nav-toggle.active span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+.nav-toggle.active span:nth-child(2) { opacity: 0; }
+.nav-toggle.active span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+.page-hero { background: var(--bg-navy); padding: 10rem 0 3.5rem; text-align: center; position: relative; }
+.page-hero-inner { width: var(--container); margin: 0 auto; }
+.page-hero .section-label { font-size: 0.72rem; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: var(--blue); margin-bottom: 1rem; display: block; }
+.page-hero h1 { font-family: var(--font-display); font-size: clamp(2.25rem, 5vw, 3.5rem); font-weight: 700; letter-spacing: -0.02em; color: var(--text-light); line-height: 1.15; margin-bottom: 1rem; }
+.breadcrumb { font-size: 0.85rem; color: var(--text-muted-light); }
+.breadcrumb a { color: var(--text-muted-light); transition: color 0.25s var(--ease); } .breadcrumb a:hover { color: var(--blue); } .breadcrumb span { margin: 0 0.5rem; }
+section { scroll-margin-top: 72px; }
+.section-label { font-size: 0.72rem; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: var(--blue); margin-bottom: 1rem; display: block; }
+.section-title { font-family: var(--font-display); font-size: clamp(2rem, 4vw, 3rem); font-weight: 700; letter-spacing: -0.02em; color: var(--bg-navy); line-height: 1.15; margin-bottom: 0.75rem; }
+.section-desc { font-size: 1.05rem; color: var(--text-muted); max-width: 540px; margin: 1rem auto 0; line-height: 1.75; }
+.feature-image { width: var(--container); margin: 0 auto; max-width: 800px; border-radius: 16px; overflow: hidden; aspect-ratio: 16/9; margin-top: -2rem; margin-bottom: 0; position: relative; z-index: 2; box-shadow: 0 12px 40px rgba(0,0,0,0.1); }
+.feature-image img { width: 100%; height: 100%; object-fit: cover; }
+.intro-section { padding: clamp(5rem, 10vh, 7rem) 0 clamp(4rem, 8vh, 6rem); background: var(--bg); }
+.content-two-col { width: var(--container); margin: 0 auto; display: grid; grid-template-columns: 1fr 340px; gap: 4rem; align-items: start; }
+.content-main h2 { font-family: var(--font-display); font-size: clamp(1.5rem, 3vw, 2.25rem); font-weight: 700; letter-spacing: -0.02em; color: var(--bg-navy); line-height: 1.2; margin-top: 3rem; margin-bottom: 1.5rem; }
+.content-main h2:first-child { margin-top: 0; }
+.content-main h3 { font-family: var(--font-display); font-size: 1.25rem; font-weight: 600; color: var(--bg-navy); margin-top: 2.5rem; margin-bottom: 0.75rem; }
+.content-main p { font-size: 1rem; color: var(--text-muted); line-height: 1.85; margin-bottom: 1.25rem; }
+.benefit-list { list-style: none; padding: 0; margin: 1.5rem 0; }
+.benefit-list li { position: relative; padding-left: 1.75rem; font-size: 0.95rem; line-height: 1.8; color: var(--text-muted); margin-bottom: 0.5rem; }
+.benefit-list li::before { content: ''; position: absolute; left: 0; top: 0.55em; width: 8px; height: 8px; border-radius: 50%; background: var(--blue); }
+.comparison-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin: 1.5rem 0; }
+.comparison-card { background: #fff; border: 1px solid var(--border); border-radius: 12px; padding: 2rem; transition: all 0.4s var(--ease); position: relative; }
+.comparison-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: var(--blue); transform: scaleX(0); transition: transform 0.4s var(--ease-out); border-radius: 12px 12px 0 0; }
+.comparison-card:hover { transform: translateY(-4px); box-shadow: 0 12px 40px rgba(0,0,0,0.06); border-color: var(--blue-border); }
+.comparison-card:hover::before { transform: scaleX(1); }
+.comparison-card.recommended { border-color: var(--blue-border); background: var(--blue-soft); }
+.comparison-card.recommended::before { transform: scaleX(1); }
+.comparison-card h3 { font-family: var(--font-display); font-size: 1.15rem; font-weight: 600; color: var(--bg-navy); margin-bottom: 0.75rem; margin-top: 0; }
+.comparison-card p { font-size: 0.9rem; color: var(--text-muted); line-height: 1.75; margin-bottom: 0; }
+.comparison-card .benefit-list { margin: 0.75rem 0 0; }
+.comparison-card .badge { display: inline-block; padding: 0.25rem 0.65rem; background: var(--blue); color: #fff; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; border-radius: 4px; margin-top: 1rem; }
+.process-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.25rem; margin: 1.5rem 0; }
+.process-card { background: var(--bg-warm); border-radius: 12px; padding: 1.5rem; text-align: center; transition: all 0.4s var(--ease); }
+.process-card:hover { transform: translateY(-3px); box-shadow: 0 8px 25px rgba(0,0,0,0.05); }
+.process-number { display: inline-flex; align-items: center; justify-content: center; width: 40px; height: 40px; border-radius: 50%; background: var(--blue); color: #fff; font-family: var(--font-display); font-size: 1rem; font-weight: 700; margin-bottom: 0.75rem; }
+.process-card h4 { font-family: var(--font-display); font-size: 0.95rem; font-weight: 600; color: var(--bg-navy); margin-bottom: 0.5rem; }
+.process-card p { font-size: 0.85rem; color: var(--text-muted); line-height: 1.7; margin-bottom: 0; }
+.callout-box { background: var(--blue-soft); border: 1px solid var(--blue-border); border-radius: 12px; padding: 1.5rem 1.75rem; margin: 1.5rem 0; }
+.callout-box p { font-size: 0.95rem; color: var(--bg-navy); line-height: 1.75; margin-bottom: 0; }
+.callout-box strong { color: var(--blue); }
+.callout-box.warning { background: rgba(239, 68, 68, 0.06); border-color: rgba(239, 68, 68, 0.2); }
+.callout-box.warning strong { color: #dc2626; }
+.sidebar-cta { position: sticky; top: 100px; background: var(--bg-navy); border-radius: 16px; padding: 2rem; color: var(--text-light); }
+.sidebar-cta h3 { font-family: var(--font-display); font-size: 1.25rem; font-weight: 700; margin-bottom: 0.75rem; color: var(--text-light); }
+.sidebar-cta p { font-size: 0.9rem; color: var(--text-muted-light); line-height: 1.7; margin-bottom: 1.5rem; }
+.sidebar-cta .btn-cta { width: 100%; justify-content: center; padding: 0.85rem 1.5rem; }
+.sidebar-cta .phone-link { display: block; text-align: center; margin-top: 1rem; font-size: 0.9rem; font-weight: 600; color: var(--text-muted-light); transition: color 0.25s var(--ease); }
+.sidebar-cta .phone-link:hover { color: var(--blue); }
+.services-list { padding: clamp(4rem, 8vh, 6rem) 0; background: var(--bg-navy); }
+.services-list-inner { width: var(--container); margin: 0 auto; max-width: 800px; text-align: center; }
+.services-list-inner h2 { font-family: var(--font-display); font-size: clamp(1.5rem, 3vw, 2.25rem); font-weight: 700; color: var(--text-light); margin-bottom: 2.5rem; }
+.services-tags { display: flex; flex-wrap: wrap; gap: 0.75rem; justify-content: center; }
+.services-tags a { display: inline-block; padding: 0.6rem 1.25rem; background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; font-size: 0.88rem; font-weight: 500; color: var(--text-light); transition: all 0.3s var(--ease); }
+.services-tags a:hover { background: rgba(43, 125, 233, 0.15); border-color: var(--blue); color: var(--blue); }
+.content-full-section { padding: clamp(4rem, 8vh, 6rem) 0; }
+.content-full-inner { width: var(--container); margin: 0 auto; max-width: 1000px; }
+.content-full-inner h2 { font-family: var(--font-display); font-size: clamp(1.5rem, 3vw, 2.25rem); font-weight: 700; letter-spacing: -0.02em; color: var(--bg-navy); line-height: 1.2; margin-top: 3rem; margin-bottom: 1.5rem; }
+.content-full-inner h2:first-child { margin-top: 0; }
+.content-full-inner p { font-size: 1rem; color: var(--text-muted); line-height: 1.85; margin-bottom: 1.25rem; }
+.service-detail-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.25rem; margin: 2rem 0; }
+.service-detail-card { background: #fff; border: 1px solid var(--border); border-radius: 12px; padding: 1.75rem; transition: all 0.4s var(--ease); }
+.service-detail-card:hover { transform: translateY(-3px); box-shadow: 0 8px 30px rgba(0,0,0,0.06); border-color: var(--blue-border); }
+.service-detail-card h4 { font-family: var(--font-display); font-size: 1.05rem; font-weight: 600; color: var(--bg-navy); margin-bottom: 0.5rem; }
+.service-detail-card p { font-size: 0.88rem; color: var(--text-muted); line-height: 1.75; margin-bottom: 0; }
+.service-detail-card .service-number { display: inline-flex; align-items: center; justify-content: center; width: 32px; height: 32px; border-radius: 50%; background: var(--blue-soft); color: var(--blue); font-family: var(--font-display); font-size: 0.85rem; font-weight: 700; margin-bottom: 0.75rem; border: 1px solid var(--blue-border); }
+.cta-section { padding: clamp(5rem, 10vh, 8rem) 0; background: var(--bg-warm); text-align: center; }
+.cta-inner { width: var(--container); margin: 0 auto; }
+.cta-section .section-title { margin-bottom: 0.75rem; } .cta-section .section-desc { margin-bottom: 2.5rem; }
+.cta-actions { display: flex; align-items: center; justify-content: center; gap: 1.25rem; flex-wrap: wrap; }
+.btn-hero { display: inline-flex; align-items: center; gap: 0.6rem; padding: 0.9rem 2rem; font-family: var(--font-body); font-size: 0.9rem; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; border-radius: 6px; cursor: pointer; transition: all 0.35s var(--ease); border: none; }
+.btn-hero.filled { background: var(--blue); color: #fff; }
+.btn-hero.filled:hover { background: var(--blue-hover); transform: translateY(-2px); box-shadow: 0 8px 30px rgba(43, 125, 233, 0.35); }
+.btn-hero .arrow { transition: transform 0.3s var(--ease); } .btn-hero:hover .arrow { transform: translateX(3px); }
+.btn-call { display: inline-flex; align-items: center; gap: 0.6rem; padding: 0.9rem 2rem; font-family: var(--font-body); font-size: 0.9rem; font-weight: 600; color: var(--bg-navy); letter-spacing: 0.03em; border: 1.5px solid var(--border); border-radius: 6px; transition: all 0.3s var(--ease); }
+.btn-call:hover { border-color: var(--bg-navy); background: var(--bg-navy); color: #fff; }
+.footer { background: var(--bg-navy); color: var(--text-light); padding: 4.5rem 0 0; }
+.footer-inner { width: var(--container); margin: 0 auto; display: grid; grid-template-columns: 1.5fr 1fr 1fr 1.2fr; gap: 3rem; padding-bottom: 3.5rem; border-bottom: 1px solid var(--border-light); }
+.footer-brand { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem; }
+.footer-brand img { width: 36px; height: 36px; border-radius: 6px; object-fit: cover; }
+.footer-brand-text { font-family: var(--font-display); font-size: 1.2rem; } .footer-brand-text span { color: var(--blue); }
+.footer-desc { font-size: 0.88rem; color: var(--text-muted-light); line-height: 1.75; max-width: 280px; }
+.footer h4 { font-family: var(--font-display); font-size: 1rem; margin-bottom: 1.25rem; color: var(--text-light); }
+.footer ul li { margin-bottom: 0.6rem; } .footer ul li a { font-size: 0.88rem; color: var(--text-muted-light); transition: color 0.25s var(--ease); } .footer ul li a:hover { color: var(--blue); }
+.footer-contact-item { display: flex; align-items: flex-start; gap: 0.6rem; margin-bottom: 0.75rem; font-size: 0.88rem; color: var(--text-muted-light); }
+.footer-contact-item svg { width: 16px; height: 16px; stroke: var(--blue); fill: none; stroke-width: 2; flex-shrink: 0; margin-top: 3px; }
+.footer-contact-item a { color: var(--text-muted-light); transition: color 0.25s; } .footer-contact-item a:hover { color: var(--blue); }
+.footer-bottom { width: var(--container); margin: 0 auto; display: flex; align-items: center; justify-content: space-between; padding: 1.5rem 0; font-size: 0.8rem; color: var(--text-muted-light); }
+.footer-social a { display: inline-flex; align-items: center; justify-content: center; width: 36px; height: 36px; border-radius: 8px; border: 1px solid var(--border-light); transition: all 0.3s var(--ease); }
+.footer-social a:hover { border-color: var(--blue); background: rgba(43, 125, 233, 0.1); }
+.footer-social svg { width: 16px; height: 16px; fill: var(--text-muted-light); } .footer-social a:hover svg { fill: var(--blue); }
+@media (max-width: 1024px) { .content-two-col { grid-template-columns: 1fr; gap: 2rem; } .sidebar-cta { position: static; } .footer-inner { grid-template-columns: repeat(2, 1fr); gap: 2.5rem; } .comparison-grid { grid-template-columns: 1fr; } .process-grid { grid-template-columns: repeat(2, 1fr); } .service-detail-grid { grid-template-columns: 1fr; } }
+@media (max-width: 768px) { .nav-links { display: none; } .nav-phone { display: none; } .nav-toggle { display: flex; } .nav-links.open { display: flex; flex-direction: column; position: absolute; top: 72px; left: 0; right: 0; background: var(--bg); padding: 1.5rem 1rem; gap: 0; border-bottom: 1px solid var(--border); box-shadow: 0 10px 30px rgba(0,0,0,0.06); } .nav-links.open a { padding: 0.75rem 1rem; font-size: 1rem; border-bottom: 1px solid var(--border); } .nav-links.open a:last-child { border-bottom: none; } .feature-image { margin-top: 0; border-radius: 12px; } .process-grid { grid-template-columns: 1fr; } .service-detail-grid { grid-template-columns: 1fr; } .footer-inner { grid-template-columns: 1fr; gap: 2rem; } .footer-bottom { flex-direction: column; gap: 1rem; text-align: center; } }
+@media (max-width: 480px) { .cta-actions { flex-direction: column; align-items: center; } .services-tags { gap: 0.5rem; } }
+</style>
+</head>
+<body>
+
+<header class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <img src="images/logo.jpg" alt="Tile & Stone Cleaners" loading="lazy">
+      <div class="nav-logo-text">Tile & Stone <span>Cleaners</span></div>
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="nav-right">
+      <a href="tel:0481616303" class="nav-phone">04 81 616 303</a>
+      <a href="contact.html" class="btn-cta">Get a Quote</a>
+      <div class="nav-toggle" id="navToggle" aria-label="Menu" role="button" tabindex="0"><span></span><span></span><span></span></div>
+    </div>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div class="page-hero-inner">
+    <span class="section-label">Material Guide</span>
+    <h1>Terracotta Tile Cleaning, Sealing &amp; Restoration</h1>
+    <div class="breadcrumb"><a href="index.html">Home</a><span>/</span><a href="services.html">Services</a><span>/</span>Terracotta</div>
+  </div>
+</section>
+
+<div class="feature-image reveal">
+  <img src="images/materials/terracotta.png" alt="Terracotta tile surface showing warm reddish-brown natural clay tones and rustic texture">
+</div>
+
+<section class="intro-section">
+  <div class="content-two-col">
+    <div class="content-main reveal">
+
+      <h2>Sydney's Terracotta Tile Cleaning &amp; Restoration Experts</h2>
+      <p>Terracotta tiles are a timeless flooring choice that brings warmth and character to any space. When cared for properly, terracotta is beautiful, durable, resistant to stains, and easy to maintain. At Tile and Stone Cleaners, we specialise in professional terracotta tile cleaning, stripping, sealing, and restoration across Sydney.</p>
+      <p>Whether your terracotta tiles are in a heritage kitchen, a Mediterranean-style courtyard, or a rustic living area, our technicians have the expertise and equipment to restore them to their original beauty. We understand the unique characteristics of terracotta and tailor our approach to suit each surface.</p>
+
+      <h2>What is Terracotta?</h2>
+      <p>The word "terracotta" literally translates to "baked earth" in Italian. Terracotta tiles are made from natural clay that is shaped and fired at relatively low temperatures, producing the distinctive warm, reddish-brown colour that the material is known for. Each tile has subtle variations in colour and texture, giving terracotta its unique, handcrafted character that is difficult to replicate with manufactured alternatives.</p>
+      <p>Terracotta has been used for thousands of years and remains a popular choice for its old-world, Mediterranean and rustic styling. It is one of the most versatile tile materials, suitable for both indoor and outdoor applications including kitchens, hallways, patios, and pool surrounds. Unlike many other ceramic tiles, terracotta feels warmer underfoot, making it a comfortable choice for living areas.</p>
+      <p>The natural variation in each terracotta tile means no two floors are exactly alike. This unique appearance, combined with its warmth and durability, makes terracotta a sought-after material for homeowners who want a floor with genuine character and history.</p>
+
+      <h2>Sealing Requirements</h2>
+      <p>Raw terracotta clay is highly absorbent and porous, which means it stains easily if left unsealed. Spills from coffee, wine, oil, and other common household liquids can penetrate the tile surface within minutes, leaving permanent marks that are extremely difficult to remove without professional intervention.</p>
+      <p>A deep-penetrating impregnating sealer is recommended for terracotta tiles. This type of sealer soaks into the pores of the clay and creates an invisible barrier that repels moisture and stains from within, while still allowing the tile to breathe naturally. Sealing is essential both for new terracotta installations and for maintaining existing floors.</p>
+      <p>When cleaning terracotta tiles, never use pressure above 1,100 PSI. Terracotta is softer than porcelain or granite, and excessive pressure can erode the surface, blast out grout, and cause irreversible damage to the tile face. Always use low-pressure equipment with appropriate cleaning solutions designed for natural clay tiles.</p>
+
+      <h2>Sealing Options for Terracotta</h2>
+      <p>Choosing the right sealer for your terracotta tiles depends on the desired finish, the tile's location, and the level of protection required. There are two main categories of sealers used on terracotta.</p>
+
+      <div class="comparison-grid">
+        <div class="comparison-card recommended">
+          <h3>Impregnating Sealer</h3>
+          <ul class="benefit-list">
+            <li>Uses nano-technology to penetrate deep into the clay's pores for lasting protection</li>
+            <li>Breathable -- allows moisture to escape from within the tile naturally</li>
+            <li>Available in transparent finish that preserves the natural terracotta appearance</li>
+            <li>Also available in colour-enhancing finish that deepens and enriches the reddish-brown tones</li>
+            <li>Long-lasting protection that doesn't require frequent reapplication</li>
+            <li>Shields against both water and oil-based stains</li>
+          </ul>
+          <span class="badge">Recommended</span>
+        </div>
+        <div class="comparison-card">
+          <h3>Topical Sealer</h3>
+          <ul class="benefit-list">
+            <li>Creates a protective coating on the surface of the tile</li>
+            <li>Available in gloss, satin, or matte finish options to suit different aesthetics</li>
+            <li>Approximate lifespan of 3 years before reapplication is needed</li>
+            <li>Enhances the appearance of the tile with a visible sheen</li>
+            <li>Provides a physical barrier against spills and foot traffic wear</li>
+            <li>May require stripping before reapplication to prevent buildup</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="callout-box">
+        <p><strong>Porosity Test:</strong> To determine whether your terracotta tiles need sealing, perform a simple water drop test. Place a few drops of water on the tile surface and observe how quickly it absorbs. If the water soaks in within 1-2 minutes and darkens the tile, the surface is porous and requires sealing. If the water beads up and sits on the surface, the existing sealer is still providing adequate protection. Perform this test in multiple areas, as wear patterns can vary across the floor.</p>
+      </div>
+
+      <h2>Stripping &amp; Sealing Terracotta</h2>
+      <p>Over time, terracotta tiles can lose their beauty as old sealant degrades, foot traffic wears down the protective coating, and dirt becomes embedded in the tile's porous surface. When this happens, the tiles typically need to be stripped back to bare clay and resealed -- a process that should be carried out every 2-3 years depending on the level of foot traffic and exposure.</p>
+      <p>At Tile and Stone Cleaners, we use advanced machinery and professional-grade water-based sealers to strip and reseal terracotta floors. Our process involves removing all existing sealant and buildup, deep cleaning the tile and grout, allowing the surface to dry completely, and then applying fresh sealer in multiple coats for lasting protection.</p>
+      <p>We exclusively use water-based sealers that are low-VOC and environmentally responsible. These sealers penetrate effectively, dry quickly, and produce minimal odour during application -- making them safe for use in occupied homes and businesses.</p>
+
+    </div>
+
+    <aside class="reveal reveal-delay-1">
+      <div class="sidebar-cta">
+        <h3>Get a Free Quote</h3>
+        <p>Need your terracotta tiles cleaned, sealed, or restored? We offer free, no-obligation inspections and quotes across Sydney.</p>
+        <a href="contact.html" class="btn-cta">Request a Quote</a>
+        <a href="tel:0481616303" class="phone-link">or call 04 81 616 303</a>
+      </div>
+    </aside>
+  </div>
+</section>
+
+<section class="content-full-section" style="background: var(--bg-warm);">
+  <div class="content-full-inner reveal">
+    <div style="text-align: center; margin-bottom: 2.5rem;">
+      <span class="section-label">What We Offer</span>
+      <h2 style="margin-bottom: 0.5rem;">Our Terracotta Services</h2>
+      <p style="max-width: 580px; margin: 0 auto;">We offer a comprehensive range of terracotta tile cleaning, restoration, and protection services. Every service is tailored to your tile's specific condition and requirements.</p>
+    </div>
+
+    <div class="service-detail-grid">
+      <div class="service-detail-card">
+        <div class="service-number">1</div>
+        <h4>Stripping &amp; Sealing</h4>
+        <p>Complete strip of old sealant and buildup, deep clean, and reseal of terracotta tiles. We remove all existing coatings back to bare clay before applying fresh, long-lasting sealer protection. Recommended every 2-3 years for high-traffic areas.</p>
+      </div>
+      <div class="service-detail-card">
+        <div class="service-number">2</div>
+        <h4>Cleaning &amp; Sealing</h4>
+        <p>Professional deep clean of terracotta tiles and grout followed by protective sealer application. Ideal for floors where the existing sealer is worn but doesn't require full stripping -- restores the warm, natural appearance of the clay.</p>
+      </div>
+      <div class="service-detail-card">
+        <div class="service-number">3</div>
+        <h4>Tile &amp; Grout Cleaning</h4>
+        <p>Specialised terracotta tile and grout cleaning using professional-grade equipment calibrated for soft natural clay. We extract embedded dirt, grime, and discolouration from both tile faces and grout lines without damaging the delicate surface.</p>
+      </div>
+      <div class="service-detail-card">
+        <div class="service-number">4</div>
+        <h4>Tile Sealing</h4>
+        <p>Seal porous terracotta tiles to prevent staining and moisture damage. Our impregnating sealers create a protective barrier within the clay that repels water and oil-based contaminants while preserving the tile's natural appearance and allowing it to breathe.</p>
+      </div>
+      <div class="service-detail-card">
+        <div class="service-number">5</div>
+        <h4>Stripping</h4>
+        <p>Remove old sealant, wax buildup, and surface residue to restore your terracotta tiles to their original bare clay state. Proper stripping is essential before any new sealer application to ensure adhesion, even coverage, and optimal penetration.</p>
+      </div>
+      <div class="service-detail-card">
+        <div class="service-number">6</div>
+        <h4>Efflorescence Treatment</h4>
+        <p>Remove unsightly white salt deposits that appear on terracotta tile surfaces. Efflorescence is common on terracotta due to its porous nature -- we use specialised chemicals to dissolve and extract these deposits without damaging the underlying clay.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="services-list">
+  <div class="services-list-inner reveal">
+    <h2>Related Services</h2>
+    <div class="services-tags">
+      <a href="cleaning-sealing.html">Cleaning & Sealing</a>
+      <a href="stripping-sealing.html">Stripping & Sealing</a>
+      <a href="tile-grout-cleaning.html">Tile & Grout Cleaning</a>
+      <a href="efflorescence-treatment.html">Efflorescence Treatment</a>
+      <a href="services.html">Tile Sealing</a>
+      <a href="services.html">Stripping</a>
+    </div>
+  </div>
+</section>
+
+<section class="cta-section">
+  <div class="cta-inner reveal">
+    <span class="section-label">Let's Talk</span>
+    <h2 class="section-title">Ready to Restore Your Terracotta?</h2>
+    <p class="section-desc">Get a free, no-obligation quote. We'll inspect your terracotta surfaces and recommend the best treatment plan.</p>
+    <div class="cta-actions">
+      <a href="contact.html" class="btn-hero filled" style="border: none;">Get a Free Quote <svg class="arrow" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      <a href="tel:0481616303" class="btn-call"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M14.5 11.35v1.9a1.27 1.27 0 0 1-1.38 1.27 12.52 12.52 0 0 1-5.46-1.94 12.33 12.33 0 0 1-3.8-3.8A12.52 12.52 0 0 1 1.92 3.3 1.27 1.27 0 0 1 3.17 1.93h1.9a1.27 1.27 0 0 1 1.27 1.09c.08.6.23 1.19.44 1.76a1.27 1.27 0 0 1-.28 1.34L5.6 7.01a10.16 10.16 0 0 0 3.8 3.8l.89-.89a1.27 1.27 0 0 1 1.34-.28c.57.2 1.16.36 1.76.44a1.27 1.27 0 0 1 1.09 1.29z" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg> 04 81 616 303</a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div>
+      <div class="footer-brand"><img src="images/logo.jpg" alt="Tile & Stone Cleaners" loading="lazy"><div class="footer-brand-text">Tile & Stone <span>Cleaners</span></div></div>
+      <p class="footer-desc">Sydney's trusted tile and stone specialists. Cleaning, sealing, restoration and repair across 9 regions with 15+ years of experience.</p>
+    </div>
+    <div><h4>Quick Links</h4><ul><li><a href="services.html">Services</a></li><li><a href="about.html">About Us</a></li><li><a href="contact.html">Contact</a></li><li><a href="sydney.html">Sydney</a></li></ul></div>
+    <div><h4>Service Areas</h4><ul><li><a href="sydney.html">Sydney</a></li><li><a href="sydney.html">North Shore</a></li><li><a href="sydney.html">Northern Beaches</a></li><li><a href="sydney.html">Central Coast</a></li><li><a href="sydney.html">Eastern Suburbs</a></li><li><a href="sydney.html">Hills Shire</a></li><li><a href="sydney.html">Sutherland Shire</a></li><li><a href="sydney.html">Western Suburbs</a></li></ul></div>
+    <div>
+      <h4>Contact</h4>
+      <div class="footer-contact-item"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.81.36 1.6.68 2.34a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.74.32 1.53.55 2.34.68a2 2 0 0 1 1.72 2.05z" stroke-linecap="round" stroke-linejoin="round"/></svg><a href="tel:0481616303">04 81 616 303</a></div>
+      <div class="footer-contact-item"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg><a href="mailto:tileandstonecleaners@mail.com">tileandstonecleaners@mail.com</a></div>
+      <div class="footer-contact-item"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg><div>Mon&ndash;Fri: 8am&ndash;6pm<br>Sat&ndash;Sun: 11am&ndash;3pm</div></div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div>&copy; 2024 Tile & Stone Cleaners. All rights reserved.</div>
+    <div class="footer-social"><a href="https://instagram.com/tileandstonecleanerss/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5"/></svg></a></div>
+  </div>
+</footer>
+
+<script>
+const nav=document.getElementById('nav');window.addEventListener('scroll',()=>{nav.classList.toggle('scrolled',window.scrollY>20)},{passive:true});const toggle=document.getElementById('navToggle');const links=document.getElementById('navLinks');toggle.addEventListener('click',()=>{toggle.classList.toggle('active');links.classList.toggle('open')});links.querySelectorAll('a').forEach(a=>{a.addEventListener('click',()=>{toggle.classList.remove('active');links.classList.remove('open')})});const revealElements=document.querySelectorAll('.reveal');const observer=new IntersectionObserver((entries)=>{entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('visible');observer.unobserve(entry.target)}})},{threshold:0.12,rootMargin:'0px 0px -40px 0px'});revealElements.forEach(el=>observer.observe(el));
+</script>
+</body>
+</html>

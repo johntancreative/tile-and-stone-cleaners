@@ -1,0 +1,1176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Our Services | Tile & Stone Cleaners, Sydney</title>
+<meta name="description" content="Comprehensive tile, grout, and stone cleaning services across Sydney. 18 specialist services including sealing, restoration, polishing, and high pressure cleaning.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* ═══════════════════════════════════════════
+   TILE & STONE CLEANERS — Design System
+   ═══════════════════════════════════════════ */
+
+:root {
+  --bg: #FAFAF7;
+  --bg-warm: #F3F1EC;
+  --bg-navy: #0C2340;
+  --bg-navy-light: #122D4D;
+  --blue: #2B7DE9;
+  --blue-hover: #1A6AD8;
+  --blue-soft: rgba(43, 125, 233, 0.08);
+  --blue-border: rgba(43, 125, 233, 0.2);
+  --text: #1A1A1A;
+  --text-light: #F5F2ED;
+  --text-muted: #6B7280;
+  --text-muted-light: rgba(245, 242, 237, 0.55);
+  --border: rgba(0,0,0,0.08);
+  --border-light: rgba(255,255,255,0.1);
+  --font-display: 'Syne', system-ui, sans-serif;
+  --font-body: 'Inter', system-ui, sans-serif;
+  --ease: cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --container: min(1200px, 100% - 2rem);
+  --container-wide: min(1400px, 100% - 2rem);
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
+body {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--text);
+  background: var(--bg);
+  overflow-x: hidden;
+}
+a { text-decoration: none; color: inherit; }
+img { max-width: 100%; display: block; }
+ul { list-style: none; }
+
+/* ─── Scroll Animations ─── */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.9s var(--ease-out), transform 0.9s var(--ease-out);
+}
+.reveal.visible { opacity: 1; transform: translateY(0); }
+.reveal-delay-1 { transition-delay: 0.1s; }
+.reveal-delay-2 { transition-delay: 0.2s; }
+.reveal-delay-3 { transition-delay: 0.3s; }
+
+/* ═══════════════════════════════
+   NAVIGATION
+   ═══════════════════════════════ */
+
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: rgba(250, 250, 247, 0.92);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.3s var(--ease), box-shadow 0.3s var(--ease);
+}
+.nav.scrolled {
+  border-bottom-color: var(--border);
+  box-shadow: 0 1px 20px rgba(0,0,0,0.04);
+}
+.nav-inner {
+  width: var(--container-wide);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 72px;
+}
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+.nav-logo img {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+.nav-logo-text {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  color: var(--bg-navy);
+  letter-spacing: -0.01em;
+  white-space: nowrap;
+}
+.nav-logo-text span { color: var(--blue); }
+.nav-links {
+  display: flex;
+  gap: 2.5rem;
+  align-items: center;
+}
+.nav-links a {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  letter-spacing: 0.02em;
+  transition: color 0.25s var(--ease);
+  position: relative;
+}
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 1.5px;
+  background: var(--blue);
+  transition: width 0.3s var(--ease-out);
+}
+.nav-links a:hover { color: var(--text); }
+.nav-links a:hover::after { width: 100%; }
+.nav-links a.active { color: var(--text); }
+.nav-links a.active::after { width: 100%; }
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+.nav-phone {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--text);
+  letter-spacing: 0.01em;
+}
+.btn-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.65rem 1.5rem;
+  background: var(--blue);
+  color: #fff;
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s var(--ease);
+  text-transform: uppercase;
+}
+.btn-cta:hover {
+  background: var(--blue-hover);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 20px rgba(43, 125, 233, 0.3);
+}
+
+/* Hamburger */
+.nav-toggle { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; }
+.nav-toggle span { display: block; width: 22px; height: 2px; background: var(--text); transition: all 0.3s var(--ease); }
+.nav-toggle.active span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+.nav-toggle.active span:nth-child(2) { opacity: 0; }
+.nav-toggle.active span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+
+/* ═══════════════════════════════
+   PAGE HERO (Inner Pages)
+   ═══════════════════════════════ */
+
+.page-hero {
+  background: var(--bg-navy);
+  padding: 10rem 0 3.5rem;
+  text-align: center;
+  position: relative;
+}
+.page-hero-inner {
+  width: var(--container);
+  margin: 0 auto;
+}
+.page-hero .section-label {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--blue);
+  margin-bottom: 1rem;
+  display: block;
+}
+.page-hero h1 {
+  font-family: var(--font-display);
+  font-size: clamp(2.25rem, 5vw, 3.5rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--text-light);
+  line-height: 1.15;
+  margin-bottom: 1rem;
+}
+.breadcrumb {
+  font-size: 0.85rem;
+  color: var(--text-muted-light);
+}
+.breadcrumb a {
+  color: var(--text-muted-light);
+  transition: color 0.25s var(--ease);
+}
+.breadcrumb a:hover { color: var(--blue); }
+.breadcrumb span { margin: 0 0.5rem; }
+
+/* ═══════════════════════════════
+   SECTION COMMON
+   ═══════════════════════════════ */
+
+section {
+  scroll-margin-top: 72px;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+.section-label {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--blue);
+  margin-bottom: 1rem;
+  display: block;
+}
+.section-title {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--bg-navy);
+  line-height: 1.15;
+  margin-bottom: 0.75rem;
+}
+.section-line {
+  width: 50px;
+  height: 2px;
+  background: var(--blue);
+  margin: 1.25rem auto 0;
+  border-radius: 2px;
+}
+.section-desc {
+  font-size: 1.05rem;
+  color: var(--text-muted);
+  max-width: 540px;
+  margin: 1rem auto 0;
+  line-height: 1.75;
+}
+
+/* ═══════════════════════════════
+   PROMISE SECTION
+   ═══════════════════════════════ */
+
+.promise {
+  padding: clamp(4rem, 8vh, 6rem) 0;
+  background: var(--bg-warm);
+}
+.promise-inner {
+  width: var(--container);
+  margin: 0 auto;
+  text-align: center;
+  max-width: 720px;
+}
+.promise-inner p {
+  font-size: 1.15rem;
+  color: var(--text-muted);
+  line-height: 1.85;
+}
+
+/* ═══════════════════════════════
+   SERVICES GRID
+   ═══════════════════════════════ */
+
+.services {
+  padding: clamp(5rem, 10vh, 8rem) 0;
+  background: var(--bg);
+}
+.services-grid {
+  width: var(--container);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+.service-card {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all 0.4s var(--ease);
+  position: relative;
+  display: block;
+  cursor: pointer;
+}
+.service-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--blue);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s var(--ease-out);
+  z-index: 2;
+}
+.service-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.06);
+  border-color: var(--blue-border);
+}
+.service-card:hover::before {
+  transform: scaleX(1);
+}
+.service-card-img {
+  width: 100%;
+  aspect-ratio: 16/10;
+  overflow: hidden;
+}
+.service-card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s var(--ease);
+}
+.service-card:hover .service-card-img img {
+  transform: scale(1.05);
+}
+.service-card-body {
+  padding: 1.75rem 1.75rem 1.5rem;
+}
+.service-card h3 {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  color: var(--bg-navy);
+  margin-bottom: 0.5rem;
+}
+.service-card p {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  line-height: 1.7;
+  margin-bottom: 1rem;
+}
+.service-link {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--blue);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  transition: gap 0.3s var(--ease);
+}
+.service-link:hover { gap: 0.7rem; }
+
+@media (max-width: 768px) {
+  .services-grid { grid-template-columns: 1fr; gap: 1rem; }
+}
+
+/* ═══════════════════════════════
+   MATERIAL SPECIALISTS
+   ═══════════════════════════════ */
+
+.materials-section {
+  background: var(--bg-navy);
+  padding: clamp(5rem, 10vh, 8rem) 0;
+}
+.materials-section .section-title {
+  color: var(--text-light);
+}
+.materials-section .section-desc {
+  color: var(--text-muted-light);
+}
+.materials-section .section-line {
+  background: var(--blue);
+}
+.mat-grid {
+  width: var(--container-wide);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1rem;
+  margin-top: 3rem;
+}
+.mat-card {
+  position: relative;
+  aspect-ratio: 1;
+  border-radius: 10px;
+  overflow: hidden;
+  text-decoration: none;
+}
+.mat-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s var(--ease);
+}
+.mat-card:hover img {
+  transform: scale(1.08);
+}
+.mat-card-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(12,35,64,0.85) 0%, rgba(12,35,64,0.2) 50%, transparent 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 1.25rem;
+  transition: background 0.3s var(--ease);
+}
+.mat-card:hover .mat-card-overlay {
+  background: linear-gradient(to top, rgba(43,125,233,0.8) 0%, rgba(43,125,233,0.15) 50%, transparent 100%);
+}
+.mat-card-name {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-light);
+  margin-bottom: 0.25rem;
+}
+.mat-card-link {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: rgba(255,255,255,0.6);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  transition: color 0.2s, gap 0.2s;
+}
+.mat-card:hover .mat-card-link {
+  color: white;
+  gap: 0.5rem;
+}
+
+@media (max-width: 1024px) {
+  .mat-grid { grid-template-columns: repeat(4, 1fr); }
+}
+@media (max-width: 768px) {
+  .mat-grid { grid-template-columns: repeat(3, 1fr); }
+}
+@media (max-width: 480px) {
+  .mat-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* ═══════════════════════════════
+   CTA SECTION
+   ═══════════════════════════════ */
+
+.cta-section {
+  padding: clamp(5rem, 10vh, 8rem) 0;
+  background: var(--bg-warm);
+  text-align: center;
+}
+.cta-inner {
+  width: var(--container);
+  margin: 0 auto;
+}
+.cta-section .section-title {
+  margin-bottom: 0.75rem;
+}
+.cta-section .section-desc {
+  margin-bottom: 2.5rem;
+}
+.cta-actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+}
+.btn-hero {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.9rem 2rem;
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.35s var(--ease);
+  border: none;
+}
+.btn-hero.filled {
+  background: var(--blue);
+  color: #fff;
+}
+.btn-hero.filled:hover {
+  background: var(--blue-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(43, 125, 233, 0.35);
+}
+.btn-hero .arrow {
+  transition: transform 0.3s var(--ease);
+}
+.btn-hero:hover .arrow {
+  transform: translateX(3px);
+}
+.btn-call {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.9rem 2rem;
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--bg-navy);
+  letter-spacing: 0.03em;
+  border: 1.5px solid var(--border);
+  border-radius: 6px;
+  transition: all 0.3s var(--ease);
+}
+.btn-call:hover {
+  border-color: var(--bg-navy);
+  background: var(--bg-navy);
+  color: #fff;
+}
+
+/* ═══════════════════════════════
+   FOOTER
+   ═══════════════════════════════ */
+
+.footer {
+  background: var(--bg-navy);
+  color: var(--text-light);
+  padding: 4.5rem 0 0;
+}
+.footer-inner {
+  width: var(--container);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1.2fr;
+  gap: 3rem;
+  padding-bottom: 3.5rem;
+  border-bottom: 1px solid var(--border-light);
+}
+.footer-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+.footer-brand img {
+  width: 36px;
+  height: 36px;
+  border-radius: 6px;
+  object-fit: cover;
+}
+.footer-brand-text {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+}
+.footer-brand-text span { color: var(--blue); }
+.footer-desc {
+  font-size: 0.88rem;
+  color: var(--text-muted-light);
+  line-height: 1.75;
+  max-width: 280px;
+}
+.footer h4 {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  margin-bottom: 1.25rem;
+  color: var(--text-light);
+}
+.footer ul li { margin-bottom: 0.6rem; }
+.footer ul li a {
+  font-size: 0.88rem;
+  color: var(--text-muted-light);
+  transition: color 0.25s var(--ease);
+}
+.footer ul li a:hover { color: var(--blue); }
+.footer-contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  margin-bottom: 0.75rem;
+  font-size: 0.88rem;
+  color: var(--text-muted-light);
+}
+.footer-contact-item svg {
+  width: 16px;
+  height: 16px;
+  stroke: var(--blue);
+  fill: none;
+  stroke-width: 2;
+  flex-shrink: 0;
+  margin-top: 3px;
+}
+.footer-contact-item a { color: var(--text-muted-light); transition: color 0.25s; }
+.footer-contact-item a:hover { color: var(--blue); }
+
+.footer-bottom {
+  width: var(--container);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem 0;
+  font-size: 0.8rem;
+  color: var(--text-muted-light);
+}
+.footer-social a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  border: 1px solid var(--border-light);
+  transition: all 0.3s var(--ease);
+}
+.footer-social a:hover {
+  border-color: var(--blue);
+  background: rgba(43, 125, 233, 0.1);
+}
+.footer-social svg {
+  width: 16px;
+  height: 16px;
+  fill: var(--text-muted-light);
+}
+.footer-social a:hover svg { fill: var(--blue); }
+
+/* ═══════════════════════════════
+   RESPONSIVE
+   ═══════════════════════════════ */
+
+@media (max-width: 1024px) {
+  .services-grid { grid-template-columns: repeat(2, 1fr); }
+  .footer-inner { grid-template-columns: repeat(2, 1fr); gap: 2.5rem; }
+}
+
+@media (max-width: 768px) {
+  .nav-links { display: none; }
+  .nav-phone { display: none; }
+  .nav-toggle { display: flex; }
+  .nav-links.open {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 72px;
+    left: 0;
+    right: 0;
+    background: var(--bg);
+    padding: 1.5rem 1rem;
+    gap: 0;
+    border-bottom: 1px solid var(--border);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+  }
+  .nav-links.open a {
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+    border-bottom: 1px solid var(--border);
+  }
+  .nav-links.open a:last-child { border-bottom: none; }
+
+  .services-grid { grid-template-columns: 1fr; gap: 1rem; }
+  .footer-inner { grid-template-columns: 1fr; gap: 2rem; }
+  .footer-bottom { flex-direction: column; gap: 1rem; text-align: center; }
+}
+
+@media (max-width: 480px) {
+  .cta-actions { flex-direction: column; align-items: center; }
+}
+
+/* Service Modal */
+.modal-overlay {
+  position: fixed; inset: 0; z-index: 2000;
+  background: rgba(0,0,0,0.6);
+  backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px);
+  display: flex; align-items: center; justify-content: center;
+  padding: 1.5rem;
+  opacity: 0; visibility: hidden;
+  transition: opacity 0.3s var(--ease), visibility 0.3s;
+}
+.modal-overlay.active { opacity: 1; visibility: visible; }
+.modal {
+  background: var(--bg); border-radius: 16px;
+  max-width: 560px; width: 100%; max-height: 85vh; overflow-y: auto;
+  transform: translateY(20px) scale(0.97);
+  transition: transform 0.35s var(--ease-out);
+  box-shadow: 0 24px 64px rgba(0,0,0,0.2);
+}
+.modal-overlay.active .modal { transform: translateY(0) scale(1); }
+.modal-img { width: 100%; aspect-ratio: 16/9; overflow: hidden; border-radius: 16px 16px 0 0; }
+.modal-img img { width: 100%; height: 100%; object-fit: cover; }
+.modal-body { padding: 2rem; }
+.modal-body h3 {
+  font-family: var(--font-display); font-size: 1.5rem; font-weight: 700;
+  margin-bottom: 0.75rem; color: var(--text);
+}
+.modal-body p {
+  font-size: 0.95rem; line-height: 1.7; color: var(--text-muted); margin-bottom: 1rem;
+}
+.modal-body ul { list-style: none; padding: 0; margin-bottom: 1.5rem; }
+.modal-body ul li {
+  position: relative; padding-left: 1.25rem;
+  font-size: 0.9rem; line-height: 1.7; color: var(--text-muted);
+}
+.modal-body ul li::before {
+  content: ''; position: absolute; left: 0; top: 0.6em;
+  width: 6px; height: 6px; border-radius: 50%; background: var(--blue);
+}
+.modal-close {
+  position: absolute; top: 1rem; right: 1rem;
+  width: 36px; height: 36px; border-radius: 50%; border: none;
+  background: rgba(0,0,0,0.4); color: white; font-size: 1.25rem;
+  cursor: pointer; display: flex; align-items: center; justify-content: center;
+  transition: background 0.2s; z-index: 1;
+}
+.modal-close:hover { background: rgba(0,0,0,0.6); }
+.modal-actions { display: flex; gap: 0.75rem; flex-wrap: wrap; }
+.modal-cta {
+  display: inline-flex; align-items: center; gap: 0.5rem;
+  padding: 0.75rem 1.5rem; border-radius: 6px;
+  font-weight: 600; font-size: 0.9rem; text-decoration: none; transition: all 0.2s;
+}
+.modal-cta-primary { background: var(--blue); color: white; }
+.modal-cta-primary:hover { background: var(--blue-hover); }
+.modal-cta-outline {
+  background: transparent; color: var(--bg-navy);
+  border: 1.5px solid var(--border);
+}
+.modal-cta-outline:hover { border-color: var(--blue); color: var(--blue); }
+</style>
+</head>
+<body>
+
+<!-- ═══════════ NAVIGATION ═══════════ -->
+<header class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <img src="images/logo.jpg" alt="Tile & Stone Cleaners" loading="lazy">
+      <div class="nav-logo-text">Tile & Stone <span>Cleaners</span></div>
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="index.html">Home</a>
+      <a href="services.html" class="active">Services</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="nav-right">
+      <a href="tel:0481616303" class="nav-phone">04 81 616 303</a>
+      <a href="contact.html" class="btn-cta">Get a Quote</a>
+      <div class="nav-toggle" id="navToggle" aria-label="Menu" role="button" tabindex="0">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ═══════════ PAGE HERO ═══════════ -->
+<section class="page-hero">
+  <div class="page-hero-inner">
+    <span class="section-label">What We Do</span>
+    <h1>Our Services</h1>
+    <div class="breadcrumb">
+      <a href="index.html">Home</a>
+      <span>/</span>
+      Services
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ PROMISE ═══════════ -->
+<section class="promise">
+  <div class="promise-inner reveal">
+    <span class="section-label">Our Promise</span>
+    <p>We guarantee complete satisfaction regarding workmanship on all tile, grout, and stone cleaning services. From our many years of experience and the feedback from thousands of loyal customers, we are confident in delivering results that exceed expectations every time.</p>
+  </div>
+</section>
+
+<!-- ═══════════ CORE SERVICES ═══════════ -->
+<section class="services" id="services">
+  <div class="section-header reveal">
+    <span class="section-label">What We Do</span>
+    <h2 class="section-title">Core Services</h2>
+    <div class="section-line"></div>
+    <p class="section-desc">Professional cleaning, sealing, and restoration for every tile and stone surface.</p>
+  </div>
+  <div class="services-grid">
+
+    <div class="service-card reveal" data-modal="tile-cleaning">
+      <div class="service-card-img"><img src="images/services/tile-cleaning.png" alt="Tile and Grout Cleaning" loading="lazy"></div>
+      <div class="service-card-body">
+        <h3>Tile & Grout Cleaning</h3>
+        <p>Deep extraction cleaning to remove built-up grime, grease, and bacteria from tile and grout lines.</p>
+        <span class="service-link">Learn more <span>&rarr;</span></span>
+      </div>
+    </div>
+
+    <div class="service-card reveal reveal-delay-1" data-modal="sealing">
+      <div class="service-card-img"><img src="images/services/sealing.png" alt="Cleaning & Sealing" loading="lazy"></div>
+      <div class="service-card-body">
+        <h3>Cleaning & Sealing</h3>
+        <p>Professional cleaning followed by protective sealant application for long-lasting surface protection.</p>
+        <span class="service-link">Learn more <span>&rarr;</span></span>
+      </div>
+    </div>
+
+    <div class="service-card reveal reveal-delay-2" data-modal="stripping">
+      <div class="service-card-img"><img src="images/services/regrouting.png" alt="Stripping & Sealing" loading="lazy"></div>
+      <div class="service-card-body">
+        <h3>Stripping & Sealing</h3>
+        <p>Complete removal of old sealant and coatings, followed by fresh sealer application for a renewed finish.</p>
+        <span class="service-link">Learn more <span>&rarr;</span></span>
+      </div>
+    </div>
+
+    <div class="service-card reveal" data-modal="honing">
+      <div class="service-card-img"><img src="images/services/restoration.png" alt="Stone Honing" loading="lazy"></div>
+      <div class="service-card-body">
+        <h3>Stone Honing</h3>
+        <p>Diamond abrasive honing to achieve a smooth, matte finish that removes scratches and wear marks.</p>
+        <span class="service-link">Learn more <span>&rarr;</span></span>
+      </div>
+    </div>
+
+    <div class="service-card reveal reveal-delay-1" data-modal="polishing">
+      <div class="service-card-img"><img src="images/services/polishing.png" alt="Stone Polishing" loading="lazy"></div>
+      <div class="service-card-body">
+        <h3>Stone Polishing</h3>
+        <p>Multi-stage diamond polishing to restore a high-gloss, mirror-like finish to natural stone surfaces.</p>
+        <span class="service-link">Learn more <span>&rarr;</span></span>
+      </div>
+    </div>
+
+    <div class="service-card reveal reveal-delay-2" data-modal="pressure">
+      <div class="service-card-img"><img src="images/services/pressure-cleaning.png" alt="High Pressure Cleaning" loading="lazy"></div>
+      <div class="service-card-body">
+        <h3>High-Pressure Cleaning</h3>
+        <p>Industrial-strength pressure washing to remove dirt, algae, mould, and moss from outdoor surfaces.</p>
+        <span class="service-link">Learn more <span>&rarr;</span></span>
+      </div>
+    </div>
+
+    <div class="service-card reveal" data-modal="efflorescence">
+      <div class="service-card-img"><img src="images/services/efflorescence.png" alt="Efflorescence Treatment" loading="lazy"></div>
+      <div class="service-card-body">
+        <h3>Efflorescence Treatment</h3>
+        <p>Removal of white mineral salt deposits that form on stone and tile surfaces due to moisture migration.</p>
+        <span class="service-link">Learn more <span>&rarr;</span></span>
+      </div>
+    </div>
+
+    <div class="service-card reveal reveal-delay-1" data-modal="mould">
+      <div class="service-card-img"><img src="images/services/mould-treatment.png" alt="Mould Treatment" loading="lazy"></div>
+      <div class="service-card-body">
+        <h3>Mould Treatment</h3>
+        <p>Professional mould removal and treatment to eliminate spores and prevent regrowth on tile and grout.</p>
+        <span class="service-link">Learn more <span>&rarr;</span></span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Service Modal -->
+<div class="modal-overlay" id="serviceModal">
+  <div class="modal" role="dialog">
+    <button class="modal-close" aria-label="Close">&times;</button>
+    <div class="modal-img"><img id="modalImg" src="" alt=""></div>
+    <div class="modal-body">
+      <h3 id="modalTitle"></h3>
+      <p id="modalDesc"></p>
+      <ul id="modalList"></ul>
+      <div class="modal-actions">
+        <a id="modalLearnMore" href="#" class="modal-cta modal-cta-outline">Learn More</a>
+        <a href="contact.html" class="modal-cta modal-cta-primary">
+          Get a Quote
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════ MATERIAL SPECIALISTS ═══════════ -->
+<section class="materials-section">
+  <div class="section-header reveal" style="text-align: center;">
+    <span class="section-label" style="color: var(--blue);">Surfaces We Specialise In</span>
+    <h2 class="section-title">Material Specialists</h2>
+    <div class="section-line"></div>
+    <p class="section-desc">Every surface is different. Tap a material to see our full cleaning and care guide.</p>
+  </div>
+  <div class="mat-grid">
+    <a href="marble.html" class="mat-card reveal">
+      <img src="images/materials/marble.png" alt="Marble" loading="lazy">
+      <div class="mat-card-overlay"><span class="mat-card-name">Marble</span><span class="mat-card-link">View guide &rarr;</span></div>
+    </a>
+    <a href="bluestone.html" class="mat-card reveal reveal-delay-1">
+      <img src="images/materials/bluestone.png" alt="Bluestone" loading="lazy">
+      <div class="mat-card-overlay"><span class="mat-card-name">Bluestone</span><span class="mat-card-link">View guide &rarr;</span></div>
+    </a>
+    <a href="travertine.html" class="mat-card reveal reveal-delay-2">
+      <img src="images/materials/travertine.png" alt="Travertine" loading="lazy">
+      <div class="mat-card-overlay"><span class="mat-card-name">Travertine</span><span class="mat-card-link">View guide &rarr;</span></div>
+    </a>
+    <a href="sandstone.html" class="mat-card reveal reveal-delay-3">
+      <img src="images/materials/sandstone.png" alt="Sandstone" loading="lazy">
+      <div class="mat-card-overlay"><span class="mat-card-name">Sandstone</span><span class="mat-card-link">View guide &rarr;</span></div>
+    </a>
+    <a href="terrazzo.html" class="mat-card reveal">
+      <img src="images/materials/terrazzo.png" alt="Terrazzo" loading="lazy">
+      <div class="mat-card-overlay"><span class="mat-card-name">Terrazzo</span><span class="mat-card-link">View guide &rarr;</span></div>
+    </a>
+    <a href="slate.html" class="mat-card reveal reveal-delay-1">
+      <img src="images/materials/slate.png" alt="Slate" loading="lazy">
+      <div class="mat-card-overlay"><span class="mat-card-name">Slate</span><span class="mat-card-link">View guide &rarr;</span></div>
+    </a>
+    <a href="limestone.html" class="mat-card reveal reveal-delay-2">
+      <img src="images/materials/limestone.png" alt="Limestone" loading="lazy">
+      <div class="mat-card-overlay"><span class="mat-card-name">Limestone</span><span class="mat-card-link">View guide &rarr;</span></div>
+    </a>
+    <a href="ceramic.html" class="mat-card reveal reveal-delay-3">
+      <img src="images/materials/ceramic.png" alt="Ceramic" loading="lazy">
+      <div class="mat-card-overlay"><span class="mat-card-name">Ceramic</span><span class="mat-card-link">View guide &rarr;</span></div>
+    </a>
+    <a href="porcelain.html" class="mat-card reveal">
+      <img src="images/materials/porcelain.png" alt="Porcelain" loading="lazy">
+      <div class="mat-card-overlay"><span class="mat-card-name">Porcelain</span><span class="mat-card-link">View guide &rarr;</span></div>
+    </a>
+    <a href="terracotta.html" class="mat-card reveal reveal-delay-1">
+      <img src="images/materials/terracotta.png" alt="Terracotta" loading="lazy">
+      <div class="mat-card-overlay"><span class="mat-card-name">Terracotta</span><span class="mat-card-link">View guide &rarr;</span></div>
+    </a>
+    <a href="granite.html" class="mat-card reveal reveal-delay-2">
+      <img src="images/materials/granite.png" alt="Granite" loading="lazy">
+      <div class="mat-card-overlay"><span class="mat-card-name">Granite</span><span class="mat-card-link">View guide &rarr;</span></div>
+    </a>
+    <a href="concrete.html" class="mat-card reveal reveal-delay-3">
+      <img src="images/materials/concrete.png" alt="Concrete" loading="lazy">
+      <div class="mat-card-overlay"><span class="mat-card-name">Concrete</span><span class="mat-card-link">View guide &rarr;</span></div>
+    </a>
+    <a href="vinyl.html" class="mat-card reveal">
+      <img src="images/materials/vinyl.png" alt="Vinyl" loading="lazy">
+      <div class="mat-card-overlay"><span class="mat-card-name">Vinyl</span><span class="mat-card-link">View guide &rarr;</span></div>
+    </a>
+    <a href="pavers.html" class="mat-card reveal reveal-delay-1">
+      <img src="images/materials/pavers.png" alt="Pavers" loading="lazy">
+      <div class="mat-card-overlay"><span class="mat-card-name">Pavers</span><span class="mat-card-link">View guide &rarr;</span></div>
+    </a>
+  </div>
+</section>
+
+<!-- ═══════════ CTA ═══════════ -->
+<section class="cta-section">
+  <div class="cta-inner reveal">
+    <span class="section-label">Let's Talk</span>
+    <h2 class="section-title">Ready to Restore Your Surfaces?</h2>
+    <p class="section-desc">Get a free, no-obligation quote. We'll inspect your surfaces and recommend the best treatment plan.</p>
+    <div class="cta-actions">
+      <a href="contact.html" class="btn-hero filled" style="border: none;">
+        Get a Free Quote
+        <svg class="arrow" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+      <a href="tel:0481616303" class="btn-call">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M14.5 11.35v1.9a1.27 1.27 0 0 1-1.38 1.27 12.52 12.52 0 0 1-5.46-1.94 12.33 12.33 0 0 1-3.8-3.8A12.52 12.52 0 0 1 1.92 3.3 1.27 1.27 0 0 1 3.17 1.93h1.9a1.27 1.27 0 0 1 1.27 1.09c.08.6.23 1.19.44 1.76a1.27 1.27 0 0 1-.28 1.34L5.6 7.01a10.16 10.16 0 0 0 3.8 3.8l.89-.89a1.27 1.27 0 0 1 1.34-.28c.57.2 1.16.36 1.76.44a1.27 1.27 0 0 1 1.09 1.29z" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        04 81 616 303
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ FOOTER ═══════════ -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div>
+      <div class="footer-brand">
+        <img src="images/logo.jpg" alt="Tile & Stone Cleaners" loading="lazy">
+        <div class="footer-brand-text">Tile & Stone <span>Cleaners</span></div>
+      </div>
+      <p class="footer-desc">Sydney's trusted tile and stone specialists. Cleaning, sealing, restoration and repair across 9 regions with 15+ years of experience.</p>
+    </div>
+    <div>
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="sydney.html">Sydney</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Service Areas</h4>
+      <ul>
+        <li><a href="sydney.html">Sydney</a></li>
+        <li><a href="sydney.html">North Shore</a></li>
+        <li><a href="sydney.html">Northern Beaches</a></li>
+        <li><a href="sydney.html">Central Coast</a></li>
+        <li><a href="sydney.html">Eastern Suburbs</a></li>
+        <li><a href="sydney.html">Hills Shire</a></li>
+        <li><a href="sydney.html">Sutherland Shire</a></li>
+        <li><a href="sydney.html">Western Suburbs</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <div class="footer-contact-item">
+        <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.81.36 1.6.68 2.34a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.74.32 1.53.55 2.34.68a2 2 0 0 1 1.72 2.05z" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <a href="tel:0481616303">04 81 616 303</a>
+      </div>
+      <div class="footer-contact-item">
+        <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        <a href="mailto:tileandstonecleaners@mail.com">tileandstonecleaners@mail.com</a>
+      </div>
+      <div class="footer-contact-item">
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        <div>
+          Mon&ndash;Fri: 8am&ndash;6pm<br>
+          Sat&ndash;Sun: 11am&ndash;3pm
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div>&copy; 2024 Tile & Stone Cleaners. All rights reserved.</div>
+    <div class="footer-social">
+      <a href="https://instagram.com/tileandstonecleanerss/" target="_blank" rel="noopener" aria-label="Instagram">
+        <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5"/></svg>
+      </a>
+    </div>
+  </div>
+</footer>
+
+<!-- ═══════════ SCRIPTS ═══════════ -->
+<script>
+// Sticky nav
+const nav = document.getElementById('nav');
+window.addEventListener('scroll', () => {
+  nav.classList.toggle('scrolled', window.scrollY > 20);
+}, { passive: true });
+
+// Mobile menu
+const toggle = document.getElementById('navToggle');
+const links = document.getElementById('navLinks');
+toggle.addEventListener('click', () => {
+  toggle.classList.toggle('active');
+  links.classList.toggle('open');
+});
+links.querySelectorAll('a').forEach(a => {
+  a.addEventListener('click', () => {
+    toggle.classList.remove('active');
+    links.classList.remove('open');
+  });
+});
+
+// Scroll reveal
+const revealElements = document.querySelectorAll('.reveal');
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      observer.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+revealElements.forEach(el => observer.observe(el));
+
+// Service modals
+const serviceData = {
+  'tile-cleaning': {
+    img: 'images/services/tile-cleaning.png',
+    title: 'Tile & Grout Cleaning',
+    desc: 'Our deep extraction cleaning process removes years of built-up grime, grease, and bacteria from tile surfaces and grout lines. We use professional-grade rotary machines and hot water extraction to deliver results that regular mopping simply can\'t match.',
+    points: ['Hot water extraction and rotary scrubbing', 'Removes deep-set stains, grease, and bacteria', 'Suitable for ceramic, porcelain, terracotta, and more', 'Kitchen, bathroom, and commercial floor cleaning', 'Safe, non-toxic cleaning solutions'],
+    learnMore: 'tile-grout-cleaning.html'
+  },
+  'sealing': {
+    img: 'images/services/sealing.png',
+    title: 'Cleaning & Sealing',
+    desc: 'We apply professional-grade penetrating and topical sealants that create an invisible barrier against stains, moisture, and everyday wear. Sealing extends the life of your surfaces and makes routine cleaning significantly easier.',
+    points: ['Penetrating sealers for natural stone', 'Topical sealers for high-traffic areas', 'Protects against water, oil, and stain penetration', 'Extends surface lifespan by years', 'Recommended after every professional clean'],
+    learnMore: 'cleaning-sealing.html'
+  },
+  'stripping': {
+    img: 'images/services/regrouting.png',
+    title: 'Stripping & Sealing',
+    desc: 'Old sealant breaks down over time, leaving your surfaces vulnerable. We completely strip old coatings using professional-grade chemicals and equipment, then apply fresh, high-quality sealer for renewed protection and appearance.',
+    points: ['Full removal of old, degraded sealant', 'Chemical and mechanical stripping methods', 'Surface preparation for optimal sealer adhesion', 'Fresh sealer application in your choice of finish', 'Recommended every 2-10 years depending on traffic'],
+    learnMore: 'stripping-sealing.html'
+  },
+  'honing': {
+    img: 'images/services/restoration.png',
+    title: 'Stone Honing',
+    desc: 'Honing uses diamond abrasives to create a smooth, matte finish that removes scratches and wear marks. The result is a velvety surface that\'s beautiful to look at and easier to maintain than a polished finish.',
+    points: ['Diamond abrasive honing process', 'Removes scratches and surface wear', 'Creates a smooth, satin-matte finish', 'Works on marble, limestone, travertine, terrazzo', 'Lower maintenance than polished finishes'],
+    learnMore: 'stone-honing.html'
+  },
+  'polishing': {
+    img: 'images/services/polishing.png',
+    title: 'Stone Polishing',
+    desc: 'Our multi-stage diamond polishing process restores a high-gloss, mirror-like finish to natural stone. Fine-grade abrasive discs progressively refine the surface until the natural crystals reflect light beautifully.',
+    points: ['Multi-stage fine diamond abrasive process', 'Restores mirror-like high-gloss finish', 'Removes microscopic scratches', 'Smaller pores means easier cleaning', 'Suitable for marble, granite, terrazzo, limestone'],
+    learnMore: 'stone-polishing.html'
+  },
+  'pressure': {
+    img: 'images/services/pressure-cleaning.png',
+    title: 'High-Pressure Cleaning',
+    desc: 'Our industrial-strength pressure washing removes built-up dirt, algae, mould, and moss from outdoor surfaces. We adjust pressure levels to suit each surface type, ensuring thorough cleaning without damage.',
+    points: ['Driveways, patios, and pool surrounds', 'Removes algae, mould, moss, and black stains', 'Adjustable pressure for different surfaces', 'Sandstone, bluestone, concrete, and pavers', 'Pairs perfectly with sealing for lasting results'],
+    learnMore: 'pressure-cleaning.html'
+  },
+  'efflorescence': {
+    img: 'images/services/efflorescence.png',
+    title: 'Efflorescence Treatment',
+    desc: 'Efflorescence is the white, powdery deposit of mineral salts that forms on stone and tile surfaces when moisture migrates through the material. Our specialised equipment and chemical solutions safely remove these deposits from both indoor and outdoor surfaces.',
+    points: ['Removes white salt crystal buildup', 'Treats both indoor and outdoor surfaces', 'Specialised chemical solutions', 'Prevents recurrence with proper sealing', 'Safe for all natural stone types'],
+    learnMore: 'efflorescence-treatment.html'
+  },
+  'mould': {
+    img: 'images/services/mould-treatment.png',
+    title: 'Mould Treatment',
+    desc: 'Mould and mildew thrive in damp areas like bathrooms, showers, and outdoor pavers. Our professional treatment eliminates existing mould spores and applies preventative solutions to inhibit regrowth.',
+    points: ['Professional mould and mildew removal', 'Eliminates spores at the source', 'Preventative treatment against regrowth', 'Safe for grout, tile, and stone', 'Ideal for bathrooms, showers, and wet areas'],
+    learnMore: 'mould-treatment.html'
+  }
+};
+
+const overlay = document.getElementById('serviceModal');
+const modalImg = document.getElementById('modalImg');
+const modalTitle = document.getElementById('modalTitle');
+const modalDesc = document.getElementById('modalDesc');
+const modalList = document.getElementById('modalList');
+const modalLearnMore = document.getElementById('modalLearnMore');
+
+document.querySelectorAll('.service-card[data-modal]').forEach(card => {
+  card.style.cursor = 'pointer';
+  card.addEventListener('click', () => {
+    const data = serviceData[card.getAttribute('data-modal')];
+    if (!data) return;
+    modalImg.src = data.img;
+    modalImg.alt = data.title;
+    modalTitle.textContent = data.title;
+    modalDesc.textContent = data.desc;
+    modalList.innerHTML = data.points.map(p => '<li>' + p + '</li>').join('');
+    modalLearnMore.href = data.learnMore;
+    overlay.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  });
+});
+
+function closeModal() {
+  overlay.classList.remove('active');
+  document.body.style.overflow = '';
+}
+overlay.querySelector('.modal-close').addEventListener('click', closeModal);
+overlay.addEventListener('click', e => { if (e.target === overlay) closeModal(); });
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+</script>
+</body>
+</html>

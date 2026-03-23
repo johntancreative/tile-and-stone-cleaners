@@ -1,0 +1,1256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Limestone Cleaning, Sealing & Restoration Sydney | Tile & Stone Cleaners</title>
+<meta name="description" content="Professional limestone tile and grout cleaning, stripping, sealing, and restoration in Sydney. Expert limestone floor care with pH-neutral treatments, impregnating sealers, honing, polishing, and acid etch repair. Free quotes.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* ===================================
+   TILE & STONE CLEANERS -- Design System
+   =================================== */
+
+:root {
+  --bg: #FAFAF7;
+  --bg-warm: #F3F1EC;
+  --bg-navy: #0C2340;
+  --bg-navy-light: #122D4D;
+  --blue: #2B7DE9;
+  --blue-hover: #1A6AD8;
+  --blue-soft: rgba(43, 125, 233, 0.08);
+  --blue-border: rgba(43, 125, 233, 0.2);
+  --text: #1A1A1A;
+  --text-light: #F5F2ED;
+  --text-muted: #6B7280;
+  --text-muted-light: rgba(245, 242, 237, 0.55);
+  --border: rgba(0,0,0,0.08);
+  --border-light: rgba(255,255,255,0.1);
+  --font-display: 'Syne', system-ui, sans-serif;
+  --font-body: 'Inter', system-ui, sans-serif;
+  --ease: cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --container: min(1200px, 100% - 2rem);
+  --container-wide: min(1400px, 100% - 2rem);
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
+body {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--text);
+  background: var(--bg);
+  overflow-x: hidden;
+}
+a { text-decoration: none; color: inherit; }
+img { max-width: 100%; display: block; }
+ul { list-style: none; }
+
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.9s var(--ease-out), transform 0.9s var(--ease-out);
+}
+.reveal.visible { opacity: 1; transform: translateY(0); }
+.reveal-delay-1 { transition-delay: 0.1s; }
+.reveal-delay-2 { transition-delay: 0.2s; }
+.reveal-delay-3 { transition-delay: 0.3s; }
+
+/* ===========================
+   NAVIGATION
+   =========================== */
+
+.nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 1000;
+  background: rgba(250, 250, 247, 0.92);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.3s var(--ease), box-shadow 0.3s var(--ease);
+}
+.nav.scrolled {
+  border-bottom-color: var(--border);
+  box-shadow: 0 1px 20px rgba(0,0,0,0.04);
+}
+.nav-inner {
+  width: var(--container-wide);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 72px;
+}
+.nav-logo { display: flex; align-items: center; gap: 0.75rem; }
+.nav-logo img { width: 40px; height: 40px; border-radius: 8px; object-fit: cover; }
+.nav-logo-text {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  color: var(--bg-navy);
+  letter-spacing: -0.01em;
+  white-space: nowrap;
+}
+.nav-logo-text span { color: var(--blue); }
+.nav-links { display: flex; gap: 2.5rem; align-items: center; }
+.nav-links a {
+  font-size: 0.875rem; font-weight: 500; color: var(--text-muted);
+  letter-spacing: 0.02em; transition: color 0.25s var(--ease); position: relative;
+}
+.nav-links a::after {
+  content: ''; position: absolute; bottom: -4px; left: 0;
+  width: 0; height: 1.5px; background: var(--blue);
+  transition: width 0.3s var(--ease-out);
+}
+.nav-links a:hover { color: var(--text); }
+.nav-links a:hover::after { width: 100%; }
+.nav-links a.active { color: var(--text); }
+.nav-links a.active::after { width: 100%; }
+.nav-right { display: flex; align-items: center; gap: 1.5rem; }
+.nav-phone { font-size: 0.875rem; font-weight: 600; color: var(--text); letter-spacing: 0.01em; }
+.btn-cta {
+  display: inline-flex; align-items: center; gap: 0.5rem;
+  padding: 0.65rem 1.5rem; background: var(--blue); color: #fff;
+  font-family: var(--font-body); font-size: 0.85rem; font-weight: 600;
+  letter-spacing: 0.03em; border: none; border-radius: 6px;
+  cursor: pointer; transition: all 0.3s var(--ease); text-transform: uppercase;
+}
+.btn-cta:hover {
+  background: var(--blue-hover); transform: translateY(-1px);
+  box-shadow: 0 4px 20px rgba(43, 125, 233, 0.3);
+}
+.nav-toggle { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; }
+.nav-toggle span { display: block; width: 22px; height: 2px; background: var(--text); transition: all 0.3s var(--ease); }
+.nav-toggle.active span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+.nav-toggle.active span:nth-child(2) { opacity: 0; }
+.nav-toggle.active span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+
+/* ===========================
+   PAGE HERO
+   =========================== */
+
+.page-hero {
+  background: var(--bg-navy);
+  padding: 10rem 0 3.5rem;
+  text-align: center;
+  position: relative;
+}
+.page-hero-inner {
+  width: var(--container);
+  margin: 0 auto;
+}
+.page-hero .section-label {
+  font-size: 0.72rem; font-weight: 600; letter-spacing: 0.2em;
+  text-transform: uppercase; color: var(--blue); margin-bottom: 1rem; display: block;
+}
+.page-hero h1 {
+  font-family: var(--font-display);
+  font-size: clamp(2.25rem, 5vw, 3.5rem);
+  font-weight: 700; letter-spacing: -0.02em;
+  color: var(--text-light); line-height: 1.15; margin-bottom: 1rem;
+}
+.breadcrumb { font-size: 0.85rem; color: var(--text-muted-light); }
+.breadcrumb a { color: var(--text-muted-light); transition: color 0.25s var(--ease); }
+.breadcrumb a:hover { color: var(--blue); }
+.breadcrumb span { margin: 0 0.5rem; }
+
+/* ===========================
+   SECTION COMMON
+   =========================== */
+
+section { scroll-margin-top: 72px; }
+
+.section-label {
+  font-size: 0.72rem; font-weight: 600; letter-spacing: 0.2em;
+  text-transform: uppercase; color: var(--blue); margin-bottom: 1rem; display: block;
+}
+.section-title {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 700; letter-spacing: -0.02em;
+  color: var(--bg-navy); line-height: 1.15; margin-bottom: 0.75rem;
+}
+.section-desc {
+  font-size: 1.05rem; color: var(--text-muted);
+  max-width: 540px; margin: 1rem auto 0; line-height: 1.75;
+}
+
+/* ===========================
+   FEATURE IMAGE
+   =========================== */
+
+.feature-image {
+  width: var(--container);
+  margin: 0 auto;
+  max-width: 800px;
+  border-radius: 16px;
+  overflow: hidden;
+  aspect-ratio: 16/9;
+  margin-top: -2rem;
+  margin-bottom: 0;
+  position: relative;
+  z-index: 2;
+  box-shadow: 0 12px 40px rgba(0,0,0,0.1);
+}
+.feature-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ===========================
+   EDITORIAL CONTENT
+   =========================== */
+
+.intro-section {
+  padding: clamp(5rem, 10vh, 7rem) 0 clamp(4rem, 8vh, 6rem);
+  background: var(--bg);
+}
+
+.content-two-col {
+  width: var(--container);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  gap: 4rem;
+  align-items: start;
+}
+.content-main h2 {
+  font-family: var(--font-display);
+  font-size: clamp(1.5rem, 3vw, 2.25rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--bg-navy);
+  line-height: 1.2;
+  margin-top: 3rem;
+  margin-bottom: 1.5rem;
+}
+.content-main h2:first-child {
+  margin-top: 0;
+}
+.content-main h3 {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--bg-navy);
+  margin-top: 2.5rem;
+  margin-bottom: 0.75rem;
+}
+.content-main p {
+  font-size: 1rem;
+  color: var(--text-muted);
+  line-height: 1.85;
+  margin-bottom: 1.25rem;
+}
+
+/* Inline content image */
+.content-image {
+  border-radius: 12px;
+  overflow: hidden;
+  margin: 1.5rem 0;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.06);
+}
+.content-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.content-image.aspect-wide {
+  aspect-ratio: 16/9;
+}
+.content-image.aspect-wide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Benefit list */
+.benefit-list {
+  list-style: none;
+  padding: 0;
+  margin: 1.5rem 0;
+}
+.benefit-list li {
+  position: relative;
+  padding-left: 1.75rem;
+  font-size: 0.95rem;
+  line-height: 1.8;
+  color: var(--text-muted);
+  margin-bottom: 0.5rem;
+}
+.benefit-list li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.55em;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--blue);
+}
+
+/* Tips list */
+.tips-list {
+  list-style: none;
+  padding: 0;
+  margin: 1.5rem 0 0;
+}
+.tips-list li {
+  position: relative;
+  padding-left: 1.5rem;
+  font-size: 0.95rem;
+  line-height: 1.8;
+  color: var(--text-muted);
+  margin-bottom: 0.5rem;
+}
+.tips-list li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.65em;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--blue);
+}
+
+/* ===========================
+   COMPARISON CARDS
+   =========================== */
+
+.comparison-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin: 1.5rem 0;
+}
+
+.comparison-card {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 2rem;
+  transition: all 0.4s var(--ease);
+  position: relative;
+}
+.comparison-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: var(--blue);
+  transform: scaleX(0);
+  transition: transform 0.4s var(--ease-out);
+  border-radius: 12px 12px 0 0;
+}
+.comparison-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.06);
+  border-color: var(--blue-border);
+}
+.comparison-card:hover::before {
+  transform: scaleX(1);
+}
+.comparison-card.recommended {
+  border-color: var(--blue-border);
+  background: var(--blue-soft);
+}
+.comparison-card.recommended::before {
+  transform: scaleX(1);
+}
+.comparison-card.advantage {
+  border-color: rgba(34, 197, 94, 0.2);
+}
+.comparison-card.advantage::before {
+  background: #22c55e;
+  transform: scaleX(1);
+}
+.comparison-card.disadvantage {
+  border-color: rgba(239, 68, 68, 0.15);
+}
+.comparison-card.disadvantage::before {
+  background: #ef4444;
+  transform: scaleX(1);
+}
+.comparison-card h3 {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--bg-navy);
+  margin-bottom: 0.75rem;
+  margin-top: 0;
+}
+.comparison-card p {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  line-height: 1.75;
+  margin-bottom: 0;
+}
+.comparison-card .benefit-list {
+  margin: 0.75rem 0 0;
+}
+.comparison-card .badge {
+  display: inline-block;
+  padding: 0.25rem 0.65rem;
+  background: var(--blue);
+  color: #fff;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border-radius: 4px;
+  margin-top: 1rem;
+}
+
+/* ===========================
+   PROCESS GRID (numbered cards)
+   =========================== */
+
+.process-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.25rem;
+  margin: 1.5rem 0;
+}
+.process-card {
+  background: var(--bg-warm);
+  border-radius: 12px;
+  padding: 1.5rem;
+  text-align: center;
+  transition: all 0.4s var(--ease);
+}
+.process-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.05);
+}
+.process-number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--blue);
+  color: #fff;
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+}
+.process-card h4 {
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--bg-navy);
+  margin-bottom: 0.5rem;
+}
+.process-card p {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  line-height: 1.7;
+  margin-bottom: 0;
+}
+
+/* ===========================
+   CALLOUT BOX
+   =========================== */
+
+.callout-box {
+  background: var(--blue-soft);
+  border: 1px solid var(--blue-border);
+  border-radius: 12px;
+  padding: 1.5rem 1.75rem;
+  margin: 1.5rem 0;
+}
+.callout-box p {
+  font-size: 0.95rem;
+  color: var(--bg-navy);
+  line-height: 1.75;
+  margin-bottom: 0;
+}
+.callout-box strong {
+  color: var(--blue);
+}
+
+.callout-box.warning {
+  background: rgba(239, 68, 68, 0.06);
+  border-color: rgba(239, 68, 68, 0.2);
+}
+.callout-box.warning strong {
+  color: #dc2626;
+}
+
+/* ===========================
+   INDUSTRY / TAG CLOUD
+   =========================== */
+
+.industry-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin: 1.25rem 0;
+}
+.industry-tags span {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background: var(--bg-warm);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  transition: all 0.3s var(--ease);
+}
+.industry-tags span:hover {
+  background: var(--blue-soft);
+  border-color: var(--blue-border);
+  color: var(--blue);
+}
+
+/* ===========================
+   SIDEBAR CTA
+   =========================== */
+
+.sidebar-cta {
+  position: sticky;
+  top: 100px;
+  background: var(--bg-navy);
+  border-radius: 16px;
+  padding: 2rem;
+  color: var(--text-light);
+}
+.sidebar-cta h3 {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+  color: var(--text-light);
+}
+.sidebar-cta p {
+  font-size: 0.9rem;
+  color: var(--text-muted-light);
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+}
+.sidebar-cta .btn-cta {
+  width: 100%;
+  justify-content: center;
+  padding: 0.85rem 1.5rem;
+}
+.sidebar-cta .phone-link {
+  display: block;
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-muted-light);
+  transition: color 0.25s var(--ease);
+}
+.sidebar-cta .phone-link:hover {
+  color: var(--blue);
+}
+
+/* ===========================
+   SERVICES LIST (navy section)
+   =========================== */
+
+.services-list {
+  padding: clamp(4rem, 8vh, 6rem) 0;
+  background: var(--bg-navy);
+}
+.services-list-inner {
+  width: var(--container);
+  margin: 0 auto;
+  max-width: 800px;
+  text-align: center;
+}
+.services-list-inner h2 {
+  font-family: var(--font-display);
+  font-size: clamp(1.5rem, 3vw, 2.25rem);
+  font-weight: 700;
+  color: var(--text-light);
+  margin-bottom: 2.5rem;
+}
+.services-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: center;
+}
+.services-tags a {
+  display: inline-block;
+  padding: 0.6rem 1.25rem;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 8px;
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: var(--text-light);
+  transition: all 0.3s var(--ease);
+}
+.services-tags a:hover {
+  background: rgba(43, 125, 233, 0.15);
+  border-color: var(--blue);
+  color: var(--blue);
+}
+
+/* ===========================
+   FULL-WIDTH CONTENT SECTION
+   =========================== */
+
+.content-full-section {
+  padding: clamp(4rem, 8vh, 6rem) 0;
+}
+.content-full-inner {
+  width: var(--container);
+  margin: 0 auto;
+  max-width: 1000px;
+}
+.content-full-inner h2 {
+  font-family: var(--font-display);
+  font-size: clamp(1.5rem, 3vw, 2.25rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--bg-navy);
+  line-height: 1.2;
+  margin-top: 3rem;
+  margin-bottom: 1.5rem;
+}
+.content-full-inner h2:first-child {
+  margin-top: 0;
+}
+.content-full-inner p {
+  font-size: 1rem;
+  color: var(--text-muted);
+  line-height: 1.85;
+  margin-bottom: 1.25rem;
+}
+
+/* ===========================
+   SERVICE DETAIL CARDS
+   =========================== */
+
+.service-detail-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.25rem;
+  margin: 2rem 0;
+}
+.service-detail-card {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1.75rem;
+  transition: all 0.4s var(--ease);
+}
+.service-detail-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 30px rgba(0,0,0,0.06);
+  border-color: var(--blue-border);
+}
+.service-detail-card h4 {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--bg-navy);
+  margin-bottom: 0.5rem;
+}
+.service-detail-card p {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  line-height: 1.75;
+  margin-bottom: 0;
+}
+.service-detail-card .service-number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--blue-soft);
+  color: var(--blue);
+  font-family: var(--font-display);
+  font-size: 0.85rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+  border: 1px solid var(--blue-border);
+}
+
+/* Do's and Don'ts grid */
+.dos-donts-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin: 1.5rem 0;
+}
+.dos-card, .donts-card {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 2rem;
+  position: relative;
+}
+.dos-card::before, .donts-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  border-radius: 12px 12px 0 0;
+}
+.dos-card::before {
+  background: #22c55e;
+}
+.donts-card::before {
+  background: #ef4444;
+}
+.dos-card h3, .donts-card h3 {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--bg-navy);
+  margin-bottom: 0.75rem;
+  margin-top: 0;
+}
+
+/* ===========================
+   CTA SECTION
+   =========================== */
+
+.cta-section {
+  padding: clamp(5rem, 10vh, 8rem) 0;
+  background: var(--bg-warm);
+  text-align: center;
+}
+.cta-inner {
+  width: var(--container);
+  margin: 0 auto;
+}
+.cta-section .section-title { margin-bottom: 0.75rem; }
+.cta-section .section-desc { margin-bottom: 2.5rem; }
+.cta-actions {
+  display: flex; align-items: center; justify-content: center;
+  gap: 1.25rem; flex-wrap: wrap;
+}
+.btn-hero {
+  display: inline-flex; align-items: center; gap: 0.6rem;
+  padding: 0.9rem 2rem; font-family: var(--font-body);
+  font-size: 0.9rem; font-weight: 600; letter-spacing: 0.04em;
+  text-transform: uppercase; border-radius: 6px; cursor: pointer;
+  transition: all 0.35s var(--ease); border: none;
+}
+.btn-hero.filled { background: var(--blue); color: #fff; }
+.btn-hero.filled:hover {
+  background: var(--blue-hover); transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(43, 125, 233, 0.35);
+}
+.btn-hero .arrow { transition: transform 0.3s var(--ease); }
+.btn-hero:hover .arrow { transform: translateX(3px); }
+.btn-call {
+  display: inline-flex; align-items: center; gap: 0.6rem;
+  padding: 0.9rem 2rem; font-family: var(--font-body);
+  font-size: 0.9rem; font-weight: 600; color: var(--bg-navy);
+  letter-spacing: 0.03em; border: 1.5px solid var(--border);
+  border-radius: 6px; transition: all 0.3s var(--ease);
+}
+.btn-call:hover {
+  border-color: var(--bg-navy); background: var(--bg-navy); color: #fff;
+}
+
+/* ===========================
+   FOOTER
+   =========================== */
+
+.footer {
+  background: var(--bg-navy);
+  color: var(--text-light);
+  padding: 4.5rem 0 0;
+}
+.footer-inner {
+  width: var(--container);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1.2fr;
+  gap: 3rem;
+  padding-bottom: 3.5rem;
+  border-bottom: 1px solid var(--border-light);
+}
+.footer-brand { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem; }
+.footer-brand img { width: 36px; height: 36px; border-radius: 6px; object-fit: cover; }
+.footer-brand-text { font-family: var(--font-display); font-size: 1.2rem; }
+.footer-brand-text span { color: var(--blue); }
+.footer-desc {
+  font-size: 0.88rem; color: var(--text-muted-light);
+  line-height: 1.75; max-width: 280px;
+}
+.footer h4 {
+  font-family: var(--font-display);
+  font-size: 1rem; margin-bottom: 1.25rem; color: var(--text-light);
+}
+.footer ul li { margin-bottom: 0.6rem; }
+.footer ul li a {
+  font-size: 0.88rem; color: var(--text-muted-light);
+  transition: color 0.25s var(--ease);
+}
+.footer ul li a:hover { color: var(--blue); }
+.footer-contact-item {
+  display: flex; align-items: flex-start; gap: 0.6rem;
+  margin-bottom: 0.75rem; font-size: 0.88rem; color: var(--text-muted-light);
+}
+.footer-contact-item svg {
+  width: 16px; height: 16px; stroke: var(--blue); fill: none;
+  stroke-width: 2; flex-shrink: 0; margin-top: 3px;
+}
+.footer-contact-item a { color: var(--text-muted-light); transition: color 0.25s; }
+.footer-contact-item a:hover { color: var(--blue); }
+.footer-bottom {
+  width: var(--container);
+  margin: 0 auto;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 1.5rem 0; font-size: 0.8rem; color: var(--text-muted-light);
+}
+.footer-social a {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 36px; height: 36px; border-radius: 8px;
+  border: 1px solid var(--border-light); transition: all 0.3s var(--ease);
+}
+.footer-social a:hover { border-color: var(--blue); background: rgba(43, 125, 233, 0.1); }
+.footer-social svg { width: 16px; height: 16px; fill: var(--text-muted-light); }
+.footer-social a:hover svg { fill: var(--blue); }
+
+/* ===========================
+   RESPONSIVE
+   =========================== */
+
+@media (max-width: 1024px) {
+  .content-two-col { grid-template-columns: 1fr; gap: 2rem; }
+  .sidebar-cta { position: static; }
+  .footer-inner { grid-template-columns: repeat(2, 1fr); gap: 2.5rem; }
+  .comparison-grid { grid-template-columns: 1fr; }
+  .process-grid { grid-template-columns: repeat(2, 1fr); }
+  .service-detail-grid { grid-template-columns: 1fr; }
+  .dos-donts-grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 768px) {
+  .nav-links { display: none; }
+  .nav-phone { display: none; }
+  .nav-toggle { display: flex; }
+  .nav-links.open {
+    display: flex; flex-direction: column; position: absolute;
+    top: 72px; left: 0; right: 0; background: var(--bg);
+    padding: 1.5rem 1rem; gap: 0;
+    border-bottom: 1px solid var(--border);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+  }
+  .nav-links.open a {
+    padding: 0.75rem 1rem; font-size: 1rem;
+    border-bottom: 1px solid var(--border);
+  }
+  .nav-links.open a:last-child { border-bottom: none; }
+
+  .feature-image { margin-top: 0; border-radius: 12px; }
+  .process-grid { grid-template-columns: 1fr; }
+  .service-detail-grid { grid-template-columns: 1fr; }
+  .footer-inner { grid-template-columns: 1fr; gap: 2rem; }
+  .footer-bottom { flex-direction: column; gap: 1rem; text-align: center; }
+}
+
+@media (max-width: 480px) {
+  .cta-actions { flex-direction: column; align-items: center; }
+  .services-tags { gap: 0.5rem; }
+}
+</style>
+</head>
+<body>
+
+<!-- =========== NAVIGATION =========== -->
+<header class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <img src="images/logo.jpg" alt="Tile & Stone Cleaners" loading="lazy">
+      <div class="nav-logo-text">Tile & Stone <span>Cleaners</span></div>
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="nav-right">
+      <a href="tel:0481616303" class="nav-phone">04 81 616 303</a>
+      <a href="contact.html" class="btn-cta">Get a Quote</a>
+      <div class="nav-toggle" id="navToggle" aria-label="Menu" role="button" tabindex="0">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- =========== PAGE HERO =========== -->
+<section class="page-hero">
+  <div class="page-hero-inner">
+    <span class="section-label">Material Guide</span>
+    <h1>Limestone Cleaning, Sealing &amp; Restoration</h1>
+    <div class="breadcrumb">
+      <a href="index.html">Home</a>
+      <span>/</span>
+      <a href="services.html">Services</a>
+      <span>/</span>
+      Limestone
+    </div>
+  </div>
+</section>
+
+<!-- =========== FEATURE IMAGE =========== -->
+<div class="feature-image reveal">
+  <img src="images/materials/limestone.png" alt="Limestone surface close-up showing natural texture and fossil patterns">
+</div>
+
+<!-- =========== SECTION 1: INTRO + SIDEBAR =========== -->
+<section class="intro-section">
+  <div class="content-two-col">
+    <div class="content-main reveal">
+
+      <!-- SECTION 1: Intro -->
+      <h2>Sydney's Limestone Cleaning &amp; Restoration Experts</h2>
+      <p>Tile and Stone Cleaners is the go-to company for limestone tile and grout cleaning, stripping, sealing, and restoration. Our technicians are experts in these areas and are able to provide you with the necessary advice and service to make your old limestone floor and tile grout look brand new again.</p>
+      <p>Whether your limestone floors are in a residential kitchen, a heritage foyer, or a commercial lobby, we have the specialised equipment and expertise to restore them to their original beauty. Every limestone surface is unique, and we tailor our approach to match the specific characteristics of your stone.</p>
+
+      <!-- SECTION 2: What is Limestone? -->
+      <h2>What is Limestone?</h2>
+      <p>Limestone is a sedimentary rock formed over millions of years from the accumulation of material on the ocean floor. It is composed primarily of calcium carbonate, derived from the shells, bones, and skeletal fragments of marine organisms. Through sustained heat and immense pressure deep within the earth, this sediment gradually transforms into solid rock.</p>
+      <p>Many limestone surfaces contain visible fossilised marine material, giving each piece a unique natural history. Limestone is found in a range of common colours including black, grey, white, yellow, and brown, making it a versatile choice for interior and exterior flooring, wall cladding, and decorative surfaces.</p>
+
+      <!-- SECTION 3: Cleaning Limestone Floors -->
+      <h2>Cleaning Limestone Floors</h2>
+      <p>Limestone is a porous natural stone that is vulnerable to scratches, stains, and fractures. It needs to breathe -- meaning you cannot use synthetic sealers or urethane coatings that trap moisture within the stone. Instead, we use impregnating sealers that penetrate deeply into the limestone's pores, allowing the stone to release moisture naturally while remaining protected.</p>
+      <p>Foot traffic is the primary cause of dullness in limestone floors. Over time, dust, sand, and grit tracked in from outside accumulates on the surface. These fine particles act like sandpaper underfoot, creating thousands of microscopic scratches that eventually cover large portions of the floor, dulling the finish and causing the stone to lose its reflective properties.</p>
+      <p>Older buildings often feature chalky, porous French and Spanish limestone varieties that are more prone to staining than marble. These softer limestones absorb oils and liquids quickly and can be etched by acidic substances such as lemon juice, wine, or cleaning products containing acid.</p>
+      <p>When cleaning limestone, only use neutral pH detergents. Never pressure clean limestone above 800 PSI, and only if the grout is in good condition. Excessive pressure can blast out grout, force water deep into the stone, and cause surface damage that is expensive to repair.</p>
+      <p>Limestone looks best with a honed or low-to-medium sheen finish. Some low-calcite limestone varieties are difficult to polish and may require vitrification -- a chemical hardening process that creates a polishable surface where the natural stone cannot achieve one on its own.</p>
+
+      <div class="content-image aspect-wide">
+        <img src="images/services/restoration.png" alt="Professional limestone floor restoration in progress showing equipment and technique" loading="lazy">
+      </div>
+
+      <!-- SECTION 4: Advantages & Disadvantages -->
+      <h2>Advantages &amp; Disadvantages of Limestone</h2>
+      <p>Limestone is a popular natural stone for flooring and surfaces, but it comes with trade-offs. Understanding both sides helps you make informed decisions about installation and maintenance.</p>
+
+      <div class="comparison-grid">
+        <div class="comparison-card advantage">
+          <h3>Advantages</h3>
+          <ul class="benefit-list">
+            <li>Exceptionally durable -- withstands high foot traffic and daily use when properly maintained</li>
+            <li>Easy to clean and maintain with the right products and routine</li>
+            <li>Less expensive than marble or granite, offering natural stone beauty at a lower price point</li>
+            <li>Naturally moisture resistant, making it a good choice for bathrooms and kitchens when sealed correctly</li>
+          </ul>
+        </div>
+        <div class="comparison-card disadvantage">
+          <h3>Disadvantages</h3>
+          <ul class="benefit-list">
+            <li>Feels cold and hard underfoot without underfloor heating</li>
+            <li>Requires regular sealing to maintain its protective barrier against stains and moisture</li>
+            <li>Sensitive to acidic substances -- prolonged contact with acids causes etching and surface damage over time</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- SECTION 5: Sealing Limestone Tiles -->
+      <h2>Sealing Limestone Tiles</h2>
+      <p>Sealing is essential for protecting your limestone investment. There are two main types of sealers used on limestone, each with different properties, finishes, and lifespans. Choosing the right one depends on your stone type, location, and the level of protection required.</p>
+
+      <div class="comparison-grid">
+        <div class="comparison-card recommended">
+          <h3>Impregnating Sealer</h3>
+          <ul class="benefit-list">
+            <li>Deep penetrating -- reacts chemically with the stone's pores for lasting protection</li>
+            <li>Available in transparent or colour-enhancing finish options</li>
+            <li>Uses nano-technology to create an invisible protective barrier within the stone</li>
+            <li>Shields against both water and oil-based stains</li>
+            <li>Makes ongoing cleaning and maintenance significantly easier</li>
+            <li>Prevents stain absorption before it happens</li>
+          </ul>
+          <span class="badge">Recommended</span>
+        </div>
+        <div class="comparison-card">
+          <h3>Topical Sealer</h3>
+          <ul class="benefit-list">
+            <li>Creates a protective coating on the surface of the stone</li>
+            <li>Available in gloss, satin, or matte finish options</li>
+            <li>Protects from external factors including foot traffic and spills</li>
+            <li>Does not penetrate like an impregnating sealer -- sits on top</li>
+            <li>Approximate lifespan of 3 years before reapplication is needed</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- SECTION 6: Pre-Sealing Preparation -->
+      <h3>Pre-Sealing Preparation</h3>
+      <p>Proper preparation before sealing is critical. Rushing this step leads to trapped stains, sealer failure, and costly rework. Follow these essential steps before any sealer is applied to limestone.</p>
+
+      <div class="process-grid">
+        <div class="process-card">
+          <div class="process-number">1</div>
+          <h4>Clean &amp; Condition</h4>
+          <p>Clean all surfaces and achieve the desired condition before sealing. Stains may become impossible to remove once sealed over.</p>
+        </div>
+        <div class="process-card">
+          <div class="process-number">2</div>
+          <h4>Avoid Acid Cleaners</h4>
+          <p>Never use acidic cleaners on limestone at any stage. Acid causes irreversible etching and chemical damage to the calcium carbonate surface.</p>
+        </div>
+        <div class="process-card">
+          <div class="process-number">3</div>
+          <h4>Remove Old Coatings</h4>
+          <p>Strip and remove any existing coatings, wax, or old topical sealers before applying new sealer. Old layers prevent proper adhesion and penetration.</p>
+        </div>
+        <div class="process-card">
+          <div class="process-number">4</div>
+          <h4>Ensure Complete Dryness</h4>
+          <p>The floor must be completely dry before applying any sealer. Moisture trapped beneath sealer causes white hazing, peeling, and premature failure.</p>
+        </div>
+      </div>
+
+      <!-- SECTION 7: Protection from Acid Etching -->
+      <h2>Protection from Acid Etching</h2>
+      <p>Limestone and all calcite-based natural stones -- including marble and travertine -- are particularly prone to acid etching. This occurs when acidic substances come into contact with the calcium carbonate in the stone, causing a chemical reaction that dissolves the surface layer and leaves dull, rough marks.</p>
+      <p>Common household substances that damage limestone include lemon juice, cola, wine, champagne, vinegar, and many bathroom cleaning products. Even brief contact with these liquids can leave visible etch marks on polished limestone surfaces.</p>
+      <p>A honed (matte) finish is a popular choice for limestone flooring specifically because it shows fewer etch marks than a polished finish. On a glossy polished surface, even minor etching is immediately visible. On a honed surface, light etching blends in more naturally with the stone's existing texture.</p>
+
+      <div class="callout-box warning">
+        <p><strong>Acid Warning:</strong> Always clean acidic spills on limestone immediately. Lemon juice, wine, cola, champagne, and vinegar will etch and permanently damage limestone surfaces on contact. Keep acidic cleaning products away from all calcite-based natural stones. If etching has already occurred, professional honing and re-polishing may be required to restore the surface.</p>
+      </div>
+
+      <!-- SECTION 8: Limestone Care & Maintenance -->
+      <h2>Limestone Care &amp; Maintenance</h2>
+      <p>Proper daily care extends the life of your limestone surfaces and reduces the frequency of professional restoration. Follow these guidelines to keep your limestone looking its best between professional services.</p>
+
+      <div class="dos-donts-grid">
+        <div class="dos-card">
+          <h3>Do's</h3>
+          <ul class="benefit-list">
+            <li>Clean spills immediately to prevent staining and etching</li>
+            <li>Seal limestone floors with appropriate stone-specific sealers</li>
+            <li>Place a mat at every entrance to trap grit and sand</li>
+            <li>Use a microfiber mop for regular cleaning</li>
+            <li>Clean regularly with neutral pH stone-safe detergents</li>
+          </ul>
+        </div>
+        <div class="donts-card">
+          <h3>Don'ts</h3>
+          <ul class="benefit-list">
+            <li>Never use bleach, ammonia, or vinegar on limestone</li>
+            <li>Don't use acidic cleaners of any kind on the stone surface</li>
+            <li>Never use abrasive cleaners or scouring pads -- they scratch and dull the finish</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- SECTION 9: Commercial Services -->
+      <h2>Commercial Limestone Services</h2>
+      <p>Beyond residential limestone care, we provide commercial limestone cleaning, sealing, and restoration services for businesses across Sydney. Our team is equipped to handle large-scale projects with minimal disruption to your operations.</p>
+
+      <div class="industry-tags">
+        <span>Building Cleaning</span>
+        <span>After Renovation Clean</span>
+        <span>Insurance Companies</span>
+        <span>Sidewalks</span>
+        <span>Store Fronts</span>
+        <span>Power Wash Awnings &amp; Signs</span>
+        <span>Gum &amp; Stain Removal</span>
+        <span>Strip Malls</span>
+        <span>Condominiums</span>
+        <span>Town Homes</span>
+      </div>
+
+    </div>
+
+    <!-- SIDEBAR CTA -->
+    <aside class="reveal reveal-delay-1">
+      <div class="sidebar-cta">
+        <h3>Get a Free Quote</h3>
+        <p>Need your limestone surfaces cleaned, sealed, or restored? We offer free, no-obligation inspections and quotes across Sydney.</p>
+        <a href="contact.html" class="btn-cta">Request a Quote</a>
+        <a href="tel:0481616303" class="phone-link">or call 04 81 616 303</a>
+      </div>
+    </aside>
+  </div>
+</section>
+
+<!-- =========== SECTION 10: OUR LIMESTONE SERVICES (Full-width) =========== -->
+<section class="content-full-section" style="background: var(--bg-warm);">
+  <div class="content-full-inner reveal">
+    <div style="text-align: center; margin-bottom: 2.5rem;">
+      <span class="section-label">What We Offer</span>
+      <h2 style="margin-bottom: 0.5rem;">Our Limestone Services</h2>
+      <p style="max-width: 580px; margin: 0 auto;">We offer a comprehensive range of limestone cleaning, restoration, and protection services. Every service is tailored to your stone's specific condition and requirements.</p>
+    </div>
+
+    <div class="service-detail-grid">
+      <div class="service-detail-card">
+        <div class="service-number">1</div>
+        <h4>Stripping &amp; Sealing</h4>
+        <p>Complete strip, deep clean, and reseal of limestone tiles in kitchens, showers, bathrooms, pool areas, backyards, and hard-to-reach areas. We remove all existing coatings before applying fresh, long-lasting sealer protection.</p>
+      </div>
+      <div class="service-detail-card">
+        <div class="service-number">2</div>
+        <h4>Cleaning &amp; Sealing</h4>
+        <p>For dulled limestone surfaces, new installations, or worn sealant. We restore the natural shine and character of your limestone before applying protective sealer to guard against future damage and staining.</p>
+      </div>
+      <div class="service-detail-card">
+        <div class="service-number">3</div>
+        <h4>Tile &amp; Grout Cleaning</h4>
+        <p>Specialised limestone tile and grout cleaning using professional-grade equipment including van-mounted high-pressure systems. We extract embedded dirt, grime, and discolouration from both tile faces and grout lines.</p>
+      </div>
+      <div class="service-detail-card">
+        <div class="service-number">4</div>
+        <h4>Tile Sealing</h4>
+        <p>Seal porous limestone tiles to prevent staining and moisture damage. Our sealers create a protective barrier within the stone that repels water and oil-based contaminants while allowing the stone to breathe naturally.</p>
+      </div>
+      <div class="service-detail-card">
+        <div class="service-number">5</div>
+        <h4>Stripping</h4>
+        <p>Remove old sealant, wax buildup, and surface residue to restore your limestone's original appearance. Proper stripping is essential before any new sealer application to ensure adhesion and even coverage.</p>
+      </div>
+      <div class="service-detail-card">
+        <div class="service-number">6</div>
+        <h4>Grinding</h4>
+        <p>Smooth out surface imperfections and open a new layer of stone for a honed or polished finish. Grinding removes deep scratches, stubborn stains, and corrects lippage -- uneven tile edges caused by shifting or poor installation.</p>
+      </div>
+      <div class="service-detail-card">
+        <div class="service-number">7</div>
+        <h4>Honing</h4>
+        <p>Achieve a satin-feel, smooth, velvety limestone surface. Honed finishes require less maintenance than polished surfaces and suit casual living environments. The matte texture shows fewer marks and etch spots than a glossy polish.</p>
+      </div>
+      <div class="service-detail-card">
+        <div class="service-number">8</div>
+        <h4>Polishing</h4>
+        <p>Fine-grade diamond discs create a reflective, mirror-like finish on your limestone. Polishing removes invisible surface scratches, allowing the stone's natural crystals to reflect light. The resulting smooth surface has smaller pores that collect less dirt.</p>
+      </div>
+      <div class="service-detail-card">
+        <div class="service-number">9</div>
+        <h4>Efflorescence Treatment</h4>
+        <p>Remove unsightly salt deposit buildup that appears as white powdery residue on limestone surfaces. We use specialised equipment and chemicals to dissolve and extract efflorescence without damaging the underlying stone.</p>
+      </div>
+      <div class="service-detail-card">
+        <div class="service-number">10</div>
+        <h4>Minor Tile Repair</h4>
+        <p>Fix cracked, chipped, loose, and discoloured limestone tiles in both indoor and outdoor settings. Minor repairs prevent further damage and extend the lifespan of your limestone installation without the cost of full replacement.</p>
+      </div>
+      <div class="service-detail-card" style="grid-column: span 2;">
+        <div class="service-number">11</div>
+        <h4>Grout Colour Sealing</h4>
+        <p>Re-colour stained, discoloured grout lines or alter the existing grout colour to refresh the overall appearance of your limestone floor. Colour sealing provides a uniform look while simultaneously protecting the grout from future staining and moisture damage.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =========== SERVICES TAG CLOUD =========== -->
+<section class="services-list">
+  <div class="services-list-inner reveal">
+    <h2>Related Services</h2>
+    <div class="services-tags">
+      <a href="cleaning-sealing.html">Cleaning & Sealing</a>
+      <a href="stripping-sealing.html">Stripping & Sealing</a>
+      <a href="tile-grout-cleaning.html">Tile & Grout Cleaning</a>
+      <a href="stone-honing.html">Stone Honing</a>
+      <a href="stone-polishing.html">Stone Polishing</a>
+      <a href="pressure-cleaning.html">High-Pressure Cleaning</a>
+      <a href="efflorescence-treatment.html">Efflorescence Treatment</a>
+      <a href="services.html">Grinding</a>
+      <a href="services.html">Minor Tile Repair</a>
+      <a href="services.html">Grout Colour Sealing</a>
+    </div>
+  </div>
+</section>
+
+<!-- =========== CTA =========== -->
+<section class="cta-section">
+  <div class="cta-inner reveal">
+    <span class="section-label">Let's Talk</span>
+    <h2 class="section-title">Ready to Restore Your Limestone?</h2>
+    <p class="section-desc">Get a free, no-obligation quote. We'll inspect your limestone surfaces and recommend the best treatment plan.</p>
+    <div class="cta-actions">
+      <a href="contact.html" class="btn-hero filled" style="border: none;">
+        Get a Free Quote
+        <svg class="arrow" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+      <a href="tel:0481616303" class="btn-call">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M14.5 11.35v1.9a1.27 1.27 0 0 1-1.38 1.27 12.52 12.52 0 0 1-5.46-1.94 12.33 12.33 0 0 1-3.8-3.8A12.52 12.52 0 0 1 1.92 3.3 1.27 1.27 0 0 1 3.17 1.93h1.9a1.27 1.27 0 0 1 1.27 1.09c.08.6.23 1.19.44 1.76a1.27 1.27 0 0 1-.28 1.34L5.6 7.01a10.16 10.16 0 0 0 3.8 3.8l.89-.89a1.27 1.27 0 0 1 1.34-.28c.57.2 1.16.36 1.76.44a1.27 1.27 0 0 1 1.09 1.29z" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        04 81 616 303
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- =========== FOOTER =========== -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div>
+      <div class="footer-brand">
+        <img src="images/logo.jpg" alt="Tile & Stone Cleaners" loading="lazy">
+        <div class="footer-brand-text">Tile & Stone <span>Cleaners</span></div>
+      </div>
+      <p class="footer-desc">Sydney's trusted tile and stone specialists. Cleaning, sealing, restoration and repair across 9 regions with 15+ years of experience.</p>
+    </div>
+    <div>
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="sydney.html">Sydney</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Service Areas</h4>
+      <ul>
+        <li><a href="sydney.html">Sydney</a></li>
+        <li><a href="sydney.html">North Shore</a></li>
+        <li><a href="sydney.html">Northern Beaches</a></li>
+        <li><a href="sydney.html">Central Coast</a></li>
+        <li><a href="sydney.html">Eastern Suburbs</a></li>
+        <li><a href="sydney.html">Hills Shire</a></li>
+        <li><a href="sydney.html">Sutherland Shire</a></li>
+        <li><a href="sydney.html">Western Suburbs</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <div class="footer-contact-item">
+        <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.81.36 1.6.68 2.34a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.74.32 1.53.55 2.34.68a2 2 0 0 1 1.72 2.05z" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <a href="tel:0481616303">04 81 616 303</a>
+      </div>
+      <div class="footer-contact-item">
+        <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        <a href="mailto:tileandstonecleaners@mail.com">tileandstonecleaners@mail.com</a>
+      </div>
+      <div class="footer-contact-item">
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        <div>Mon&ndash;Fri: 8am&ndash;6pm<br>Sat&ndash;Sun: 11am&ndash;3pm</div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div>&copy; 2024 Tile & Stone Cleaners. All rights reserved.</div>
+    <div class="footer-social">
+      <a href="https://instagram.com/tileandstonecleanerss/" target="_blank" rel="noopener" aria-label="Instagram">
+        <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5"/></svg>
+      </a>
+    </div>
+  </div>
+</footer>
+
+<script>
+const nav=document.getElementById('nav');window.addEventListener('scroll',()=>{nav.classList.toggle('scrolled',window.scrollY>20)},{passive:true});const toggle=document.getElementById('navToggle');const links=document.getElementById('navLinks');toggle.addEventListener('click',()=>{toggle.classList.toggle('active');links.classList.toggle('open')});links.querySelectorAll('a').forEach(a=>{a.addEventListener('click',()=>{toggle.classList.remove('active');links.classList.remove('open')})});const revealElements=document.querySelectorAll('.reveal');const observer=new IntersectionObserver((entries)=>{entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('visible');observer.unobserve(entry.target)}})},{threshold:0.12,rootMargin:'0px 0px -40px 0px'});revealElements.forEach(el=>observer.observe(el));
+</script>
+</body>
+</html>

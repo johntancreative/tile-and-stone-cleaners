@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Efflorescence Treatment - Tile & Stone Cleaners</title>
+<meta name="description" content="Professional efflorescence treatment in Sydney. Specialised solutions safely remove white mineral salt deposits from stone, tile, and concrete surfaces.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #FAFAF7;
+  --bg-warm: #F3F1EC;
+  --bg-navy: #0C2340;
+  --bg-navy-light: #122D4D;
+  --blue: #2B7DE9;
+  --blue-hover: #1A6AD8;
+  --blue-soft: rgba(43, 125, 233, 0.08);
+  --blue-border: rgba(43, 125, 233, 0.2);
+  --text: #1A1A1A;
+  --text-light: #F5F2ED;
+  --text-muted: #6B7280;
+  --text-muted-light: rgba(245, 242, 237, 0.55);
+  --border: rgba(0,0,0,0.08);
+  --border-light: rgba(255,255,255,0.1);
+  --font-display: 'Syne', system-ui, sans-serif;
+  --font-body: 'Inter', system-ui, sans-serif;
+  --ease: cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --container: min(1200px, 100% - 2rem);
+  --container-wide: min(1400px, 100% - 2rem);
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
+body { font-family: var(--font-body); font-size: 1rem; line-height: 1.7; color: var(--text); background: var(--bg); overflow-x: hidden; }
+a { text-decoration: none; color: inherit; }
+img { max-width: 100%; display: block; }
+ul { list-style: none; }
+
+.reveal { opacity: 0; transform: translateY(40px); transition: opacity 0.9s var(--ease-out), transform 0.9s var(--ease-out); }
+.reveal.visible { opacity: 1; transform: translateY(0); }
+.reveal-delay-1 { transition-delay: 0.1s; }
+.reveal-delay-2 { transition-delay: 0.2s; }
+.reveal-delay-3 { transition-delay: 0.3s; }
+
+.nav { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; background: rgba(250, 250, 247, 0.92); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border-bottom: 1px solid transparent; transition: border-color 0.3s var(--ease), box-shadow 0.3s var(--ease); }
+.nav.scrolled { border-bottom-color: var(--border); box-shadow: 0 1px 20px rgba(0,0,0,0.04); }
+.nav-inner { width: var(--container-wide); margin: 0 auto; display: flex; align-items: center; justify-content: space-between; height: 72px; }
+.nav-logo { display: flex; align-items: center; gap: 0.75rem; }
+.nav-logo img { width: 40px; height: 40px; border-radius: 8px; object-fit: cover; }
+.nav-logo-text { font-family: var(--font-display); font-size: 1.2rem; color: var(--bg-navy); letter-spacing: -0.01em; white-space: nowrap; }
+.nav-logo-text span { color: var(--blue); }
+.nav-links { display: flex; gap: 2.5rem; align-items: center; }
+.nav-links a { font-size: 0.875rem; font-weight: 500; color: var(--text-muted); letter-spacing: 0.02em; transition: color 0.25s var(--ease); position: relative; }
+.nav-links a::after { content: ''; position: absolute; bottom: -4px; left: 0; width: 0; height: 1.5px; background: var(--blue); transition: width 0.3s var(--ease-out); }
+.nav-links a:hover { color: var(--text); }
+.nav-links a:hover::after { width: 100%; }
+.nav-links a.active { color: var(--text); }
+.nav-links a.active::after { width: 100%; }
+.nav-right { display: flex; align-items: center; gap: 1.5rem; }
+.nav-phone { font-size: 0.875rem; font-weight: 600; color: var(--text); letter-spacing: 0.01em; }
+.btn-cta { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.65rem 1.5rem; background: var(--blue); color: #fff; font-family: var(--font-body); font-size: 0.85rem; font-weight: 600; letter-spacing: 0.03em; border: none; border-radius: 6px; cursor: pointer; transition: all 0.3s var(--ease); text-transform: uppercase; }
+.btn-cta:hover { background: var(--blue-hover); transform: translateY(-1px); box-shadow: 0 4px 20px rgba(43, 125, 233, 0.3); }
+.nav-toggle { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; }
+.nav-toggle span { display: block; width: 22px; height: 2px; background: var(--text); transition: all 0.3s var(--ease); }
+.nav-toggle.active span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+.nav-toggle.active span:nth-child(2) { opacity: 0; }
+.nav-toggle.active span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+
+.page-hero { background: var(--bg-navy); padding: 10rem 0 3.5rem; text-align: center; position: relative; }
+.page-hero-inner { width: var(--container); margin: 0 auto; }
+.page-hero .section-label { font-size: 0.72rem; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: var(--blue); margin-bottom: 1rem; display: block; }
+.page-hero h1 { font-family: var(--font-display); font-size: clamp(2.25rem, 5vw, 3.5rem); font-weight: 700; letter-spacing: -0.02em; color: var(--text-light); line-height: 1.15; margin-bottom: 1rem; }
+.breadcrumb { font-size: 0.85rem; color: var(--text-muted-light); }
+.breadcrumb a { color: var(--text-muted-light); transition: color 0.25s var(--ease); }
+.breadcrumb a:hover { color: var(--blue); }
+.breadcrumb span { margin: 0 0.5rem; }
+
+section { scroll-margin-top: 72px; }
+.section-label { font-size: 0.72rem; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: var(--blue); margin-bottom: 1rem; display: block; }
+.section-title { font-family: var(--font-display); font-size: clamp(2rem, 4vw, 3rem); font-weight: 700; letter-spacing: -0.02em; color: var(--bg-navy); line-height: 1.15; margin-bottom: 0.75rem; }
+.section-line { width: 50px; height: 2px; background: var(--blue); margin: 1.25rem auto 0; border-radius: 2px; }
+.section-desc { font-size: 1.05rem; color: var(--text-muted); max-width: 540px; margin: 1rem auto 0; line-height: 1.75; }
+
+.feature-image { width: var(--container); margin: 0 auto; max-width: 800px; border-radius: 16px; overflow: hidden; aspect-ratio: 16/9; margin-top: -2rem; margin-bottom: 0; position: relative; z-index: 2; box-shadow: 0 12px 40px rgba(0,0,0,0.1); }
+.feature-image img { width: 100%; height: 100%; object-fit: cover; }
+
+.intro-section { padding: clamp(5rem, 10vh, 7rem) 0 clamp(4rem, 8vh, 6rem); background: var(--bg); }
+
+.content-two-col { width: var(--container); margin: 0 auto; display: grid; grid-template-columns: 1fr 340px; gap: 4rem; align-items: start; }
+.content-main h2 {
+  margin-top: 3rem; font-family: var(--font-display); font-size: clamp(1.5rem, 3vw, 2.25rem); font-weight: 700; letter-spacing: -0.02em; color: var(--bg-navy); line-height: 1.2; margin-bottom: 1.5rem; }
+.content-main h2:first-child {
+  margin-top: 0;
+}
+.content-main h3 { font-family: var(--font-display); font-size: 1.25rem; font-weight: 600; color: var(--bg-navy); margin-top: 2.5rem; margin-bottom: 0.75rem; }
+.content-main p { font-size: 1rem; color: var(--text-muted); line-height: 1.85; margin-bottom: 1.25rem; }
+
+.process-steps { list-style: none; padding: 0; margin: 1.5rem 0; counter-reset: step; }
+.process-steps li { position: relative; padding-left: 2.5rem; font-size: 0.95rem; line-height: 1.8; color: var(--text-muted); margin-bottom: 0.75rem; counter-increment: step; }
+.process-steps li::before { content: counter(step); position: absolute; left: 0; top: 0.15em; width: 24px; height: 24px; border-radius: 50%; background: var(--blue); color: white; font-size: 0.75rem; font-weight: 700; display: flex; align-items: center; justify-content: center; }
+
+.benefit-list { list-style: none; padding: 0; margin: 1.5rem 0; }
+.benefit-list li { position: relative; padding-left: 1.75rem; font-size: 0.95rem; line-height: 1.8; color: var(--text-muted); margin-bottom: 0.5rem; }
+.benefit-list li::before { content: ''; position: absolute; left: 0; top: 0.55em; width: 8px; height: 8px; border-radius: 50%; background: var(--blue); }
+
+.sidebar-cta { position: sticky; top: 100px; background: var(--bg-navy); border-radius: 16px; padding: 2rem; color: var(--text-light); }
+.sidebar-cta h3 { font-family: var(--font-display); font-size: 1.25rem; font-weight: 700; margin-bottom: 0.75rem; color: var(--text-light); }
+.sidebar-cta p { font-size: 0.9rem; color: var(--text-muted-light); line-height: 1.7; margin-bottom: 1.5rem; }
+.sidebar-cta .btn-cta { width: 100%; justify-content: center; padding: 0.85rem 1.5rem; }
+.sidebar-cta .phone-link { display: block; text-align: center; margin-top: 1rem; font-size: 0.9rem; font-weight: 600; color: var(--text-muted-light); transition: color 0.25s var(--ease); }
+.sidebar-cta .phone-link:hover { color: var(--blue); }
+
+.ba-section { padding: clamp(5rem, 10vh, 8rem) 0; background: var(--bg-navy); }
+.ba-section .section-title { color: var(--text-light); }
+.ba-section .section-desc { color: var(--text-muted-light); }
+.ba-grid { width: var(--container); margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 3rem; }
+.ba-slider { position: relative; overflow: hidden; border-radius: 12px; cursor: ew-resize; -webkit-user-select: none; user-select: none; aspect-ratio: 3/2; box-shadow: 0 4px 24px rgba(0,0,0,0.08); }
+.ba-slider img { width: 100%; height: 100%; object-fit: cover; display: block; pointer-events: none; }
+.ba-after { position: absolute; inset: 0; }
+.ba-before { position: absolute; inset: 0; clip-path: inset(0 50% 0 0); z-index: 2; }
+.ba-handle { position: absolute; top: 0; bottom: 0; left: 50%; transform: translateX(-50%); z-index: 3; display: flex; flex-direction: column; align-items: center; justify-content: center; pointer-events: none; }
+.ba-handle-line { width: 2px; flex: 1; background: white; box-shadow: 0 0 4px rgba(0,0,0,0.3); }
+.ba-handle-circle { width: 44px; height: 44px; border-radius: 50%; background: white; box-shadow: 0 2px 8px rgba(0,0,0,0.2); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.ba-handle-circle svg { width: 20px; height: 20px; color: var(--text); }
+.ba-label { position: absolute; bottom: 1rem; z-index: 4; padding: 0.35rem 0.75rem; background: rgba(0,0,0,0.55); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); color: white; font-family: var(--font-display); font-size: 0.75rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; border-radius: 4px; }
+.ba-label-before { left: 1rem; }
+.ba-label-after { right: 1rem; }
+.ba-caption { margin-top: 1rem; text-align: center; font-size: 0.9rem; color: var(--text-muted-light); }
+
+.services-list { padding: clamp(4rem, 8vh, 6rem) 0; background: var(--bg-navy); }
+.services-list-inner { width: var(--container); margin: 0 auto; max-width: 800px; text-align: center; }
+.services-list-inner h2 { font-family: var(--font-display); font-size: clamp(1.5rem, 3vw, 2.25rem); font-weight: 700; color: var(--text-light); margin-bottom: 2.5rem; }
+.services-tags { display: flex; flex-wrap: wrap; gap: 0.75rem; justify-content: center; }
+.services-tags a { display: inline-block; padding: 0.6rem 1.25rem; background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; font-size: 0.88rem; font-weight: 500; color: var(--text-light); transition: all 0.3s var(--ease); }
+.services-tags a:hover { background: rgba(43, 125, 233, 0.15); border-color: var(--blue); color: var(--blue); }
+
+.cta-section { padding: clamp(5rem, 10vh, 8rem) 0; background: var(--bg-warm); text-align: center; }
+.cta-inner { width: var(--container); margin: 0 auto; }
+.cta-section .section-title { margin-bottom: 0.75rem; }
+.cta-section .section-desc { margin-bottom: 2.5rem; }
+.cta-actions { display: flex; align-items: center; justify-content: center; gap: 1.25rem; flex-wrap: wrap; }
+.btn-hero { display: inline-flex; align-items: center; gap: 0.6rem; padding: 0.9rem 2rem; font-family: var(--font-body); font-size: 0.9rem; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; border-radius: 6px; cursor: pointer; transition: all 0.35s var(--ease); border: none; }
+.btn-hero.filled { background: var(--blue); color: #fff; }
+.btn-hero.filled:hover { background: var(--blue-hover); transform: translateY(-2px); box-shadow: 0 8px 30px rgba(43, 125, 233, 0.35); }
+.btn-hero .arrow { transition: transform 0.3s var(--ease); }
+.btn-hero:hover .arrow { transform: translateX(3px); }
+.btn-call { display: inline-flex; align-items: center; gap: 0.6rem; padding: 0.9rem 2rem; font-family: var(--font-body); font-size: 0.9rem; font-weight: 600; color: var(--bg-navy); letter-spacing: 0.03em; border: 1.5px solid var(--border); border-radius: 6px; transition: all 0.3s var(--ease); }
+.btn-call:hover { border-color: var(--bg-navy); background: var(--bg-navy); color: #fff; }
+
+.footer { background: var(--bg-navy); color: var(--text-light); padding: 4.5rem 0 0; }
+.footer-inner { width: var(--container); margin: 0 auto; display: grid; grid-template-columns: 1.5fr 1fr 1fr 1.2fr; gap: 3rem; padding-bottom: 3.5rem; border-bottom: 1px solid var(--border-light); }
+.footer-brand { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem; }
+.footer-brand img { width: 36px; height: 36px; border-radius: 6px; object-fit: cover; }
+.footer-brand-text { font-family: var(--font-display); font-size: 1.2rem; }
+.footer-brand-text span { color: var(--blue); }
+.footer-desc { font-size: 0.88rem; color: var(--text-muted-light); line-height: 1.75; max-width: 280px; }
+.footer h4 { font-family: var(--font-display); font-size: 1rem; margin-bottom: 1.25rem; color: var(--text-light); }
+.footer ul li { margin-bottom: 0.6rem; }
+.footer ul li a { font-size: 0.88rem; color: var(--text-muted-light); transition: color 0.25s var(--ease); }
+.footer ul li a:hover { color: var(--blue); }
+.footer-contact-item { display: flex; align-items: flex-start; gap: 0.6rem; margin-bottom: 0.75rem; font-size: 0.88rem; color: var(--text-muted-light); }
+.footer-contact-item svg { width: 16px; height: 16px; stroke: var(--blue); fill: none; stroke-width: 2; flex-shrink: 0; margin-top: 3px; }
+.footer-contact-item a { color: var(--text-muted-light); transition: color 0.25s; }
+.footer-contact-item a:hover { color: var(--blue); }
+.footer-bottom { width: var(--container); margin: 0 auto; display: flex; align-items: center; justify-content: space-between; padding: 1.5rem 0; font-size: 0.8rem; color: var(--text-muted-light); }
+.footer-social a { display: inline-flex; align-items: center; justify-content: center; width: 36px; height: 36px; border-radius: 8px; border: 1px solid var(--border-light); transition: all 0.3s var(--ease); }
+.footer-social a:hover { border-color: var(--blue); background: rgba(43, 125, 233, 0.1); }
+.footer-social svg { width: 16px; height: 16px; fill: var(--text-muted-light); }
+.footer-social a:hover svg { fill: var(--blue); }
+
+@media (max-width: 1024px) {
+  .content-two-col { grid-template-columns: 1fr; gap: 2rem; }
+  .sidebar-cta { position: static; }
+  .footer-inner { grid-template-columns: repeat(2, 1fr); gap: 2.5rem; }
+}
+
+@media (max-width: 768px) {
+  .nav-links { display: none; }
+  .nav-phone { display: none; }
+  .nav-toggle { display: flex; }
+  .nav-links.open { display: flex; flex-direction: column; position: absolute; top: 72px; left: 0; right: 0; background: var(--bg); padding: 1.5rem 1rem; gap: 0; border-bottom: 1px solid var(--border); box-shadow: 0 10px 30px rgba(0,0,0,0.06); }
+  .nav-links.open a { padding: 0.75rem 1rem; font-size: 1rem; border-bottom: 1px solid var(--border); }
+  .nav-links.open a:last-child { border-bottom: none; }
+  .feature-image { margin-top: 0; border-radius: 12px; }
+  .ba-grid { grid-template-columns: 1fr; }
+  .footer-inner { grid-template-columns: 1fr; gap: 2rem; }
+  .footer-bottom { flex-direction: column; gap: 1rem; text-align: center; }
+}
+
+@media (max-width: 480px) {
+  .cta-actions { flex-direction: column; align-items: center; }
+  .services-tags { gap: 0.5rem; }
+}
+</style>
+</head>
+<body>
+
+<!-- ═══════════ NAVIGATION ═══════════ -->
+<header class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <img src="images/logo.jpg" alt="Tile & Stone Cleaners" loading="lazy">
+      <div class="nav-logo-text">Tile & Stone <span>Cleaners</span></div>
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="index.html">Home</a>
+      <a href="services.html" class="active">Services</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="nav-right">
+      <a href="tel:0481616303" class="nav-phone">04 81 616 303</a>
+      <a href="contact.html" class="btn-cta">Get a Quote</a>
+      <div class="nav-toggle" id="navToggle" aria-label="Menu" role="button" tabindex="0">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ═══════════ PAGE HERO ═══════════ -->
+<section class="page-hero">
+  <div class="page-hero-inner">
+    <span class="section-label">Core Service</span>
+    <h1>Efflorescence Treatment</h1>
+    <div class="breadcrumb">
+      <a href="index.html">Home</a>
+      <span>/</span>
+      <a href="services.html">Services</a>
+      <span>/</span>
+      Efflorescence Treatment
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ FEATURE IMAGE ═══════════ -->
+<div class="feature-image reveal">
+  <img src="images/services/efflorescence.png" alt="Professional efflorescence treatment service">
+</div>
+
+<!-- ═══════════ INTRO + SIDEBAR ═══════════ -->
+<section class="intro-section">
+  <div class="content-two-col">
+    <div class="content-main reveal">
+      <h2>Professional Efflorescence Treatment in Sydney</h2>
+      <p>Efflorescence is the white, powdery mineral salt deposits that form when moisture migrates through stone and tile. Our specialised chemical solutions safely dissolve and remove these deposits, restoring your surfaces to their original appearance.</p>
+
+      <h2>What is Efflorescence?</h2>
+      <p>Efflorescence appears as white crystalline salt deposits on the surface of stone, tile, concrete, and grout. It occurs when water dissolves mineral salts within the material and carries them to the surface. As the water evaporates, it leaves behind visible white deposits that can be unsightly and difficult to remove with standard cleaning.</p>
+
+      <h2>Common Causes</h2>
+      <ul class="benefit-list">
+        <li>Rising damp from inadequate damp-proof membranes</li>
+        <li>Inadequate waterproofing beneath tiles</li>
+        <li>Poor drainage around the building or structure</li>
+        <li>Newly installed tiles (common in the first 12 months as excess moisture escapes)</li>
+        <li>Rain exposure on outdoor surfaces and retaining walls</li>
+      </ul>
+
+      <h2>Our Treatment Process</h2>
+      <ol class="process-steps">
+        <li>Identify the moisture source causing the efflorescence</li>
+        <li>Apply specialised chemical solutions to dissolve the salt deposits</li>
+        <li>Mechanical removal of stubborn or thick deposits</li>
+        <li>Deep clean the entire surface to remove all residue</li>
+        <li>Apply a breathable sealer to reduce future occurrences</li>
+      </ol>
+
+      <h2>Prevention</h2>
+      <ul class="benefit-list">
+        <li>Ensure proper waterproofing is installed before tiling</li>
+        <li>Maintain adequate drainage around structures</li>
+        <li>Use breathable sealers only -- non-breathable sealers trap moisture and worsen the problem</li>
+        <li>Regular maintenance and early treatment prevents buildup</li>
+        <li>Address rising damp issues at the source</li>
+      </ul>
+    </div>
+
+    <aside class="reveal reveal-delay-1">
+      <div class="sidebar-cta">
+        <h3>Get a Free Quote</h3>
+        <p>Dealing with white salt deposits on your surfaces? We offer free, no-obligation inspections and quotes across Sydney.</p>
+        <a href="contact.html" class="btn-cta">Request a Quote</a>
+        <a href="tel:0481616303" class="phone-link">or call 04 81 616 303</a>
+      </div>
+    </aside>
+  </div>
+</section>
+
+<!-- ═══════════ BEFORE / AFTER RESULTS ═══════════ -->
+<section class="ba-section" id="results">
+  <div style="text-align: center;">
+    <span class="section-label reveal">Real Results</span>
+    <h2 class="section-title reveal" style="margin-bottom: 0.5rem;">Before & After Results</h2>
+    <div class="section-line reveal"></div>
+    <p class="section-desc reveal" style="max-width: 480px; margin: 0 auto;">Drag the slider to see the transformation from our efflorescence treatment projects.</p>
+  </div>
+
+  <div class="ba-grid">
+    <!-- Slider 1 -->
+    <div class="reveal">
+      <div class="ba-slider">
+        <div class="ba-after">
+          <img src="images/before-after/efflorescence/slate-after.png" alt="Slate floor after efflorescence removal">
+        </div>
+        <div class="ba-before">
+          <img src="images/before-after/efflorescence/slate-before.png" alt="Slate floor with white efflorescence deposits">
+        </div>
+        <span class="ba-label ba-label-before">Before</span>
+        <span class="ba-label ba-label-after">After</span>
+        <div class="ba-handle">
+          <div class="ba-handle-line"></div>
+          <div class="ba-handle-circle">
+            <svg viewBox="0 0 20 20" fill="none"><path d="M7 4l-4 6 4 6M13 4l4 6-4 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <div class="ba-handle-line"></div>
+        </div>
+      </div>
+      <p class="ba-caption">Slate floor efflorescence removal</p>
+    </div>
+
+    <!-- Slider 2 -->
+    <div class="reveal reveal-delay-1">
+      <div class="ba-slider">
+        <div class="ba-after">
+          <img src="images/before-after/efflorescence/wall-after.png" alt="Sandstone wall after efflorescence treatment">
+        </div>
+        <div class="ba-before">
+          <img src="images/before-after/efflorescence/wall-before.png" alt="Sandstone wall with white salt stains">
+        </div>
+        <span class="ba-label ba-label-before">Before</span>
+        <span class="ba-label ba-label-after">After</span>
+        <div class="ba-handle">
+          <div class="ba-handle-line"></div>
+          <div class="ba-handle-circle">
+            <svg viewBox="0 0 20 20" fill="none"><path d="M7 4l-4 6 4 6M13 4l4 6-4 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <div class="ba-handle-line"></div>
+        </div>
+      </div>
+      <p class="ba-caption">Sandstone retaining wall salt stain removal</p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ SERVICES LIST ═══════════ -->
+<section class="services-list">
+  <div class="services-list-inner reveal">
+    <h2>Related Services</h2>
+    <div class="services-tags">
+      <a href="tile-grout-cleaning.html">Tile & Grout Cleaning</a>
+      <a href="cleaning-sealing.html">Cleaning & Sealing</a>
+      <a href="stripping-sealing.html">Stripping & Sealing</a>
+      <a href="stone-honing.html">Stone Honing</a>
+      <a href="stone-polishing.html">Stone Polishing</a>
+      <a href="pressure-cleaning.html">High-Pressure Cleaning</a>
+      <a href="mould-treatment.html">Mould Treatment</a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ CTA ═══════════ -->
+<section class="cta-section">
+  <div class="cta-inner reveal">
+    <span class="section-label">Let's Talk</span>
+    <h2 class="section-title">Ready to Remove Efflorescence?</h2>
+    <p class="section-desc">Get a free, no-obligation quote. We'll inspect your surfaces, identify the moisture source, and recommend the best treatment plan.</p>
+    <div class="cta-actions">
+      <a href="contact.html" class="btn-hero filled" style="border: none;">
+        Get a Free Quote
+        <svg class="arrow" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+      <a href="tel:0481616303" class="btn-call">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M14.5 11.35v1.9a1.27 1.27 0 0 1-1.38 1.27 12.52 12.52 0 0 1-5.46-1.94 12.33 12.33 0 0 1-3.8-3.8A12.52 12.52 0 0 1 1.92 3.3 1.27 1.27 0 0 1 3.17 1.93h1.9a1.27 1.27 0 0 1 1.27 1.09c.08.6.23 1.19.44 1.76a1.27 1.27 0 0 1-.28 1.34L5.6 7.01a10.16 10.16 0 0 0 3.8 3.8l.89-.89a1.27 1.27 0 0 1 1.34-.28c.57.2 1.16.36 1.76.44a1.27 1.27 0 0 1 1.09 1.29z" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        04 81 616 303
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ FOOTER ═══════════ -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div>
+      <div class="footer-brand">
+        <img src="images/logo.jpg" alt="Tile & Stone Cleaners" loading="lazy">
+        <div class="footer-brand-text">Tile & Stone <span>Cleaners</span></div>
+      </div>
+      <p class="footer-desc">Sydney's trusted tile and stone specialists. Cleaning, sealing, restoration and repair across 9 regions with 15+ years of experience.</p>
+    </div>
+    <div>
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="sydney.html">Sydney</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Service Areas</h4>
+      <ul>
+        <li><a href="sydney.html">Sydney</a></li>
+        <li><a href="sydney.html">North Shore</a></li>
+        <li><a href="sydney.html">Northern Beaches</a></li>
+        <li><a href="sydney.html">Central Coast</a></li>
+        <li><a href="sydney.html">Eastern Suburbs</a></li>
+        <li><a href="sydney.html">Hills Shire</a></li>
+        <li><a href="sydney.html">Sutherland Shire</a></li>
+        <li><a href="sydney.html">Western Suburbs</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <div class="footer-contact-item">
+        <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.81.36 1.6.68 2.34a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.74.32 1.53.55 2.34.68a2 2 0 0 1 1.72 2.05z" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <a href="tel:0481616303">04 81 616 303</a>
+      </div>
+      <div class="footer-contact-item">
+        <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        <a href="mailto:tileandstonecleaners@mail.com">tileandstonecleaners@mail.com</a>
+      </div>
+      <div class="footer-contact-item">
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        <div>
+          Mon&ndash;Fri: 8am&ndash;6pm<br>
+          Sat&ndash;Sun: 11am&ndash;3pm
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div>&copy; 2024 Tile & Stone Cleaners. All rights reserved.</div>
+    <div class="footer-social">
+      <a href="https://instagram.com/tileandstonecleanerss/" target="_blank" rel="noopener" aria-label="Instagram">
+        <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5"/></svg>
+      </a>
+    </div>
+  </div>
+</footer>
+
+<!-- ═══════════ SCRIPTS ═══════════ -->
+<script>
+const nav = document.getElementById('nav');
+window.addEventListener('scroll', () => { nav.classList.toggle('scrolled', window.scrollY > 20); }, { passive: true });
+
+const toggle = document.getElementById('navToggle');
+const links = document.getElementById('navLinks');
+toggle.addEventListener('click', () => { toggle.classList.toggle('active'); links.classList.toggle('open'); });
+links.querySelectorAll('a').forEach(a => { a.addEventListener('click', () => { toggle.classList.remove('active'); links.classList.remove('open'); }); });
+
+const revealElements = document.querySelectorAll('.reveal');
+const observer = new IntersectionObserver((entries) => { entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); } }); }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+revealElements.forEach(el => observer.observe(el));
+
+document.querySelectorAll('.ba-slider').forEach(slider => {
+  const before = slider.querySelector('.ba-before');
+  const handle = slider.querySelector('.ba-handle');
+  const labelBefore = slider.querySelector('.ba-label-before');
+  const labelAfter = slider.querySelector('.ba-label-after');
+  let isDragging = false;
+
+  function updatePosition(clientX) {
+    const rect = slider.getBoundingClientRect();
+    let pct = ((clientX - rect.left) / rect.width) * 100;
+    pct = Math.max(3, Math.min(97, pct));
+    before.style.clipPath = `inset(0 ${100 - pct}% 0 0)`;
+    handle.style.left = pct + '%';
+    labelBefore.style.opacity = pct > 18 ? '1' : '0';
+    labelAfter.style.opacity = pct < 82 ? '1' : '0';
+  }
+
+  function startDrag(e) { isDragging = true; slider.style.cursor = 'ew-resize'; e.preventDefault(); }
+  function onDrag(e) { if (!isDragging) return; const x = e.touches ? e.touches[0].clientX : e.clientX; requestAnimationFrame(() => updatePosition(x)); }
+  function stopDrag() { isDragging = false; slider.style.cursor = 'ew-resize'; }
+
+  slider.addEventListener('mousedown', startDrag);
+  slider.addEventListener('touchstart', startDrag, { passive: false });
+  window.addEventListener('mousemove', onDrag);
+  window.addEventListener('touchmove', onDrag, { passive: true });
+  window.addEventListener('mouseup', stopDrag);
+  window.addEventListener('touchend', stopDrag);
+  slider.addEventListener('click', (e) => { if (!isDragging) updatePosition(e.clientX); });
+});
+</script>
+</body>
+</html>

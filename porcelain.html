@@ -1,0 +1,1246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Porcelain Tile Cleaning, Sealing & Grout Restoration Sydney | Tile & Stone Cleaners</title>
+<meta name="description" content="Professional porcelain tile and grout cleaning, sealing, and restoration in Sydney. Expert porcelain floor care for natural, polished, and glazed porcelain tiles. Grout colour sealing, efflorescence treatment, and minor repair. Free quotes.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* ===================================
+   TILE & STONE CLEANERS -- Design System
+   =================================== */
+
+:root {
+  --bg: #FAFAF7;
+  --bg-warm: #F3F1EC;
+  --bg-navy: #0C2340;
+  --bg-navy-light: #122D4D;
+  --blue: #2B7DE9;
+  --blue-hover: #1A6AD8;
+  --blue-soft: rgba(43, 125, 233, 0.08);
+  --blue-border: rgba(43, 125, 233, 0.2);
+  --text: #1A1A1A;
+  --text-light: #F5F2ED;
+  --text-muted: #6B7280;
+  --text-muted-light: rgba(245, 242, 237, 0.55);
+  --border: rgba(0,0,0,0.08);
+  --border-light: rgba(255,255,255,0.1);
+  --font-display: 'Syne', system-ui, sans-serif;
+  --font-body: 'Inter', system-ui, sans-serif;
+  --ease: cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --container: min(1200px, 100% - 2rem);
+  --container-wide: min(1400px, 100% - 2rem);
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
+body {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--text);
+  background: var(--bg);
+  overflow-x: hidden;
+}
+a { text-decoration: none; color: inherit; }
+img { max-width: 100%; display: block; }
+ul { list-style: none; }
+
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.9s var(--ease-out), transform 0.9s var(--ease-out);
+}
+.reveal.visible { opacity: 1; transform: translateY(0); }
+.reveal-delay-1 { transition-delay: 0.1s; }
+.reveal-delay-2 { transition-delay: 0.2s; }
+.reveal-delay-3 { transition-delay: 0.3s; }
+
+/* ===========================
+   NAVIGATION
+   =========================== */
+
+.nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 1000;
+  background: rgba(250, 250, 247, 0.92);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.3s var(--ease), box-shadow 0.3s var(--ease);
+}
+.nav.scrolled {
+  border-bottom-color: var(--border);
+  box-shadow: 0 1px 20px rgba(0,0,0,0.04);
+}
+.nav-inner {
+  width: var(--container-wide);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 72px;
+}
+.nav-logo { display: flex; align-items: center; gap: 0.75rem; }
+.nav-logo img { width: 40px; height: 40px; border-radius: 8px; object-fit: cover; }
+.nav-logo-text {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  color: var(--bg-navy);
+  letter-spacing: -0.01em;
+  white-space: nowrap;
+}
+.nav-logo-text span { color: var(--blue); }
+.nav-links { display: flex; gap: 2.5rem; align-items: center; }
+.nav-links a {
+  font-size: 0.875rem; font-weight: 500; color: var(--text-muted);
+  letter-spacing: 0.02em; transition: color 0.25s var(--ease); position: relative;
+}
+.nav-links a::after {
+  content: ''; position: absolute; bottom: -4px; left: 0;
+  width: 0; height: 1.5px; background: var(--blue);
+  transition: width 0.3s var(--ease-out);
+}
+.nav-links a:hover { color: var(--text); }
+.nav-links a:hover::after { width: 100%; }
+.nav-links a.active { color: var(--text); }
+.nav-links a.active::after { width: 100%; }
+.nav-right { display: flex; align-items: center; gap: 1.5rem; }
+.nav-phone { font-size: 0.875rem; font-weight: 600; color: var(--text); letter-spacing: 0.01em; }
+.btn-cta {
+  display: inline-flex; align-items: center; gap: 0.5rem;
+  padding: 0.65rem 1.5rem; background: var(--blue); color: #fff;
+  font-family: var(--font-body); font-size: 0.85rem; font-weight: 600;
+  letter-spacing: 0.03em; border: none; border-radius: 6px;
+  cursor: pointer; transition: all 0.3s var(--ease); text-transform: uppercase;
+}
+.btn-cta:hover {
+  background: var(--blue-hover); transform: translateY(-1px);
+  box-shadow: 0 4px 20px rgba(43, 125, 233, 0.3);
+}
+.nav-toggle { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; }
+.nav-toggle span { display: block; width: 22px; height: 2px; background: var(--text); transition: all 0.3s var(--ease); }
+.nav-toggle.active span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+.nav-toggle.active span:nth-child(2) { opacity: 0; }
+.nav-toggle.active span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+
+/* ===========================
+   PAGE HERO
+   =========================== */
+
+.page-hero {
+  background: var(--bg-navy);
+  padding: 10rem 0 3.5rem;
+  text-align: center;
+  position: relative;
+}
+.page-hero-inner {
+  width: var(--container);
+  margin: 0 auto;
+}
+.page-hero .section-label {
+  font-size: 0.72rem; font-weight: 600; letter-spacing: 0.2em;
+  text-transform: uppercase; color: var(--blue); margin-bottom: 1rem; display: block;
+}
+.page-hero h1 {
+  font-family: var(--font-display);
+  font-size: clamp(2.25rem, 5vw, 3.5rem);
+  font-weight: 700; letter-spacing: -0.02em;
+  color: var(--text-light); line-height: 1.15; margin-bottom: 1rem;
+}
+.breadcrumb { font-size: 0.85rem; color: var(--text-muted-light); }
+.breadcrumb a { color: var(--text-muted-light); transition: color 0.25s var(--ease); }
+.breadcrumb a:hover { color: var(--blue); }
+.breadcrumb span { margin: 0 0.5rem; }
+
+/* ===========================
+   SECTION COMMON
+   =========================== */
+
+section { scroll-margin-top: 72px; }
+
+.section-label {
+  font-size: 0.72rem; font-weight: 600; letter-spacing: 0.2em;
+  text-transform: uppercase; color: var(--blue); margin-bottom: 1rem; display: block;
+}
+.section-title {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 700; letter-spacing: -0.02em;
+  color: var(--bg-navy); line-height: 1.15; margin-bottom: 0.75rem;
+}
+.section-desc {
+  font-size: 1.05rem; color: var(--text-muted);
+  max-width: 540px; margin: 1rem auto 0; line-height: 1.75;
+}
+
+/* ===========================
+   FEATURE IMAGE
+   =========================== */
+
+.feature-image {
+  width: var(--container);
+  margin: 0 auto;
+  max-width: 800px;
+  border-radius: 16px;
+  overflow: hidden;
+  aspect-ratio: 16/9;
+  margin-top: -2rem;
+  margin-bottom: 0;
+  position: relative;
+  z-index: 2;
+  box-shadow: 0 12px 40px rgba(0,0,0,0.1);
+}
+.feature-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ===========================
+   EDITORIAL CONTENT
+   =========================== */
+
+.intro-section {
+  padding: clamp(5rem, 10vh, 7rem) 0 clamp(4rem, 8vh, 6rem);
+  background: var(--bg);
+}
+
+.content-two-col {
+  width: var(--container);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  gap: 4rem;
+  align-items: start;
+}
+.content-main h2 {
+  font-family: var(--font-display);
+  font-size: clamp(1.5rem, 3vw, 2.25rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--bg-navy);
+  line-height: 1.2;
+  margin-top: 3rem;
+  margin-bottom: 1.5rem;
+}
+.content-main h2:first-child {
+  margin-top: 0;
+}
+.content-main h3 {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--bg-navy);
+  margin-top: 2.5rem;
+  margin-bottom: 0.75rem;
+}
+.content-main p {
+  font-size: 1rem;
+  color: var(--text-muted);
+  line-height: 1.85;
+  margin-bottom: 1.25rem;
+}
+
+.content-image {
+  border-radius: 12px;
+  overflow: hidden;
+  margin: 1.5rem 0;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.06);
+}
+.content-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.content-image.aspect-wide {
+  aspect-ratio: 16/9;
+}
+.content-image.aspect-wide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.benefit-list {
+  list-style: none;
+  padding: 0;
+  margin: 1.5rem 0;
+}
+.benefit-list li {
+  position: relative;
+  padding-left: 1.75rem;
+  font-size: 0.95rem;
+  line-height: 1.8;
+  color: var(--text-muted);
+  margin-bottom: 0.5rem;
+}
+.benefit-list li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.55em;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--blue);
+}
+
+.tips-list {
+  list-style: none;
+  padding: 0;
+  margin: 1.5rem 0 0;
+}
+.tips-list li {
+  position: relative;
+  padding-left: 1.5rem;
+  font-size: 0.95rem;
+  line-height: 1.8;
+  color: var(--text-muted);
+  margin-bottom: 0.5rem;
+}
+.tips-list li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.65em;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--blue);
+}
+
+/* ===========================
+   COMPARISON CARDS
+   =========================== */
+
+.comparison-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin: 1.5rem 0;
+}
+
+.comparison-card {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 2rem;
+  transition: all 0.4s var(--ease);
+  position: relative;
+}
+.comparison-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: var(--blue);
+  transform: scaleX(0);
+  transition: transform 0.4s var(--ease-out);
+  border-radius: 12px 12px 0 0;
+}
+.comparison-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.06);
+  border-color: var(--blue-border);
+}
+.comparison-card:hover::before {
+  transform: scaleX(1);
+}
+.comparison-card.recommended {
+  border-color: var(--blue-border);
+  background: var(--blue-soft);
+}
+.comparison-card.recommended::before {
+  transform: scaleX(1);
+}
+.comparison-card.advantage {
+  border-color: rgba(34, 197, 94, 0.2);
+}
+.comparison-card.advantage::before {
+  background: #22c55e;
+  transform: scaleX(1);
+}
+.comparison-card.disadvantage {
+  border-color: rgba(239, 68, 68, 0.15);
+}
+.comparison-card.disadvantage::before {
+  background: #ef4444;
+  transform: scaleX(1);
+}
+.comparison-card h3 {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--bg-navy);
+  margin-bottom: 0.75rem;
+  margin-top: 0;
+}
+.comparison-card p {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  line-height: 1.75;
+  margin-bottom: 0;
+}
+.comparison-card .benefit-list {
+  margin: 0.75rem 0 0;
+}
+.comparison-card .badge {
+  display: inline-block;
+  padding: 0.25rem 0.65rem;
+  background: var(--blue);
+  color: #fff;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border-radius: 4px;
+  margin-top: 1rem;
+}
+
+/* ===========================
+   PROCESS GRID (numbered cards)
+   =========================== */
+
+.process-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.25rem;
+  margin: 1.5rem 0;
+}
+.process-card {
+  background: var(--bg-warm);
+  border-radius: 12px;
+  padding: 1.5rem;
+  text-align: center;
+  transition: all 0.4s var(--ease);
+}
+.process-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.05);
+}
+.process-number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--blue);
+  color: #fff;
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+}
+.process-card h4 {
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--bg-navy);
+  margin-bottom: 0.5rem;
+}
+.process-card p {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  line-height: 1.7;
+  margin-bottom: 0;
+}
+
+/* ===========================
+   CALLOUT BOX
+   =========================== */
+
+.callout-box {
+  background: var(--blue-soft);
+  border: 1px solid var(--blue-border);
+  border-radius: 12px;
+  padding: 1.5rem 1.75rem;
+  margin: 1.5rem 0;
+}
+.callout-box p {
+  font-size: 0.95rem;
+  color: var(--bg-navy);
+  line-height: 1.75;
+  margin-bottom: 0;
+}
+.callout-box strong {
+  color: var(--blue);
+}
+
+.callout-box.warning {
+  background: rgba(239, 68, 68, 0.06);
+  border-color: rgba(239, 68, 68, 0.2);
+}
+.callout-box.warning strong {
+  color: #dc2626;
+}
+
+/* ===========================
+   INDUSTRY / TAG CLOUD
+   =========================== */
+
+.industry-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin: 1.25rem 0;
+}
+.industry-tags span {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background: var(--bg-warm);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  transition: all 0.3s var(--ease);
+}
+.industry-tags span:hover {
+  background: var(--blue-soft);
+  border-color: var(--blue-border);
+  color: var(--blue);
+}
+
+/* ===========================
+   SIDEBAR CTA
+   =========================== */
+
+.sidebar-cta {
+  position: sticky;
+  top: 100px;
+  background: var(--bg-navy);
+  border-radius: 16px;
+  padding: 2rem;
+  color: var(--text-light);
+}
+.sidebar-cta h3 {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+  color: var(--text-light);
+}
+.sidebar-cta p {
+  font-size: 0.9rem;
+  color: var(--text-muted-light);
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+}
+.sidebar-cta .btn-cta {
+  width: 100%;
+  justify-content: center;
+  padding: 0.85rem 1.5rem;
+}
+.sidebar-cta .phone-link {
+  display: block;
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-muted-light);
+  transition: color 0.25s var(--ease);
+}
+.sidebar-cta .phone-link:hover {
+  color: var(--blue);
+}
+
+/* ===========================
+   SERVICES LIST (navy section)
+   =========================== */
+
+.services-list {
+  padding: clamp(4rem, 8vh, 6rem) 0;
+  background: var(--bg-navy);
+}
+.services-list-inner {
+  width: var(--container);
+  margin: 0 auto;
+  max-width: 800px;
+  text-align: center;
+}
+.services-list-inner h2 {
+  font-family: var(--font-display);
+  font-size: clamp(1.5rem, 3vw, 2.25rem);
+  font-weight: 700;
+  color: var(--text-light);
+  margin-bottom: 2.5rem;
+}
+.services-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: center;
+}
+.services-tags a {
+  display: inline-block;
+  padding: 0.6rem 1.25rem;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 8px;
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: var(--text-light);
+  transition: all 0.3s var(--ease);
+}
+.services-tags a:hover {
+  background: rgba(43, 125, 233, 0.15);
+  border-color: var(--blue);
+  color: var(--blue);
+}
+
+/* ===========================
+   FULL-WIDTH CONTENT SECTION
+   =========================== */
+
+.content-full-section {
+  padding: clamp(4rem, 8vh, 6rem) 0;
+}
+.content-full-inner {
+  width: var(--container);
+  margin: 0 auto;
+  max-width: 1000px;
+}
+.content-full-inner h2 {
+  font-family: var(--font-display);
+  font-size: clamp(1.5rem, 3vw, 2.25rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--bg-navy);
+  line-height: 1.2;
+  margin-top: 3rem;
+  margin-bottom: 1.5rem;
+}
+.content-full-inner h2:first-child {
+  margin-top: 0;
+}
+.content-full-inner p {
+  font-size: 1rem;
+  color: var(--text-muted);
+  line-height: 1.85;
+  margin-bottom: 1.25rem;
+}
+
+/* ===========================
+   SERVICE DETAIL CARDS
+   =========================== */
+
+.service-detail-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.25rem;
+  margin: 2rem 0;
+}
+.service-detail-card {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1.75rem;
+  transition: all 0.4s var(--ease);
+}
+.service-detail-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 30px rgba(0,0,0,0.06);
+  border-color: var(--blue-border);
+}
+.service-detail-card h4 {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--bg-navy);
+  margin-bottom: 0.5rem;
+}
+.service-detail-card p {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  line-height: 1.75;
+  margin-bottom: 0;
+}
+.service-detail-card .service-number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--blue-soft);
+  color: var(--blue);
+  font-family: var(--font-display);
+  font-size: 0.85rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+  border: 1px solid var(--blue-border);
+}
+
+/* Do's and Don'ts grid */
+.dos-donts-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin: 1.5rem 0;
+}
+.dos-card, .donts-card {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 2rem;
+  position: relative;
+}
+.dos-card::before, .donts-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  border-radius: 12px 12px 0 0;
+}
+.dos-card::before {
+  background: #22c55e;
+}
+.donts-card::before {
+  background: #ef4444;
+}
+.dos-card h3, .donts-card h3 {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--bg-navy);
+  margin-bottom: 0.75rem;
+  margin-top: 0;
+}
+
+/* ===========================
+   CTA SECTION
+   =========================== */
+
+.cta-section {
+  padding: clamp(5rem, 10vh, 8rem) 0;
+  background: var(--bg-warm);
+  text-align: center;
+}
+.cta-inner {
+  width: var(--container);
+  margin: 0 auto;
+}
+.cta-section .section-title { margin-bottom: 0.75rem; }
+.cta-section .section-desc { margin-bottom: 2.5rem; }
+.cta-actions {
+  display: flex; align-items: center; justify-content: center;
+  gap: 1.25rem; flex-wrap: wrap;
+}
+.btn-hero {
+  display: inline-flex; align-items: center; gap: 0.6rem;
+  padding: 0.9rem 2rem; font-family: var(--font-body);
+  font-size: 0.9rem; font-weight: 600; letter-spacing: 0.04em;
+  text-transform: uppercase; border-radius: 6px; cursor: pointer;
+  transition: all 0.35s var(--ease); border: none;
+}
+.btn-hero.filled { background: var(--blue); color: #fff; }
+.btn-hero.filled:hover {
+  background: var(--blue-hover); transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(43, 125, 233, 0.35);
+}
+.btn-hero .arrow { transition: transform 0.3s var(--ease); }
+.btn-hero:hover .arrow { transform: translateX(3px); }
+.btn-call {
+  display: inline-flex; align-items: center; gap: 0.6rem;
+  padding: 0.9rem 2rem; font-family: var(--font-body);
+  font-size: 0.9rem; font-weight: 600; color: var(--bg-navy);
+  letter-spacing: 0.03em; border: 1.5px solid var(--border);
+  border-radius: 6px; transition: all 0.3s var(--ease);
+}
+.btn-call:hover {
+  border-color: var(--bg-navy); background: var(--bg-navy); color: #fff;
+}
+
+/* ===========================
+   FOOTER
+   =========================== */
+
+.footer {
+  background: var(--bg-navy);
+  color: var(--text-light);
+  padding: 4.5rem 0 0;
+}
+.footer-inner {
+  width: var(--container);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1.2fr;
+  gap: 3rem;
+  padding-bottom: 3.5rem;
+  border-bottom: 1px solid var(--border-light);
+}
+.footer-brand { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem; }
+.footer-brand img { width: 36px; height: 36px; border-radius: 6px; object-fit: cover; }
+.footer-brand-text { font-family: var(--font-display); font-size: 1.2rem; }
+.footer-brand-text span { color: var(--blue); }
+.footer-desc {
+  font-size: 0.88rem; color: var(--text-muted-light);
+  line-height: 1.75; max-width: 280px;
+}
+.footer h4 {
+  font-family: var(--font-display);
+  font-size: 1rem; margin-bottom: 1.25rem; color: var(--text-light);
+}
+.footer ul li { margin-bottom: 0.6rem; }
+.footer ul li a {
+  font-size: 0.88rem; color: var(--text-muted-light);
+  transition: color 0.25s var(--ease);
+}
+.footer ul li a:hover { color: var(--blue); }
+.footer-contact-item {
+  display: flex; align-items: flex-start; gap: 0.6rem;
+  margin-bottom: 0.75rem; font-size: 0.88rem; color: var(--text-muted-light);
+}
+.footer-contact-item svg {
+  width: 16px; height: 16px; stroke: var(--blue); fill: none;
+  stroke-width: 2; flex-shrink: 0; margin-top: 3px;
+}
+.footer-contact-item a { color: var(--text-muted-light); transition: color 0.25s; }
+.footer-contact-item a:hover { color: var(--blue); }
+.footer-bottom {
+  width: var(--container);
+  margin: 0 auto;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 1.5rem 0; font-size: 0.8rem; color: var(--text-muted-light);
+}
+.footer-social a {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 36px; height: 36px; border-radius: 8px;
+  border: 1px solid var(--border-light); transition: all 0.3s var(--ease);
+}
+.footer-social a:hover { border-color: var(--blue); background: rgba(43, 125, 233, 0.1); }
+.footer-social svg { width: 16px; height: 16px; fill: var(--text-muted-light); }
+.footer-social a:hover svg { fill: var(--blue); }
+
+/* ===========================
+   RESPONSIVE
+   =========================== */
+
+@media (max-width: 1024px) {
+  .content-two-col { grid-template-columns: 1fr; gap: 2rem; }
+  .sidebar-cta { position: static; }
+  .footer-inner { grid-template-columns: repeat(2, 1fr); gap: 2.5rem; }
+  .comparison-grid { grid-template-columns: 1fr; }
+  .process-grid { grid-template-columns: repeat(2, 1fr); }
+  .service-detail-grid { grid-template-columns: 1fr; }
+  .dos-donts-grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 768px) {
+  .nav-links { display: none; }
+  .nav-phone { display: none; }
+  .nav-toggle { display: flex; }
+  .nav-links.open {
+    display: flex; flex-direction: column; position: absolute;
+    top: 72px; left: 0; right: 0; background: var(--bg);
+    padding: 1.5rem 1rem; gap: 0;
+    border-bottom: 1px solid var(--border);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+  }
+  .nav-links.open a {
+    padding: 0.75rem 1rem; font-size: 1rem;
+    border-bottom: 1px solid var(--border);
+  }
+  .nav-links.open a:last-child { border-bottom: none; }
+
+  .feature-image { margin-top: 0; border-radius: 12px; }
+  .process-grid { grid-template-columns: 1fr; }
+  .service-detail-grid { grid-template-columns: 1fr; }
+  .footer-inner { grid-template-columns: 1fr; gap: 2rem; }
+  .footer-bottom { flex-direction: column; gap: 1rem; text-align: center; }
+}
+
+@media (max-width: 480px) {
+  .cta-actions { flex-direction: column; align-items: center; }
+  .services-tags { gap: 0.5rem; }
+}
+</style>
+</head>
+<body>
+
+<!-- =========== NAVIGATION =========== -->
+<header class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <img src="images/logo.jpg" alt="Tile & Stone Cleaners" loading="lazy">
+      <div class="nav-logo-text">Tile & Stone <span>Cleaners</span></div>
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="nav-right">
+      <a href="tel:0481616303" class="nav-phone">04 81 616 303</a>
+      <a href="contact.html" class="btn-cta">Get a Quote</a>
+      <div class="nav-toggle" id="navToggle" aria-label="Menu" role="button" tabindex="0">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- =========== PAGE HERO =========== -->
+<section class="page-hero">
+  <div class="page-hero-inner">
+    <span class="section-label">Material Guide</span>
+    <h1>Porcelain Tile Cleaning, Sealing &amp; Restoration</h1>
+    <div class="breadcrumb">
+      <a href="index.html">Home</a>
+      <span>/</span>
+      <a href="services.html">Services</a>
+      <span>/</span>
+      Porcelain
+    </div>
+  </div>
+</section>
+
+<!-- =========== FEATURE IMAGE =========== -->
+<div class="feature-image reveal">
+  <img src="images/materials/porcelain.png" alt="Porcelain tile surface showing clean, uniform finish with minimal grout lines">
+</div>
+
+<!-- =========== SECTION 1: INTRO + SIDEBAR =========== -->
+<section class="intro-section">
+  <div class="content-two-col">
+    <div class="content-main reveal">
+
+      <!-- SECTION 1: Intro -->
+      <h2>Sydney's Porcelain Tile Cleaning &amp; Restoration Experts</h2>
+      <p>Porcelain tiles are one of the most durable and versatile flooring options available. Fired at extremely high temperatures, porcelain is highly resistant to stains, scratches, and thermal shock, making it ideal for kitchens, bathrooms, living areas, and outdoor spaces. Despite its resilience, porcelain still requires proper care and maintenance to keep it looking its best over time.</p>
+      <p>At Tile and Stone Cleaners, we specialise in professional porcelain tile and grout cleaning, sealing, and restoration across Sydney. Whether your porcelain floors are in a residential home or a high-traffic commercial space, our technicians use industry-leading equipment and techniques to restore your tiles to their original condition.</p>
+
+      <!-- SECTION 2: What is Porcelain? -->
+      <h2>What is Porcelain?</h2>
+      <p>Porcelain is a type of ceramic tile made from a refined clay mixture that is fired at temperatures exceeding 1,200 degrees Celsius. This extreme firing process creates a tile that is exceptionally dense, hard, and resistant to moisture absorption. Porcelain tiles typically have a water absorption rate of less than 0.5%, making them significantly more waterproof than standard ceramic tiles.</p>
+      <p>Porcelain resists chemicals, stains, and thermal shock better than most other tile materials. It can handle pressure cleaning at up to 1,300 PSI when the grout is sound and in good condition, making it one of the few tile types that can withstand high-pressure cleaning without risk of surface damage. This durability makes porcelain a popular choice for both indoor and outdoor applications.</p>
+
+      <!-- SECTION 3: Types of Porcelain -->
+      <h2>Types of Porcelain Tiles</h2>
+      <p>Not all porcelain tiles are the same. The three main types differ in their surface treatment, porosity, and maintenance requirements. Understanding which type you have is essential for proper cleaning and sealing.</p>
+
+      <div class="process-grid" style="grid-template-columns: repeat(3, 1fr);">
+        <div class="process-card">
+          <div class="process-number">1</div>
+          <h4>Natural (Unpolished)</h4>
+          <p>Has a textured, matte surface with higher porosity than other types. Natural porcelain is more prone to absorbing stains and moisture, making regular sealing essential to maintain its appearance and protect the surface.</p>
+        </div>
+        <div class="process-card">
+          <div class="process-number">2</div>
+          <h4>Polished</h4>
+          <p>Features a glossy, reflective surface achieved through mechanical polishing after firing. Polished porcelain is often pre-sealed at the factory but may still require additional sealing depending on the manufacturer and usage.</p>
+        </div>
+        <div class="process-card">
+          <div class="process-number">3</div>
+          <h4>Glazed</h4>
+          <p>Coated with a glass-like glaze applied before the final firing. Glazed porcelain is the most stain-resistant type with very low water absorption. The glaze creates a protective barrier that repels moisture and resists most household chemicals.</p>
+        </div>
+      </div>
+
+      <!-- SECTION 4: Porcelain vs Ceramic -->
+      <h2>Porcelain vs Ceramic</h2>
+      <p>While porcelain is technically a type of ceramic, it differs significantly in composition, durability, and performance. Understanding these differences helps you choose the right tile for your space and maintain it correctly.</p>
+
+      <div class="comparison-grid">
+        <div class="comparison-card recommended">
+          <h3>Porcelain</h3>
+          <ul class="benefit-list">
+            <li>Made from denser, more refined clay fired at higher temperatures (1,200+ degrees Celsius)</li>
+            <li>Water absorption rate of just 0.5% -- significantly more waterproof</li>
+            <li>Superior scratch resistance due to higher density and hardness</li>
+            <li>Suitable for both indoor and outdoor use, including frost-prone areas</li>
+            <li>More resistant to chemicals, stains, and heavy foot traffic</li>
+          </ul>
+          <span class="badge">More Durable</span>
+        </div>
+        <div class="comparison-card">
+          <h3>Ceramic</h3>
+          <ul class="benefit-list">
+            <li>Made from coarser clay fired at lower temperatures (900-1,100 degrees Celsius)</li>
+            <li>Higher water absorption rate -- more porous and prone to moisture damage</li>
+            <li>Softer surface that scratches and chips more easily over time</li>
+            <li>Best suited for indoor use in low-traffic areas like walls and splashbacks</li>
+            <li>More affordable upfront but may require more frequent replacement</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- SECTION 5: Porcelain Tile Care -->
+      <h2>Porcelain Tile Care</h2>
+      <p>Regular maintenance keeps your porcelain tiles looking new and extends the lifespan of both the tiles and grout. Follow these five essential care steps to protect your porcelain surfaces between professional services.</p>
+
+      <div class="process-grid">
+        <div class="process-card">
+          <div class="process-number">1</div>
+          <h4>Sweep Regularly</h4>
+          <p>Remove loose dirt, dust, and grit with a soft broom or vacuum. Grit left on the surface acts like sandpaper underfoot, gradually dulling the finish and creating microscopic scratches.</p>
+        </div>
+        <div class="process-card">
+          <div class="process-number">2</div>
+          <h4>Clean Grout Lines</h4>
+          <p>Grout is more porous than porcelain and absorbs stains quickly. Clean grout lines regularly with a pH-neutral cleaner and a stiff brush to prevent discolouration and mould growth.</p>
+        </div>
+        <div class="process-card">
+          <div class="process-number">3</div>
+          <h4>Wash Wall Tiles</h4>
+          <p>Bathroom and kitchen wall tiles accumulate soap scum, grease, and water spots. Wipe them down weekly with a non-abrasive cleaner to prevent buildup that becomes harder to remove over time.</p>
+        </div>
+        <div class="process-card">
+          <div class="process-number">4</div>
+          <h4>Keep Bathroom Grout Dry</h4>
+          <p>After showering, wipe down tiles and grout with a squeegee or dry cloth. Standing moisture promotes mould and mildew growth in grout lines, leading to staining and deterioration.</p>
+        </div>
+        <div class="process-card" style="grid-column: span 2;">
+          <div class="process-number">5</div>
+          <h4>Seal Grout Lines</h4>
+          <p>Apply a penetrating grout sealer every 12-18 months to protect grout from moisture absorption and staining. Sealed grout is easier to clean and resists mould growth significantly better than unsealed grout.</p>
+        </div>
+      </div>
+
+      <!-- SECTION 6: Daily Cleaning Tips -->
+      <h2>Daily Cleaning Tips for Porcelain</h2>
+      <p>Small daily habits make the biggest difference in keeping porcelain tiles looking pristine. These five simple practices prevent the buildup of dirt and grime that leads to costly professional intervention.</p>
+
+      <div class="process-grid">
+        <div class="process-card">
+          <div class="process-number">1</div>
+          <h4>Dust Mop Daily</h4>
+          <p>Use a microfiber dust mop to pick up fine particles that a broom might miss. Microfiber traps dust rather than pushing it around, keeping your porcelain surface clean and scratch-free.</p>
+        </div>
+        <div class="process-card">
+          <div class="process-number">2</div>
+          <h4>Mats at Entrances</h4>
+          <p>Place doormats at every entrance to trap grit, sand, and dirt before it reaches your porcelain floors. This single step prevents the majority of surface scratching caused by foot traffic.</p>
+        </div>
+        <div class="process-card">
+          <div class="process-number">3</div>
+          <h4>Shower Ventilation</h4>
+          <p>Run the exhaust fan during and for 15 minutes after each shower. Proper ventilation reduces humidity that causes mould and mildew to form on porcelain tiles and grout in wet areas.</p>
+        </div>
+        <div class="process-card">
+          <div class="process-number">4</div>
+          <h4>Mildew-Resistant Caulk</h4>
+          <p>Use mildew-resistant silicone caulk around shower edges, bath surrounds, and tile transitions. This prevents black mould from taking hold in areas where grout meets other surfaces.</p>
+        </div>
+        <div class="process-card" style="grid-column: span 2;">
+          <div class="process-number">5</div>
+          <h4>Mop 2-3x Weekly</h4>
+          <p>Damp mop porcelain floors two to three times per week with warm water and a pH-neutral tile cleaner. Avoid excessive water -- a lightly damp mop is sufficient. Too much water can seep into grout lines and cause damage over time.</p>
+        </div>
+      </div>
+
+      <!-- SECTION 7: Sealing Porcelain -->
+      <h2>Sealing Porcelain Tiles</h2>
+      <p>Not all porcelain tiles require sealing. Glazed porcelain tiles have a built-in glass-like coating that makes them virtually impervious to moisture and stains -- sealing glazed porcelain is unnecessary and can even cause issues by trapping moisture on the surface.</p>
+      <p>However, natural (unpolished) and polished porcelain varieties are more porous and benefit significantly from sealing. For these types, water-based penetrating sealers are recommended for grout lines, while impregnating sealers work best on porous tile surfaces. These sealers penetrate into the material and create an invisible barrier that repels water and oil-based stains without altering the tile's appearance.</p>
+      <p>Always test sealer on a small, inconspicuous area first. Some sealers can darken or alter the colour of certain porcelain finishes. Your Tile and Stone Cleaners technician will assess your specific tiles and recommend the appropriate sealer type and application method.</p>
+
+      <!-- SECTION 8: Grout Cleaning Methods -->
+      <h2>Grout Cleaning Methods</h2>
+      <p>Grout is the weakest link in any tiled surface. Even the most durable porcelain tiles can look dirty and neglected when grout lines become stained and discoloured. Here are two proven methods for cleaning grout at home between professional services.</p>
+
+      <div class="comparison-grid">
+        <div class="comparison-card">
+          <h3>Bleach Solution (50/50)</h3>
+          <p>Mix equal parts household bleach and warm water. Apply to grout lines with a stiff brush, scrub thoroughly, and let sit for 5-10 minutes before rinsing completely with clean water.</p>
+          <ul class="benefit-list">
+            <li>Effective at killing mould and mildew on contact</li>
+            <li>Whitens and brightens stained grout quickly</li>
+            <li>Requires proper ventilation -- open windows and use a fan</li>
+            <li>Always wear rubber gloves and eye protection</li>
+            <li>Rinse thoroughly to prevent residue buildup</li>
+          </ul>
+        </div>
+        <div class="comparison-card recommended">
+          <h3>Hydrogen Peroxide</h3>
+          <p>Apply 3% hydrogen peroxide directly to grout lines. Let it fizz and work for 10-15 minutes, then scrub with a nylon brush and rinse with clean water.</p>
+          <ul class="benefit-list">
+            <li>Odourless and gentler than bleach -- no harsh fumes</li>
+            <li>Safe for use around children and pets once dry</li>
+            <li>Effective at lifting organic stains and light mould</li>
+            <li>Won't discolour or damage porcelain tile surfaces</li>
+            <li>Can be mixed with baking soda for a paste on stubborn stains</li>
+          </ul>
+          <span class="badge">Gentle Option</span>
+        </div>
+      </div>
+
+      <!-- SECTION 9: Don't hire inexperienced contractors -->
+      <div class="callout-box warning">
+        <p><strong>Don't Hire Inexperienced Contractors:</strong> Porcelain tile and grout cleaning requires specialised knowledge of different tile types, appropriate pressure settings, and compatible cleaning chemicals. Inexperienced contractors can damage grout lines with excessive pressure, use incorrect chemicals that leave residue or discolouration, or fail to properly seal tiles after cleaning. Always choose a professional service with proven expertise in porcelain tile care to protect your investment and ensure lasting results.</p>
+      </div>
+
+    </div>
+
+    <!-- SIDEBAR CTA -->
+    <aside class="reveal reveal-delay-1">
+      <div class="sidebar-cta">
+        <h3>Get a Free Quote</h3>
+        <p>Need your porcelain tiles cleaned, sealed, or restored? We offer free, no-obligation inspections and quotes across Sydney.</p>
+        <a href="contact.html" class="btn-cta">Request a Quote</a>
+        <a href="tel:0481616303" class="phone-link">or call 04 81 616 303</a>
+      </div>
+    </aside>
+  </div>
+</section>
+
+<!-- =========== OUR PORCELAIN SERVICES (Full-width) =========== -->
+<section class="content-full-section" style="background: var(--bg-warm);">
+  <div class="content-full-inner reveal">
+    <div style="text-align: center; margin-bottom: 2.5rem;">
+      <span class="section-label">What We Offer</span>
+      <h2 style="margin-bottom: 0.5rem;">Our Porcelain Services</h2>
+      <p style="max-width: 580px; margin: 0 auto;">We offer a comprehensive range of porcelain tile cleaning, restoration, and protection services. Every service is tailored to your tile type and specific condition.</p>
+    </div>
+
+    <div class="service-detail-grid">
+      <div class="service-detail-card">
+        <div class="service-number">1</div>
+        <h4>Stripping &amp; Sealing</h4>
+        <p>Complete removal of old sealant, wax buildup, and surface residue followed by deep cleaning and application of fresh, long-lasting sealer. Ideal for porcelain floors that have lost their lustre or where previous sealant has degraded and is trapping dirt.</p>
+      </div>
+      <div class="service-detail-card">
+        <div class="service-number">2</div>
+        <h4>Cleaning &amp; Sealing</h4>
+        <p>Professional deep clean of porcelain tiles and grout followed by protective sealer application. Suitable for new installations, dulled surfaces, or tiles with worn sealant that need refreshing without full stripping.</p>
+      </div>
+      <div class="service-detail-card">
+        <div class="service-number">3</div>
+        <h4>Tile &amp; Grout Cleaning</h4>
+        <p>Specialised porcelain tile and grout cleaning using professional-grade equipment including van-mounted high-pressure systems and rotary scrubbers. We extract embedded dirt, grime, soap scum, and discolouration from both tile faces and grout lines.</p>
+      </div>
+      <div class="service-detail-card">
+        <div class="service-number">4</div>
+        <h4>Tile Sealing</h4>
+        <p>Seal porous natural and polished porcelain tiles to prevent staining and moisture damage. We use penetrating sealers that create an invisible barrier within the tile and grout, repelling water and oil-based contaminants while allowing the surface to breathe.</p>
+      </div>
+      <div class="service-detail-card">
+        <div class="service-number">5</div>
+        <h4>Stripping</h4>
+        <p>Remove old sealant, wax buildup, and surface residue to restore your porcelain tiles to their original appearance. Proper stripping is essential before any new sealer application to ensure adhesion, even coverage, and optimal protection.</p>
+      </div>
+      <div class="service-detail-card">
+        <div class="service-number">6</div>
+        <h4>Efflorescence Treatment</h4>
+        <p>Remove white, powdery salt deposits that appear on porcelain tile surfaces and grout lines. We use specialised chemicals and equipment to dissolve and extract efflorescence without damaging the underlying tile or grout.</p>
+      </div>
+      <div class="service-detail-card">
+        <div class="service-number">7</div>
+        <h4>Minor Tile Repair</h4>
+        <p>Fix cracked, chipped, loose, and discoloured porcelain tiles in both indoor and outdoor settings. Minor repairs prevent further damage and extend the lifespan of your tiled installation without the cost of full replacement.</p>
+      </div>
+      <div class="service-detail-card">
+        <div class="service-number">8</div>
+        <h4>Grout Colour Sealing</h4>
+        <p>Re-colour stained, discoloured grout lines or change the existing grout colour to refresh the overall appearance of your porcelain floor. Colour sealing provides a uniform look while simultaneously protecting grout from future staining and moisture damage.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =========== SERVICES TAG CLOUD =========== -->
+<section class="services-list">
+  <div class="services-list-inner reveal">
+    <h2>Related Services</h2>
+    <div class="services-tags">
+      <a href="cleaning-sealing.html">Cleaning & Sealing</a>
+      <a href="stripping-sealing.html">Stripping & Sealing</a>
+      <a href="tile-grout-cleaning.html">Tile & Grout Cleaning</a>
+      <a href="pressure-cleaning.html">High-Pressure Cleaning</a>
+      <a href="efflorescence-treatment.html">Efflorescence Treatment</a>
+      <a href="services.html">Minor Tile Repair</a>
+      <a href="services.html">Grout Colour Sealing</a>
+    </div>
+  </div>
+</section>
+
+<!-- =========== CTA =========== -->
+<section class="cta-section">
+  <div class="cta-inner reveal">
+    <span class="section-label">Let's Talk</span>
+    <h2 class="section-title">Ready to Restore Your Porcelain Tiles?</h2>
+    <p class="section-desc">Get a free, no-obligation quote. We'll inspect your porcelain surfaces and recommend the best treatment plan.</p>
+    <div class="cta-actions">
+      <a href="contact.html" class="btn-hero filled" style="border: none;">
+        Get a Free Quote
+        <svg class="arrow" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+      <a href="tel:0481616303" class="btn-call">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M14.5 11.35v1.9a1.27 1.27 0 0 1-1.38 1.27 12.52 12.52 0 0 1-5.46-1.94 12.33 12.33 0 0 1-3.8-3.8A12.52 12.52 0 0 1 1.92 3.3 1.27 1.27 0 0 1 3.17 1.93h1.9a1.27 1.27 0 0 1 1.27 1.09c.08.6.23 1.19.44 1.76a1.27 1.27 0 0 1-.28 1.34L5.6 7.01a10.16 10.16 0 0 0 3.8 3.8l.89-.89a1.27 1.27 0 0 1 1.34-.28c.57.2 1.16.36 1.76.44a1.27 1.27 0 0 1 1.09 1.29z" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        04 81 616 303
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- =========== FOOTER =========== -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div>
+      <div class="footer-brand">
+        <img src="images/logo.jpg" alt="Tile & Stone Cleaners" loading="lazy">
+        <div class="footer-brand-text">Tile & Stone <span>Cleaners</span></div>
+      </div>
+      <p class="footer-desc">Sydney's trusted tile and stone specialists. Cleaning, sealing, restoration and repair across 9 regions with 15+ years of experience.</p>
+    </div>
+    <div>
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="sydney.html">Sydney</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Service Areas</h4>
+      <ul>
+        <li><a href="sydney.html">Sydney</a></li>
+        <li><a href="sydney.html">North Shore</a></li>
+        <li><a href="sydney.html">Northern Beaches</a></li>
+        <li><a href="sydney.html">Central Coast</a></li>
+        <li><a href="sydney.html">Eastern Suburbs</a></li>
+        <li><a href="sydney.html">Hills Shire</a></li>
+        <li><a href="sydney.html">Sutherland Shire</a></li>
+        <li><a href="sydney.html">Western Suburbs</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <div class="footer-contact-item">
+        <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.81.36 1.6.68 2.34a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.74.32 1.53.55 2.34.68a2 2 0 0 1 1.72 2.05z" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <a href="tel:0481616303">04 81 616 303</a>
+      </div>
+      <div class="footer-contact-item">
+        <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        <a href="mailto:tileandstonecleaners@mail.com">tileandstonecleaners@mail.com</a>
+      </div>
+      <div class="footer-contact-item">
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        <div>Mon&ndash;Fri: 8am&ndash;6pm<br>Sat&ndash;Sun: 11am&ndash;3pm</div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div>&copy; 2024 Tile & Stone Cleaners. All rights reserved.</div>
+    <div class="footer-social">
+      <a href="https://instagram.com/tileandstonecleanerss/" target="_blank" rel="noopener" aria-label="Instagram">
+        <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5"/></svg>
+      </a>
+    </div>
+  </div>
+</footer>
+
+<script>
+const nav=document.getElementById('nav');window.addEventListener('scroll',()=>{nav.classList.toggle('scrolled',window.scrollY>20)},{passive:true});const toggle=document.getElementById('navToggle');const links=document.getElementById('navLinks');toggle.addEventListener('click',()=>{toggle.classList.toggle('active');links.classList.toggle('open')});links.querySelectorAll('a').forEach(a=>{a.addEventListener('click',()=>{toggle.classList.remove('active');links.classList.remove('open')})});const revealElements=document.querySelectorAll('.reveal');const observer=new IntersectionObserver((entries)=>{entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('visible');observer.unobserve(entry.target)}})},{threshold:0.12,rootMargin:'0px 0px -40px 0px'});revealElements.forEach(el=>observer.observe(el));
+</script>
+</body>
+</html>

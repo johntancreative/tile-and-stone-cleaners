@@ -1,0 +1,4 @@
+# Prototype — prevent indexing of .vercel.app preview URL
+# Remove Disallow when pointing the real domain (tileandstonecleaners.com.au)
+User-agent: *
+Disallow: /
