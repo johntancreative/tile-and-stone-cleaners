@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FAQ | Tile & Stone Cleaners Sydney</title>
+<meta name="description" content="Frequently asked questions about tile and stone cleaning, sealing, and restoration in Sydney. Pricing, methods, products, and expert advice from Tile & Stone Cleaners.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #FAFAF7; --bg-warm: #F3F1EC; --bg-navy: #0C2340; --bg-navy-light: #122D4D;
+  --blue: #2B7DE9; --blue-hover: #1A6AD8; --blue-soft: rgba(43, 125, 233, 0.08); --blue-border: rgba(43, 125, 233, 0.2);
+  --text: #1A1A1A; --text-light: #F5F2ED; --text-muted: #6B7280; --text-muted-light: rgba(245, 242, 237, 0.55);
+  --border: rgba(0,0,0,0.08); --border-light: rgba(255,255,255,0.1);
+  --font-display: 'Syne', system-ui, sans-serif; --font-body: 'Inter', system-ui, sans-serif;
+  --ease: cubic-bezier(0.4, 0, 0.2, 1); --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --container: min(1200px, 100% - 2rem); --container-wide: min(1400px, 100% - 2rem);
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
+body { font-family: var(--font-body); font-size: 1rem; line-height: 1.7; color: var(--text); background: var(--bg); overflow-x: hidden; }
+a { text-decoration: none; color: inherit; } img { max-width: 100%; display: block; } ul { list-style: none; }
+.reveal { opacity: 0; transform: translateY(40px); transition: opacity 0.9s var(--ease-out), transform 0.9s var(--ease-out); }
+.reveal.visible { opacity: 1; transform: translateY(0); }
+.reveal-delay-1 { transition-delay: 0.1s; } .reveal-delay-2 { transition-delay: 0.2s; } .reveal-delay-3 { transition-delay: 0.3s; }
+
+.nav { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; background: rgba(250, 250, 247, 0.92); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border-bottom: 1px solid transparent; transition: border-color 0.3s var(--ease), box-shadow 0.3s var(--ease); }
+.nav.scrolled { border-bottom-color: var(--border); box-shadow: 0 1px 20px rgba(0,0,0,0.04); }
+.nav-inner { width: var(--container-wide); margin: 0 auto; display: flex; align-items: center; justify-content: space-between; height: 72px; }
+.nav-logo { display: flex; align-items: center; gap: 0.75rem; }
+.nav-logo img { width: 40px; height: 40px; border-radius: 8px; object-fit: cover; }
+.nav-logo-text { font-family: var(--font-display); font-size: 1.2rem; color: var(--bg-navy); letter-spacing: -0.01em; white-space: nowrap; }
+.nav-logo-text span { color: var(--blue); }
+.nav-links { display: flex; gap: 2.5rem; align-items: center; }
+.nav-links a { font-size: 0.875rem; font-weight: 500; color: var(--text-muted); letter-spacing: 0.02em; transition: color 0.25s var(--ease); position: relative; }
+.nav-links a::after { content: ''; position: absolute; bottom: -4px; left: 0; width: 0; height: 1.5px; background: var(--blue); transition: width 0.3s var(--ease-out); }
+.nav-links a:hover { color: var(--text); } .nav-links a:hover::after { width: 100%; }
+.nav-right { display: flex; align-items: center; gap: 1.5rem; }
+.nav-phone { font-size: 0.875rem; font-weight: 600; color: var(--text); letter-spacing: 0.01em; }
+.btn-cta { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.65rem 1.5rem; background: var(--blue); color: #fff; font-family: var(--font-body); font-size: 0.85rem; font-weight: 600; letter-spacing: 0.03em; border: none; border-radius: 6px; cursor: pointer; transition: all 0.3s var(--ease); text-transform: uppercase; }
+.btn-cta:hover { background: var(--blue-hover); transform: translateY(-1px); box-shadow: 0 4px 20px rgba(43, 125, 233, 0.3); }
+.nav-toggle { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; }
+.nav-toggle span { display: block; width: 22px; height: 2px; background: var(--text); transition: all 0.3s var(--ease); }
+.nav-toggle.active span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+.nav-toggle.active span:nth-child(2) { opacity: 0; }
+.nav-toggle.active span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+
+.page-hero { background: var(--bg-navy); padding: 10rem 0 3.5rem; text-align: center; position: relative; }
+.page-hero-inner { width: var(--container); margin: 0 auto; }
+.page-hero .section-label { font-size: 0.72rem; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: var(--blue); margin-bottom: 1rem; display: block; }
+.page-hero h1 { font-family: var(--font-display); font-size: clamp(2.25rem, 5vw, 3.5rem); font-weight: 700; letter-spacing: -0.02em; color: var(--text-light); line-height: 1.15; margin-bottom: 1rem; }
+.breadcrumb { font-size: 0.85rem; color: var(--text-muted-light); }
+.breadcrumb a { color: var(--text-muted-light); transition: color 0.25s var(--ease); }
+.breadcrumb a:hover { color: var(--blue); }
+.breadcrumb span { margin: 0 0.5rem; }
+
+section { scroll-margin-top: 72px; }
+
+.faq { padding: clamp(5rem, 10vh, 8rem) 0; background: var(--bg); }
+.faq-inner { width: var(--container); margin: 0 auto; max-width: 800px; }
+.faq-inner h2 { font-family: var(--font-display); font-size: clamp(1.5rem, 3vw, 2.25rem); font-weight: 700; letter-spacing: -0.02em; color: var(--bg-navy); line-height: 1.2; margin-bottom: 2.5rem; text-align: center; }
+.faq-item { border: 1px solid var(--border); border-radius: 10px; margin-bottom: 0.75rem; background: #fff; overflow: hidden; transition: border-color 0.3s var(--ease); }
+.faq-item.active { border-color: var(--blue-border); }
+.faq-question { display: flex; align-items: center; justify-content: space-between; padding: 1.25rem 1.5rem; cursor: pointer; gap: 1rem; transition: background 0.2s var(--ease); }
+.faq-question:hover { background: var(--blue-soft); }
+.faq-question h3 { font-family: var(--font-display); font-size: 1.05rem; font-weight: 600; color: var(--bg-navy); line-height: 1.4; }
+.faq-icon { width: 28px; height: 28px; border-radius: 50%; background: var(--blue-soft); display: flex; align-items: center; justify-content: center; flex-shrink: 0; transition: all 0.3s var(--ease); }
+.faq-item.active .faq-icon { background: var(--blue); transform: rotate(180deg); }
+.faq-icon svg { width: 14px; height: 14px; stroke: var(--blue); fill: none; stroke-width: 2.5; transition: stroke 0.3s var(--ease); }
+.faq-item.active .faq-icon svg { stroke: #fff; }
+.faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.4s var(--ease); }
+.faq-answer-inner { padding: 0 1.5rem 1.5rem; }
+.faq-answer-inner p { font-size: 0.95rem; color: var(--text-muted); line-height: 1.8; }
+
+.cta-section { padding: clamp(5rem, 10vh, 8rem) 0; background: var(--bg-warm); text-align: center; }
+.cta-inner { width: var(--container); margin: 0 auto; }
+.section-label { font-size: 0.72rem; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: var(--blue); margin-bottom: 1rem; display: block; }
+.section-title { font-family: var(--font-display); font-size: clamp(2rem, 4vw, 3rem); font-weight: 700; letter-spacing: -0.02em; color: var(--bg-navy); line-height: 1.15; margin-bottom: 0.75rem; }
+.section-desc { font-size: 1.05rem; color: var(--text-muted); max-width: 540px; margin: 1rem auto 0; line-height: 1.75; }
+.cta-section .section-title { margin-bottom: 0.75rem; }
+.cta-section .section-desc { margin-bottom: 2.5rem; }
+.cta-actions { display: flex; align-items: center; justify-content: center; gap: 1.25rem; flex-wrap: wrap; }
+.btn-hero { display: inline-flex; align-items: center; gap: 0.6rem; padding: 0.9rem 2rem; font-family: var(--font-body); font-size: 0.9rem; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; border-radius: 6px; cursor: pointer; transition: all 0.35s var(--ease); border: none; }
+.btn-hero.filled { background: var(--blue); color: #fff; }
+.btn-hero.filled:hover { background: var(--blue-hover); transform: translateY(-2px); box-shadow: 0 8px 30px rgba(43, 125, 233, 0.35); }
+.btn-hero .arrow { transition: transform 0.3s var(--ease); }
+.btn-hero:hover .arrow { transform: translateX(3px); }
+.btn-call { display: inline-flex; align-items: center; gap: 0.6rem; padding: 0.9rem 2rem; font-family: var(--font-body); font-size: 0.9rem; font-weight: 600; color: var(--bg-navy); letter-spacing: 0.03em; border: 1.5px solid var(--border); border-radius: 6px; transition: all 0.3s var(--ease); }
+.btn-call:hover { border-color: var(--bg-navy); background: var(--bg-navy); color: #fff; }
+
+.footer { background: var(--bg-navy); color: var(--text-light); padding: 4.5rem 0 0; }
+.footer-inner { width: var(--container); margin: 0 auto; display: grid; grid-template-columns: 1.5fr 1fr 1fr 1.2fr; gap: 3rem; padding-bottom: 3.5rem; border-bottom: 1px solid var(--border-light); }
+.footer-brand { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem; }
+.footer-brand img { width: 36px; height: 36px; border-radius: 6px; object-fit: cover; }
+.footer-brand-text { font-family: var(--font-display); font-size: 1.2rem; }
+.footer-brand-text span { color: var(--blue); }
+.footer-desc { font-size: 0.88rem; color: var(--text-muted-light); line-height: 1.75; max-width: 280px; }
+.footer h4 { font-family: var(--font-display); font-size: 1rem; margin-bottom: 1.25rem; color: var(--text-light); }
+.footer ul li { margin-bottom: 0.6rem; }
+.footer ul li a { font-size: 0.88rem; color: var(--text-muted-light); transition: color 0.25s var(--ease); }
+.footer ul li a:hover { color: var(--blue); }
+.footer-contact-item { display: flex; align-items: flex-start; gap: 0.6rem; margin-bottom: 0.75rem; font-size: 0.88rem; color: var(--text-muted-light); }
+.footer-contact-item svg { width: 16px; height: 16px; stroke: var(--blue); fill: none; stroke-width: 2; flex-shrink: 0; margin-top: 3px; }
+.footer-contact-item a { color: var(--text-muted-light); transition: color 0.25s; }
+.footer-contact-item a:hover { color: var(--blue); }
+.footer-bottom { width: var(--container); margin: 0 auto; display: flex; align-items: center; justify-content: space-between; padding: 1.5rem 0; font-size: 0.8rem; color: var(--text-muted-light); }
+.footer-social a { display: inline-flex; align-items: center; justify-content: center; width: 36px; height: 36px; border-radius: 8px; border: 1px solid var(--border-light); transition: all 0.3s var(--ease); }
+.footer-social a:hover { border-color: var(--blue); background: rgba(43, 125, 233, 0.1); }
+.footer-social svg { width: 16px; height: 16px; fill: var(--text-muted-light); }
+.footer-social a:hover svg { fill: var(--blue); }
+
+@media (max-width: 1024px) {
+  .footer-inner { grid-template-columns: repeat(2, 1fr); gap: 2.5rem; }
+}
+@media (max-width: 768px) { .reveal { opacity: 1 !important; transform: none !important; }
+  .nav-links { display: none; }
+  .nav-phone { display: none; }
+  .nav-toggle { display: flex; } .btn-cta { display: none; }
+  .nav-links.open { display: flex; flex-direction: column; position: absolute; top: 72px; left: 0; right: 0; background: var(--bg); padding: 1.5rem 1rem; gap: 0; border-bottom: 1px solid var(--border); box-shadow: 0 10px 30px rgba(0,0,0,0.06); }
+  .nav-links.open a { padding: 0.75rem 1rem; font-size: 1rem; border-bottom: 1px solid var(--border); }
+  .nav-links.open a:last-child { border-bottom: none; }
+  .footer-inner { grid-template-columns: 1fr; gap: 2rem; }
+  .footer-bottom { flex-direction: column; gap: 1rem; text-align: center; }
+}
+@media (max-width: 480px) { .cta-actions { flex-direction: column; align-items: center; } }
+</style>
+
+<!-- FAQ Structured Data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How much does tile and grout cleaning cost?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The cost depends on several factors including the total area, type of surface, level of soiling, and whether additional services like sealing are required. As a general guide, tile and grout cleaning starts from $25 per square metre. Bathrooms typically cost up to $200 per sqm, kitchens range from $80 to $200 per sqm, and full house floors range from $200 to $400 per sqm. We provide free, no-obligation quotes after inspecting the area."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How to clean white grout and tile?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "White grout is particularly prone to discolouration from dirt, mould, and spills. For routine maintenance, use a pH-neutral cleaner and a soft brush. However, for deep staining, professional cleaning with hot water extraction and rotary scrubbing is the most effective solution. We can also apply grout colour sealing after cleaning to keep white grout looking fresh for years."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the best cleaner for natural stone tiles?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Natural stone tiles such as marble, travertine, and limestone require pH-neutral cleaners specifically formulated for stone. Avoid anything acidic (vinegar, citrus-based products) or alkaline (bleach, ammonia). These can etch, discolour, or damage the stone surface."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How to deep clean tile floors?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Deep cleaning tile floors requires more than a mop and bucket. The most effective method combines a professional-grade alkaline cleaning solution with rotary scrubbing to break down embedded dirt and grime, followed by hot water extraction to remove all residue. We recommend professional deep cleaning every 12 to 18 months."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is vinegar safe to use on tile and grout?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "While vinegar is often suggested as a natural cleaning solution, it is acidic and can damage certain surfaces over time. It is generally safe for ceramic and porcelain tiles but should never be used on natural stone (marble, travertine, limestone, slate) as the acid will etch and dull the surface. We recommend pH-neutral cleaners for all tile and stone surfaces."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How often should I have my tiles professionally cleaned?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "For most residential settings, professional tile and grout cleaning every 12 to 18 months is ideal. High-traffic areas like kitchen floors and entryways may benefit from annual cleaning. Commercial spaces typically need quarterly or bi-annual professional cleaning depending on foot traffic."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between sealing and polishing?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sealing is a protective treatment that prevents stains and moisture from penetrating the stone or grout. It does not change the appearance of the surface. Polishing is a finishing process that uses diamond abrasives to create a smooth, reflective surface on natural stone. Many surfaces benefit from both — polishing first for the desired finish, then sealing for long-term protection."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you service my area?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We service all major Sydney regions including North Shore, Northern Beaches, Eastern Suburbs, Inner West, Hills Shire, Sutherland Shire, Central Coast, and Western Suburbs. Contact us to confirm availability in your specific suburb."
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<!-- ═══════════ NAVIGATION ═══════════ -->
+<header class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <img src="images/logo.jpg" alt="Tile & Stone Cleaners" loading="lazy">
+      <div class="nav-logo-text">Tile & Stone <span>Cleaners</span></div>
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="nav-right">
+      <a href="tel:0481616303" class="nav-phone">04 81 616 303</a>
+      <a href="contact.html" class="btn-cta">Get a Quote</a>
+      <div class="nav-toggle" id="navToggle" aria-label="Menu" role="button" tabindex="0">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ═══════════ PAGE HERO ═══════════ -->
+<section class="page-hero">
+  <div class="page-hero-inner">
+    <span class="section-label">Help Centre</span>
+    <h1>Frequently Asked Questions</h1>
+    <div class="breadcrumb">
+      <a href="index.html">Home</a>
+      <span>/</span>
+      FAQ
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ FAQ ═══════════ -->
+<section class="faq" id="faq">
+  <div class="faq-inner">
+    <h2 class="reveal">Tile &amp; Stone Cleaning FAQ</h2>
+
+    <div class="faq-item reveal" data-faq>
+      <div class="faq-question">
+        <h3>How much does tile and grout cleaning cost?</h3>
+        <div class="faq-icon"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></div>
+      </div>
+      <div class="faq-answer">
+        <div class="faq-answer-inner">
+          <p>The cost depends on several factors including the total area, type of surface, level of soiling, and whether additional services like sealing are required. As a general guide, tile and grout cleaning starts from $25 per square metre. Bathrooms typically cost up to $200 per sqm, kitchens range from $80 to $200 per sqm, and full house floors range from $200 to $400 per sqm. We provide free, no-obligation quotes after inspecting the area.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-item reveal reveal-delay-1" data-faq>
+      <div class="faq-question">
+        <h3>How to clean white grout and tile?</h3>
+        <div class="faq-icon"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></div>
+      </div>
+      <div class="faq-answer">
+        <div class="faq-answer-inner">
+          <p>White grout is particularly prone to discolouration from dirt, mould, and spills. For routine maintenance, use a pH-neutral cleaner and a soft brush. However, for deep staining, professional cleaning with hot water extraction and rotary scrubbing is the most effective solution. We can also apply grout colour sealing after cleaning to keep white grout looking fresh for years.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-item reveal reveal-delay-2" data-faq>
+      <div class="faq-question">
+        <h3>What is the best cleaner for natural stone tiles?</h3>
+        <div class="faq-icon"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></div>
+      </div>
+      <div class="faq-answer">
+        <div class="faq-answer-inner">
+          <p>Natural stone tiles such as marble, travertine, and limestone require pH-neutral cleaners specifically formulated for stone. Avoid anything acidic (vinegar, citrus-based products) or alkaline (bleach, ammonia). These can etch, discolour, or damage the stone surface. For professional results, we use specialised stone cleaning solutions paired with appropriate equipment for each stone type.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-item reveal" data-faq>
+      <div class="faq-question">
+        <h3>How to deep clean tile floors?</h3>
+        <div class="faq-icon"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></div>
+      </div>
+      <div class="faq-answer">
+        <div class="faq-answer-inner">
+          <p>Deep cleaning tile floors requires more than a mop and bucket. The most effective method combines a professional-grade alkaline cleaning solution with rotary scrubbing to break down embedded dirt and grime, followed by hot water extraction to remove all residue. This process reaches deep into grout lines and tile pores where regular mopping cannot. We recommend professional deep cleaning every 12 to 18 months.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-item reveal reveal-delay-1" data-faq>
+      <div class="faq-question">
+        <h3>Is vinegar safe to use on tile and grout?</h3>
+        <div class="faq-icon"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></div>
+      </div>
+      <div class="faq-answer">
+        <div class="faq-answer-inner">
+          <p>While vinegar is often suggested as a natural cleaning solution, it is acidic and can damage certain surfaces over time. It is generally safe for ceramic and porcelain tiles but should never be used on natural stone (marble, travertine, limestone, slate) as the acid will etch and dull the surface. It can also weaken grout over time with repeated use. We recommend pH-neutral cleaners for all tile and stone surfaces.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-item reveal reveal-delay-2" data-faq>
+      <div class="faq-question">
+        <h3>How often should I have my tiles professionally cleaned?</h3>
+        <div class="faq-icon"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></div>
+      </div>
+      <div class="faq-answer">
+        <div class="faq-answer-inner">
+          <p>For most residential settings, professional tile and grout cleaning every 12 to 18 months is ideal. High-traffic areas like kitchen floors and entryways may benefit from annual cleaning. Commercial spaces typically need quarterly or bi-annual professional cleaning depending on foot traffic. Regular professional cleaning prevents permanent staining and extends the life of your grout and sealant.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-item reveal" data-faq>
+      <div class="faq-question">
+        <h3>What is the difference between sealing and polishing?</h3>
+        <div class="faq-icon"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></div>
+      </div>
+      <div class="faq-answer">
+        <div class="faq-answer-inner">
+          <p>Sealing is a protective treatment that prevents stains and moisture from penetrating the stone or grout. It does not change the appearance of the surface. Polishing is a finishing process that uses diamond abrasives to create a smooth, reflective surface on natural stone. Many surfaces benefit from both — polishing first for the desired finish, then sealing for long-term protection.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-item reveal reveal-delay-1" data-faq>
+      <div class="faq-question">
+        <h3>Do you service my area?</h3>
+        <div class="faq-icon"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></div>
+      </div>
+      <div class="faq-answer">
+        <div class="faq-answer-inner">
+          <p>We service all major Sydney regions including <a href="north-shore.html" style="color:var(--blue);">North Shore</a>, <a href="northern-beaches.html" style="color:var(--blue);">Northern Beaches</a>, <a href="eastern-suburbs.html" style="color:var(--blue);">Eastern Suburbs</a>, <a href="inner-west.html" style="color:var(--blue);">Inner West</a>, <a href="hills-shire.html" style="color:var(--blue);">Hills Shire</a>, <a href="sutherland-shire.html" style="color:var(--blue);">Sutherland Shire</a>, <a href="central-coast.html" style="color:var(--blue);">Central Coast</a>, and <a href="western-suburbs.html" style="color:var(--blue);">Western Suburbs</a>. Contact us to confirm availability in your specific suburb.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══════════ CTA ═══════════ -->
+<section class="cta-section">
+  <div class="cta-inner reveal">
+    <span class="section-label">Still Have Questions?</span>
+    <h2 class="section-title">Get in Touch</h2>
+    <p class="section-desc">Can't find the answer you're looking for? Contact us directly and we'll be happy to help.</p>
+    <div class="cta-actions">
+      <a href="contact.html" class="btn-hero filled" style="border: none;">
+        Get a Free Quote
+        <svg class="arrow" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+      <a href="tel:0481616303" class="btn-call">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M14.5 11.35v1.9a1.27 1.27 0 0 1-1.38 1.27 12.52 12.52 0 0 1-5.46-1.94 12.33 12.33 0 0 1-3.8-3.8A12.52 12.52 0 0 1 1.92 3.3 1.27 1.27 0 0 1 3.17 1.93h1.9a1.27 1.27 0 0 1 1.27 1.09c.08.6.23 1.19.44 1.76a1.27 1.27 0 0 1-.28 1.34L5.6 7.01a10.16 10.16 0 0 0 3.8 3.8l.89-.89a1.27 1.27 0 0 1 1.34-.28c.57.2 1.16.36 1.76.44a1.27 1.27 0 0 1 1.09 1.29z" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        04 81 616 303
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ FOOTER ═══════════ -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div>
+      <div class="footer-brand">
+        <img src="images/logo.jpg" alt="Tile & Stone Cleaners" loading="lazy">
+        <div class="footer-brand-text">Tile & Stone <span>Cleaners</span></div>
+      </div>
+      <p class="footer-desc">Sydney's trusted tile and stone specialists. Cleaning, sealing, restoration and repair across 9 regions with 15+ years of experience.</p>
+    </div>
+    <div>
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="sydney.html">Sydney</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Service Areas</h4>
+      <ul>
+        <li><a href="sydney.html">Sydney</a></li>
+        <li><a href="north-shore.html">North Shore</a></li>
+        <li><a href="northern-beaches.html">Northern Beaches</a></li>
+        <li><a href="central-coast.html">Central Coast</a></li>
+        <li><a href="eastern-suburbs.html">Eastern Suburbs</a></li>
+        <li><a href="hills-shire.html">Hills Shire</a></li>
+        <li><a href="sutherland-shire.html">Sutherland Shire</a></li>
+        <li><a href="western-suburbs.html">Western Suburbs</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <div class="footer-contact-item">
+        <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.81.36 1.6.68 2.34a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.74.32 1.53.55 2.34.68a2 2 0 0 1 1.72 2.05z" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <a href="tel:0481616303">04 81 616 303</a>
+      </div>
+      <div class="footer-contact-item">
+        <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        <a href="mailto:tileandstonecleaners@mail.com">tileandstonecleaners@mail.com</a>
+      </div>
+      <div class="footer-contact-item">
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        <div>Mon&ndash;Fri: 8am&ndash;6pm<br>Sat&ndash;Sun: 11am&ndash;3pm</div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div>&copy; 2024 Tile & Stone Cleaners. All rights reserved.</div>
+    <div class="footer-social">
+      <a href="https://instagram.com/tileandstonecleanerss/" target="_blank" rel="noopener" aria-label="Instagram">
+        <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5"/></svg>
+      </a>
+    </div>
+  </div>
+</footer>
+
+<script>
+// Sticky nav
+const nav = document.getElementById('nav');
+window.addEventListener('scroll', () => {
+  nav.classList.toggle('scrolled', window.scrollY > 20);
+}, { passive: true });
+
+// Mobile menu
+const toggle = document.getElementById('navToggle');
+const links = document.getElementById('navLinks');
+toggle.addEventListener('click', () => {
+  toggle.classList.toggle('active');
+  links.classList.toggle('open');
+});
+links.querySelectorAll('a').forEach(a => {
+  a.addEventListener('click', () => {
+    toggle.classList.remove('active');
+    links.classList.remove('open');
+  });
+});
+
+// Scroll reveal
+const revealElements = document.querySelectorAll('.reveal');
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      observer.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+revealElements.forEach(el => observer.observe(el));
+
+// FAQ Accordion
+document.querySelectorAll('[data-faq]').forEach(item => {
+  const question = item.querySelector('.faq-question');
+  const answer = item.querySelector('.faq-answer');
+  question.addEventListener('click', () => {
+    const isActive = item.classList.contains('active');
+    document.querySelectorAll('[data-faq]').forEach(other => {
+      other.classList.remove('active');
+      other.querySelector('.faq-answer').style.maxHeight = '0';
+    });
+    if (!isActive) {
+      item.classList.add('active');
+      answer.style.maxHeight = answer.scrollHeight + 'px';
+    }
+  });
+});
+</script>
+</body>
+</html>

@@ -29,13 +29,6 @@
     { "source": "/tile-grout-cleaning-3", "destination": "/tile-grout-cleaning", "permanent": true },
     { "source": "/ceramic-tile-grout-cleaning-and-sealing", "destination": "/ceramic", "permanent": true },
     { "source": "/enquiry", "destination": "/contact", "permanent": true },
-    { "source": "/north-shore", "destination": "/sydney", "permanent": true },
-    { "source": "/northern-beaches", "destination": "/sydney", "permanent": true },
-    { "source": "/central-coast", "destination": "/sydney", "permanent": true },
-    { "source": "/north-sydney", "destination": "/sydney", "permanent": true },
-    { "source": "/eastern-suburbs", "destination": "/sydney", "permanent": true },
-    { "source": "/hills-shire", "destination": "/sydney", "permanent": true },
-    { "source": "/sutherland-shire", "destination": "/sydney", "permanent": true },
-    { "source": "/western-suburbs", "destination": "/sydney", "permanent": true }
+    { "source": "/north-sydney", "destination": "/north-shore", "permanent": true }
   ]
 }
