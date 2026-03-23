@@ -619,6 +619,20 @@ ul { list-style: none; }
 .modal-cta:hover {
   background: var(--blue-hover);
 }
+.modal-actions {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 0.5rem;
+}
+.modal-cta-outline {
+  background: transparent;
+  color: var(--blue);
+  border: 1.5px solid var(--blue);
+}
+.modal-cta-outline:hover {
+  background: var(--blue);
+  color: #fff;
+}
 
 @media (max-width: 768px) { .reveal { opacity: 1 !important; transform: none !important; }
   .modal {
@@ -627,6 +641,12 @@ ul { list-style: none; }
   }
   .modal-body {
     padding: 1.5rem;
+  }
+  .modal-actions {
+    flex-direction: column;
+  }
+  .modal-actions .modal-cta {
+    justify-content: center;
   }
 }
 
@@ -1485,7 +1505,7 @@ ul { list-style: none; }
 <section class="services" id="services">
   <div class="section-header reveal">
     <span class="section-label">What We Do</span>
-    <h2 class="section-title">Our Services</h2>
+    <a href="services.html" style="text-decoration:none;color:inherit;"><h2 class="section-title">Our Services</h2></a>
     <div class="section-line"></div>
     <p class="section-desc">Comprehensive tile and stone care tailored to your surfaces, from routine cleaning to full restoration.</p>
   </div>
@@ -1569,10 +1589,16 @@ ul { list-style: none; }
       <h3 id="modalTitle"></h3>
       <p id="modalDesc"></p>
       <ul id="modalList"></ul>
-      <a href="contact.html" class="modal-cta">
-        Get a Free Quote
-        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      </a>
+      <div class="modal-actions">
+        <a href="" id="modalLearnMore" class="modal-cta modal-cta-outline">
+          Learn More
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <a href="contact.html" class="modal-cta">
+          Get a Free Quote
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
     </div>
   </div>
 </div>
@@ -2195,6 +2221,7 @@ const serviceData = {
   'tile-cleaning': {
     img: 'images/services/tile-cleaning.png',
     title: 'Tile & Grout Cleaning',
+    link: 'tile-grout-cleaning.html',
     desc: 'Our deep extraction cleaning process removes years of built-up grime, grease, and bacteria from tile surfaces and grout lines. We use professional-grade rotary machines and hot water extraction to deliver results that regular mopping simply can\'t match.',
     points: [
       'Hot water extraction and rotary scrubbing',
@@ -2207,6 +2234,7 @@ const serviceData = {
   'sealing': {
     img: 'images/services/sealing.png',
     title: 'Sealing & Protection',
+    link: 'cleaning-sealing.html',
     desc: 'We apply professional-grade penetrating and topical sealants that create an invisible barrier against stains, moisture, and everyday wear. Sealing extends the life of your surfaces and makes routine cleaning significantly easier.',
     points: [
       'Penetrating sealers for natural stone',
@@ -2219,6 +2247,7 @@ const serviceData = {
   'regrouting': {
     img: 'images/services/regrouting.png',
     title: 'Regrouting',
+    link: 'services.html',
     desc: 'Cracked, discoloured, or crumbling grout isn\'t just unsightly — it allows moisture to seep beneath tiles, causing long-term damage. We remove old grout and replace it with fresh, colour-matched grout to restore both the look and structural integrity of your tiling.',
     points: [
       'Full removal of old, damaged grout',
@@ -2231,6 +2260,7 @@ const serviceData = {
   'restoration': {
     img: 'images/services/restoration.png',
     title: 'Stone Restoration',
+    link: 'stone-polishing.html',
     desc: 'Natural stone loses its lustre over time through foot traffic, scratching, and chemical damage. Our restoration process uses diamond grinding and honing to remove surface damage, followed by polishing to bring your stone back to its original beauty.',
     points: [
       'Diamond grinding to remove scratches and etching',
@@ -2243,6 +2273,7 @@ const serviceData = {
   'pressure-cleaning': {
     img: 'images/services/pressure-cleaning.png',
     title: 'High-Pressure Cleaning',
+    link: 'pressure-cleaning.html',
     desc: 'Our industrial-strength pressure washing removes built-up dirt, algae, mould, and moss from outdoor surfaces. We adjust pressure levels to suit each surface type, ensuring thorough cleaning without damage.',
     points: [
       'Driveways, patios, and pool surrounds',
@@ -2255,6 +2286,7 @@ const serviceData = {
   'polishing': {
     img: 'images/services/polishing.png',
     title: 'Polishing & Honing',
+    link: 'stone-polishing.html',
     desc: 'Whether you want a mirror-like high gloss or a subtle matte finish, our precision diamond polishing and honing delivers exactly the look you\'re after. We work with all types of natural stone to achieve a flawless, even surface.',
     points: [
       'High-gloss mirror polish or matte honing',
@@ -2271,6 +2303,7 @@ const modalImg = document.getElementById('modalImg');
 const modalTitle = document.getElementById('modalTitle');
 const modalDesc = document.getElementById('modalDesc');
 const modalList = document.getElementById('modalList');
+const modalLearnMore = document.getElementById('modalLearnMore');
 
 document.querySelectorAll('.service-card[data-modal]').forEach(card => {
   card.style.cursor = 'pointer';
@@ -2283,6 +2316,7 @@ document.querySelectorAll('.service-card[data-modal]').forEach(card => {
     modalTitle.textContent = data.title;
     modalDesc.textContent = data.desc;
     modalList.innerHTML = data.points.map(p => '<li>' + p + '</li>').join('');
+    modalLearnMore.href = data.link;
     overlay.classList.add('active');
     document.body.style.overflow = 'hidden';
   });
